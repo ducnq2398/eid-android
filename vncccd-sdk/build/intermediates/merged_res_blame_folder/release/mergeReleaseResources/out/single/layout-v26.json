@@ -1,10 +1,10 @@
 [
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/layout-v26/mtrl_calendar_month.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-19:/layout-v26/mtrl_calendar_month.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/layout-v26/mtrl_calendar_month.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/layout-v26/abc_screen_toolbar.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-appcompat-1.6.1-38:/layout-v26/abc_screen_toolbar.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-appcompat-1.6.1-32:/layout-v26/abc_screen_toolbar.xml"
     }
 ]

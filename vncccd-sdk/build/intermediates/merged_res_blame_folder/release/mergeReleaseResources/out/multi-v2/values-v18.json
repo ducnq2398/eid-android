@@ -4,7 +4,7 @@
             "outputFile": "com.vncccd.sdk.vncccd-sdk-mergeReleaseResources-41:/values-v18/values-v18.xml",
             "map": [
                 {
-                    "source": "/Users/tima/.gradle/caches/8.12.1/transforms/dabb725201868360b2d0dc11e1c6c3bb/transformed/appcompat-1.6.1/res/values-v18/values-v18.xml",
+                    "source": "/Users/tima/.gradle/caches/8.10.2/transforms/d9e958188422d5f46dae3153617643f9/transformed/appcompat-1.6.1/res/values-v18/values-v18.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -19,7 +19,7 @@
             "outputFile": "com.vncccd.sdk.vncccd-sdk-release-43:/values-v18/values-v18.xml",
             "map": [
                 {
-                    "source": "/Users/tima/.gradle/caches/8.12.1/transforms/dabb725201868360b2d0dc11e1c6c3bb/transformed/appcompat-1.6.1/res/values-v18/values-v18.xml",
+                    "source": "/Users/tima/.gradle/caches/8.10.2/transforms/d9e958188422d5f46dae3153617643f9/transformed/appcompat-1.6.1/res/values-v18/values-v18.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

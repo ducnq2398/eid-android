@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -33,21 +32,21 @@ public final class ActivityMrzScannerBinding implements ViewBinding {
   public final PreviewView previewView;
 
   @NonNull
-  public final LinearLayout topBar;
+  public final TextView tvInstruction;
 
   @NonNull
-  public final TextView tvInstruction;
+  public final TextView tvTitle;
 
   private ActivityMrzScannerBinding(@NonNull ConstraintLayout rootView,
       @NonNull ImageButton btnClose, @NonNull MrzOverlayView overlayView,
-      @NonNull PreviewView previewView, @NonNull LinearLayout topBar,
-      @NonNull TextView tvInstruction) {
+      @NonNull PreviewView previewView, @NonNull TextView tvInstruction,
+      @NonNull TextView tvTitle) {
     this.rootView = rootView;
     this.btnClose = btnClose;
     this.overlayView = overlayView;
     this.previewView = previewView;
-    this.topBar = topBar;
     this.tvInstruction = tvInstruction;
+    this.tvTitle = tvTitle;
   }
 
   @Override
@@ -95,20 +94,20 @@ public final class ActivityMrzScannerBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.topBar;
-      LinearLayout topBar = ViewBindings.findChildViewById(rootView, id);
-      if (topBar == null) {
-        break missingId;
-      }
-
       id = R.id.tvInstruction;
       TextView tvInstruction = ViewBindings.findChildViewById(rootView, id);
       if (tvInstruction == null) {
         break missingId;
       }
 
+      id = R.id.tvTitle;
+      TextView tvTitle = ViewBindings.findChildViewById(rootView, id);
+      if (tvTitle == null) {
+        break missingId;
+      }
+
       return new ActivityMrzScannerBinding((ConstraintLayout) rootView, btnClose, overlayView,
-          previewView, topBar, tvInstruction);
+          previewView, tvInstruction, tvTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

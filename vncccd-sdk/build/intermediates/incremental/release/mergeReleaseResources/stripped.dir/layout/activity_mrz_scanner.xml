@@ -26,40 +26,36 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Top Bar -->
-    <LinearLayout
-        android:id="@+id/topBar"
+    <!-- Top Navigation Bar -->
+    <ImageButton
+        android:id="@+id/btnClose"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/vncccd_cancel"
+        android:padding="12dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@android:color/white" />
+
+    <TextView
+        android:id="@+id/tvTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:padding="16dp"
-        android:paddingTop="40dp"
-        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="@string/vncccd_mrz_title"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/btnClose"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <ImageButton
-            android:id="@+id/btnClose"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:src="@android:drawable/ic_menu_close_clear_cancel"
-            android:contentDescription="Đóng"
-            android:scaleType="centerInside"
-            android:padding="12dp"
-            app:tint="@android:color/white" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/vncccd_mrz_title"
-            android:textColor="@android:color/white"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:fontFamily="sans-serif-medium" />
-    </LinearLayout>
+        app:layout_constraintTop_toTopOf="@id/btnClose" />
 
     <!-- Instruction Text -->
     <TextView

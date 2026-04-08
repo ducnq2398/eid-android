@@ -4,7 +4,7 @@
             "outputFile": "com.vncccd.sdk.vncccd-sdk-mergeReleaseResources-41:/values-w400dp-port-v13/values-w400dp-port-v13.xml",
             "map": [
                 {
-                    "source": "/Users/tima/.gradle/caches/8.12.1/transforms/4f596f82cb01eeb8881adb1b13dd98eb/transformed/material-1.11.0/res/values-w400dp-port-v13/values-w400dp-port-v13.xml",
+                    "source": "/Users/tima/.gradle/caches/8.10.2/transforms/a26dceb6c626d7379687ccba34af4b6b/transformed/material-1.11.0/res/values-w400dp-port-v13/values-w400dp-port-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -19,7 +19,7 @@
             "outputFile": "com.vncccd.sdk.vncccd-sdk-release-43:/values-w400dp-port-v13/values-w400dp-port-v13.xml",
             "map": [
                 {
-                    "source": "/Users/tima/.gradle/caches/8.12.1/transforms/4f596f82cb01eeb8881adb1b13dd98eb/transformed/material-1.11.0/res/values-w400dp-port-v13/values-w400dp-port-v13.xml",
+                    "source": "/Users/tima/.gradle/caches/8.10.2/transforms/a26dceb6c626d7379687ccba34af4b6b/transformed/material-1.11.0/res/values-w400dp-port-v13/values-w400dp-port-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

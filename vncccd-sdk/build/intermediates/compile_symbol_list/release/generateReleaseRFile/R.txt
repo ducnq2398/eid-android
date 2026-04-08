@@ -57,7 +57,6 @@ int id overlayView 0x0
 int id previewView 0x0
 int id progressBar 0x0
 int id progressBarReading 0x0
-int id topBar 0x0
 int id tvInstruction 0x0
 int id tvProgress 0x0
 int id tvStatus 0x0

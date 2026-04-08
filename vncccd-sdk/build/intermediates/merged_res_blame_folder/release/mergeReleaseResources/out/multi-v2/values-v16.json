@@ -4,7 +4,7 @@
             "outputFile": "com.vncccd.sdk.vncccd-sdk-mergeReleaseResources-41:/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "/Users/tima/.gradle/caches/8.12.1/transforms/1ed9d1003fb416d422e199d5b53e3f9b/transformed/core-1.12.0/res/values-v16/values-v16.xml",
+                    "source": "/Users/tima/.gradle/caches/8.10.2/transforms/2dfc70223d22d67453ccc66555a93b34/transformed/core-1.12.0/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/Users/tima/.gradle/caches/8.12.1/transforms/dabb725201868360b2d0dc11e1c6c3bb/transformed/appcompat-1.6.1/res/values-v16/values-v16.xml",
+                    "source": "/Users/tima/.gradle/caches/8.10.2/transforms/d9e958188422d5f46dae3153617643f9/transformed/appcompat-1.6.1/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -38,7 +38,7 @@
             "outputFile": "com.vncccd.sdk.vncccd-sdk-release-43:/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "/Users/tima/.gradle/caches/8.12.1/transforms/1ed9d1003fb416d422e199d5b53e3f9b/transformed/core-1.12.0/res/values-v16/values-v16.xml",
+                    "source": "/Users/tima/.gradle/caches/8.10.2/transforms/2dfc70223d22d67453ccc66555a93b34/transformed/core-1.12.0/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -48,7 +48,7 @@
                     }
                 },
                 {
-                    "source": "/Users/tima/.gradle/caches/8.12.1/transforms/dabb725201868360b2d0dc11e1c6c3bb/transformed/appcompat-1.6.1/res/values-v16/values-v16.xml",
+                    "source": "/Users/tima/.gradle/caches/8.10.2/transforms/d9e958188422d5f46dae3153617643f9/transformed/appcompat-1.6.1/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
