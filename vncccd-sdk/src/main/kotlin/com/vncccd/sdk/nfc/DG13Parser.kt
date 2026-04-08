@@ -255,21 +255,21 @@ object DG13Parser {
     private fun parseFieldList(fields: List<String>): PersonalInfo {
         return PersonalInfo(
             idNumber = normalizeId(fields.getOrNull(0)),
-            fullName = fields.getOrNull(1)?.takeIf { it.containsLetter() },
+            fullName = normalizeName(fields.getOrNull(1)),
             dateOfBirth = normalizeDate(fields.getOrNull(2)),
             gender = normalizeGender(fields.getOrNull(3)),
-            nationality = fields.getOrNull(4),
-            ethnicity = fields.getOrNull(5),
-            religion = fields.getOrNull(6),
-            placeOfOrigin = fields.getOrNull(7),
-            placeOfResidence = fields.getOrNull(8),
-            personalIdentification = fields.getOrNull(9),
+            nationality = normalizeShortText(fields.getOrNull(4), 32),
+            ethnicity = normalizeShortText(fields.getOrNull(5), 64),
+            religion = normalizeShortText(fields.getOrNull(6), 64),
+            placeOfOrigin = normalizeAddress(fields.getOrNull(7)),
+            placeOfResidence = normalizeAddress(fields.getOrNull(8)),
+            personalIdentification = normalizeAddress(fields.getOrNull(9)),
             dateOfIssue = normalizeDate(fields.getOrNull(10)),
             dateOfExpiry = normalizeDate(fields.getOrNull(11)),
-            fatherName = fields.getOrNull(12),
-            motherName = fields.getOrNull(13),
-            spouseName = fields.getOrNull(14),
-            oldIdNumber = fields.getOrNull(15)
+            fatherName = normalizeName(fields.getOrNull(12)),
+            motherName = normalizeName(fields.getOrNull(13)),
+            spouseName = normalizeName(fields.getOrNull(14)),
+            oldIdNumber = normalizeId(fields.getOrNull(15))
         )
     }
 
@@ -466,20 +466,20 @@ object DG13Parser {
 
         val info = PersonalInfo(
             idNumber = normalizeId(pick("so_cccd", "so_dinh_danh", "id_number")),
-            fullName = pick("ho_ten", "ho_va_ten", "full_name"),
+            fullName = normalizeName(pick("ho_ten", "ho_va_ten", "full_name")),
             dateOfBirth = normalizeDate(pick("ngay_sinh", "dob", "date_of_birth")),
             gender = normalizeGender(pick("gioi_tinh", "gender", "sex")),
-            nationality = pick("quoc_tich", "nationality"),
-            ethnicity = pick("dan_toc", "ethnicity"),
-            religion = pick("ton_giao", "religion"),
-            placeOfOrigin = pick("que_quan", "noi_sinh", "place_of_origin"),
-            placeOfResidence = pick("noi_thuong_tru", "thuong_tru", "dia_chi", "place_of_residence"),
-            personalIdentification = pick("dac_diem_nhan_dang", "personal_identification"),
+            nationality = normalizeShortText(pick("quoc_tich", "nationality"), 32),
+            ethnicity = normalizeShortText(pick("dan_toc", "ethnicity"), 64),
+            religion = normalizeShortText(pick("ton_giao", "religion"), 64),
+            placeOfOrigin = normalizeAddress(pick("que_quan", "noi_sinh", "place_of_origin")),
+            placeOfResidence = normalizeAddress(pick("noi_thuong_tru", "thuong_tru", "dia_chi", "place_of_residence")),
+            personalIdentification = normalizeAddress(pick("dac_diem_nhan_dang", "personal_identification")),
             dateOfIssue = normalizeDate(pick("ngay_cap", "date_of_issue")),
             dateOfExpiry = normalizeDate(pick("ngay_het_han", "gia_tri_den", "date_of_expiry")),
-            fatherName = pick("ho_ten_cha", "father_name"),
-            motherName = pick("ho_ten_me", "mother_name"),
-            spouseName = pick("ho_ten_vo_chong", "spouse_name"),
+            fatherName = normalizeName(pick("ho_ten_cha", "father_name")),
+            motherName = normalizeName(pick("ho_ten_me", "mother_name")),
+            spouseName = normalizeName(pick("ho_ten_vo_chong", "spouse_name")),
             oldIdNumber = normalizeId(pick("so_cmnd_cu", "old_id_number"))
         )
         return info.takeIf { it.hasData() }
@@ -545,7 +545,7 @@ object DG13Parser {
             .replace(Regex("[\\p{Cntrl}&&[^\\n\\r\\t]]"), " ")
             .replace(Regex("\\s+"), " ")
             .trim()
-        return repairVietnameseMojibake(cleaned)
+        return Normalizer.normalize(repairVietnameseMojibake(cleaned), Normalizer.Form.NFC)
     }
 
     private fun decodePrimitiveBestEffort(rawBytes: ByteArray): String {

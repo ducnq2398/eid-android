@@ -23,6 +23,7 @@ import com.vncccd.sdk.CCCDConfig
 import com.vncccd.sdk.CCCDReader
 import com.vncccd.sdk.R
 import com.vncccd.sdk.models.*
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.*
 
 /**
@@ -62,6 +63,7 @@ class NfcReaderActivity : AppCompatActivity() {
     private val cardReader = NfcCardReader()
     private var readingJob: Job? = null
     private val coroutineScope = CoroutineScope(Dispatchers.Main + SupervisorJob())
+    private var hasTerminalResult = false
 
     @Suppress("DEPRECATION")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -97,7 +99,10 @@ class NfcReaderActivity : AppCompatActivity() {
         tvStatus.text = getString(R.string.vncccd_nfc_waiting)
 
         btnCancel.setOnClickListener {
+            if (hasTerminalResult) return@setOnClickListener
             readingJob?.cancel()
+            hasTerminalResult = true
+            CCCDReader.dispatchNfcError(CCCDError.Cancelled())
             setResult(Activity.RESULT_CANCELED)
             finish()
         }
@@ -110,7 +115,11 @@ class NfcReaderActivity : AppCompatActivity() {
     private fun setupNfc() {
         nfcAdapter = NfcAdapter.getDefaultAdapter(this)
         if (nfcAdapter == null) {
-            CCCDReader.getCallback()?.onError(CCCDError.NfcNotSupported())
+            if (!hasTerminalResult) {
+                hasTerminalResult = true
+                CCCDReader.dispatchNfcError(CCCDError.NfcNotSupported())
+            }
+            setResult(Activity.RESULT_CANCELED)
             finish()
             return
         }
@@ -172,6 +181,7 @@ class NfcReaderActivity : AppCompatActivity() {
     }
 
     private fun readCard(isoDep: IsoDep) {
+        if (hasTerminalResult) return
         val mrz = mrzData ?: return
 
         // Cancel any existing reading
@@ -200,6 +210,8 @@ class NfcReaderActivity : AppCompatActivity() {
                     onReadSuccess(cccdData)
                 }
 
+            } catch (e: CancellationException) {
+                Log.d(TAG, "Card reading cancelled")
             } catch (e: Exception) {
                 Log.e(TAG, "Card reading failed", e)
                 withContext(Dispatchers.Main) {
@@ -230,6 +242,8 @@ class NfcReaderActivity : AppCompatActivity() {
     }
 
     private fun onReadSuccess(cccdData: CCCDData) {
+        if (hasTerminalResult) return
+        hasTerminalResult = true
         tvStatus.text = getString(R.string.vncccd_nfc_success)
         tvProgress.text = getString(R.string.vncccd_nfc_success)
         ivNfcIcon.setImageResource(R.drawable.ic_check_circle)
@@ -242,7 +256,7 @@ class NfcReaderActivity : AppCompatActivity() {
         }
 
         // Notify callback
-        CCCDReader.getCallback()?.onSuccess(cccdData)
+        CCCDReader.dispatchNfcSuccess(cccdData)
 
         // Return result
         val resultIntent = Intent().apply {
@@ -255,6 +269,8 @@ class NfcReaderActivity : AppCompatActivity() {
     }
 
     private fun onReadError(error: Exception) {
+        if (hasTerminalResult) return
+        hasTerminalResult = true
         val cccdError = when {
             error.message?.contains("authentication", ignoreCase = true) == true ->
                 CCCDError.AuthenticationFailed(error)
@@ -275,7 +291,7 @@ class NfcReaderActivity : AppCompatActivity() {
         }, 2000)
 
         // Notify callback
-        CCCDReader.getCallback()?.onError(cccdError)
+        CCCDReader.dispatchNfcError(cccdError)
     }
 
     private fun resetToWaiting() {

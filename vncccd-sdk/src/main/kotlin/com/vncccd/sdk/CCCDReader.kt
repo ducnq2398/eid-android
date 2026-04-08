@@ -28,6 +28,8 @@ object CCCDReader {
     private var callback: CCCDCallback? = null
     private var config: CCCDConfig = CCCDConfig.defaultConfig()
     private var currentMrzData: MrzData? = null
+    private var mrzResultDelivered = false
+    private var nfcResultDelivered = false
 
     internal const val REQUEST_CODE_MRZ = 10001
     internal const val REQUEST_CODE_NFC = 10002
@@ -85,6 +87,7 @@ object CCCDReader {
     fun startMrzScan(activity: Activity, config: CCCDConfig = CCCDConfig.defaultConfig(), callback: CCCDCallback) {
         this.config = config
         this.callback = callback
+        mrzResultDelivered = false
 
         val intent = Intent(activity, MrzScannerActivity::class.java).apply {
             putExtra(EXTRA_CONFIG, config)
@@ -109,6 +112,7 @@ object CCCDReader {
         this.config = config
         this.callback = callback
         this.currentMrzData = mrzData
+        nfcResultDelivered = false
 
         val intent = Intent(activity, NfcReaderActivity::class.java).apply {
             putExtra(EXTRA_CONFIG, config)
@@ -127,10 +131,10 @@ object CCCDReader {
                 if (resultCode == Activity.RESULT_OK && data != null) {
                     val mrzData = data.getSerializableExtra(EXTRA_RESULT_MRZ) as? MrzData
                     if (mrzData != null) {
-                        callback?.onMrzScanned(mrzData)
+                        dispatchMrzScanned(mrzData)
                     }
                 } else if (resultCode == Activity.RESULT_CANCELED) {
-                    callback?.onError(CCCDError.Cancelled())
+                    dispatchMrzError(CCCDError.Cancelled())
                 }
             }
 
@@ -138,10 +142,10 @@ object CCCDReader {
                 if (resultCode == Activity.RESULT_OK && data != null) {
                     val cccdData = data.getSerializableExtra(EXTRA_RESULT_CCCD) as? com.vncccd.sdk.models.CCCDData
                     if (cccdData != null) {
-                        callback?.onSuccess(cccdData)
+                        dispatchNfcSuccess(cccdData)
                     }
                 } else if (resultCode == Activity.RESULT_CANCELED) {
-                    callback?.onError(CCCDError.Cancelled())
+                    dispatchNfcError(CCCDError.Cancelled())
                 }
             }
         }
@@ -157,6 +161,30 @@ object CCCDReader {
      */
     internal fun getConfig(): CCCDConfig = config
 
+    internal fun dispatchMrzScanned(mrzData: MrzData) {
+        if (mrzResultDelivered) return
+        mrzResultDelivered = true
+        callback?.onMrzScanned(mrzData)
+    }
+
+    internal fun dispatchMrzError(error: CCCDError) {
+        if (mrzResultDelivered) return
+        mrzResultDelivered = true
+        callback?.onError(error)
+    }
+
+    internal fun dispatchNfcSuccess(cccdData: com.vncccd.sdk.models.CCCDData) {
+        if (nfcResultDelivered) return
+        nfcResultDelivered = true
+        callback?.onSuccess(cccdData)
+    }
+
+    internal fun dispatchNfcError(error: CCCDError) {
+        if (nfcResultDelivered) return
+        nfcResultDelivered = true
+        callback?.onError(error)
+    }
+
     /**
      * Reset SDK state.
      */
@@ -164,5 +192,7 @@ object CCCDReader {
         callback = null
         currentMrzData = null
         config = CCCDConfig.defaultConfig()
+        mrzResultDelivered = false
+        nfcResultDelivered = false
     }
 }

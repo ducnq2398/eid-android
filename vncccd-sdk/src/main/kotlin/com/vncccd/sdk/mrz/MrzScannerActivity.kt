@@ -53,6 +53,7 @@ class MrzScannerActivity : AppCompatActivity() {
 
     // Animation
     private var scanLineAnimator: ValueAnimator? = null
+    private var hasCompleted = false
 
     @Suppress("DEPRECATION")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -112,6 +113,8 @@ class MrzScannerActivity : AppCompatActivity() {
      * Called when MRZ is successfully detected and validated.
      */
     private fun onMrzDetected(mrzData: MrzData) {
+        if (hasCompleted) return
+        hasCompleted = true
         Log.d(TAG, "MRZ detected: ${mrzData.fullDocumentNumber}")
 
         // Stop scanning animation
@@ -127,7 +130,7 @@ class MrzScannerActivity : AppCompatActivity() {
         }
 
         // Notify callback
-        CCCDReader.getCallback()?.onMrzScanned(mrzData)
+        CCCDReader.dispatchMrzScanned(mrzData)
 
         // Return result
         val resultIntent = Intent().apply {
@@ -194,6 +197,7 @@ class MrzScannerActivity : AppCompatActivity() {
                     getString(R.string.vncccd_camera_permission_denied),
                     Toast.LENGTH_LONG
                 ).show()
+                CCCDReader.dispatchMrzError(com.vncccd.sdk.models.CCCDError.Cancelled())
                 finish()
             }
         }
