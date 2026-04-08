@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Scanner Theme: fullscreen, dark, no action bar -->
+    <style name="VnCccd.Theme.Scanner" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="colorPrimary">@color/vncccd_primary</item>
+        <item name="colorPrimaryDark">@color/vncccd_primary_dark</item>
+        <item name="colorAccent">@color/vncccd_primary</item>
+    </style>
+
+    <!-- NFC Reader Theme: dark, status bar colored -->
+    <style name="VnCccd.Theme.NfcReader" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="android:windowBackground">@color/vncccd_bg_dark</item>
+        <item name="android:statusBarColor">@color/vncccd_bg_dark</item>
+        <item name="android:navigationBarColor">@color/vncccd_bg_dark</item>
+        <item name="colorPrimary">@color/vncccd_primary</item>
+        <item name="colorPrimaryDark">@color/vncccd_primary_dark</item>
+        <item name="colorAccent">@color/vncccd_primary</item>
+    </style>
+</resources>

@@ -1,0 +1,57 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.vncccd.sdk" >
+4
+5    <uses-sdk android:minSdkVersion="24" />
+6
+7    <uses-permission android:name="android.permission.CAMERA" />
+7-->/Users/tima/Documents/SDK/vncccd-sdk/src/main/AndroidManifest.xml:4:5-65
+7-->/Users/tima/Documents/SDK/vncccd-sdk/src/main/AndroidManifest.xml:4:22-62
+8    <uses-permission android:name="android.permission.NFC" />
+8-->/Users/tima/Documents/SDK/vncccd-sdk/src/main/AndroidManifest.xml:5:5-62
+8-->/Users/tima/Documents/SDK/vncccd-sdk/src/main/AndroidManifest.xml:5:22-59
+9
+10    <uses-feature
+10-->/Users/tima/Documents/SDK/vncccd-sdk/src/main/AndroidManifest.xml:7:5-9:35
+11        android:name="android.hardware.nfc"
+11-->/Users/tima/Documents/SDK/vncccd-sdk/src/main/AndroidManifest.xml:8:9-44
+12        android:required="true" />
+12-->/Users/tima/Documents/SDK/vncccd-sdk/src/main/AndroidManifest.xml:9:9-32
+13    <uses-feature
+13-->/Users/tima/Documents/SDK/vncccd-sdk/src/main/AndroidManifest.xml:10:5-12:35
+14        android:name="android.hardware.camera"
+14-->/Users/tima/Documents/SDK/vncccd-sdk/src/main/AndroidManifest.xml:11:9-47
+15        android:required="true" />
+15-->/Users/tima/Documents/SDK/vncccd-sdk/src/main/AndroidManifest.xml:12:9-32
+16    <uses-feature
+16-->/Users/tima/Documents/SDK/vncccd-sdk/src/main/AndroidManifest.xml:13:5-15:36
+17        android:name="android.hardware.camera.autofocus"
+17-->/Users/tima/Documents/SDK/vncccd-sdk/src/main/AndroidManifest.xml:14:9-57
+18        android:required="false" />
+18-->/Users/tima/Documents/SDK/vncccd-sdk/src/main/AndroidManifest.xml:15:9-33
+19
+20    <application>
+20-->/Users/tima/Documents/SDK/vncccd-sdk/src/main/AndroidManifest.xml:17:5-29:19
+21        <activity
+21-->/Users/tima/Documents/SDK/vncccd-sdk/src/main/AndroidManifest.xml:18:9-22:59
+22            android:name="com.vncccd.sdk.mrz.MrzScannerActivity"
+22-->/Users/tima/Documents/SDK/vncccd-sdk/src/main/AndroidManifest.xml:19:13-51
+23            android:exported="false"
+23-->/Users/tima/Documents/SDK/vncccd-sdk/src/main/AndroidManifest.xml:20:13-37
+24            android:screenOrientation="portrait"
+24-->/Users/tima/Documents/SDK/vncccd-sdk/src/main/AndroidManifest.xml:21:13-49
+25            android:theme="@style/VnCccd.Theme.Scanner" />
+25-->/Users/tima/Documents/SDK/vncccd-sdk/src/main/AndroidManifest.xml:22:13-56
+26        <activity
+26-->/Users/tima/Documents/SDK/vncccd-sdk/src/main/AndroidManifest.xml:24:9-28:61
+27            android:name="com.vncccd.sdk.nfc.NfcReaderActivity"
+27-->/Users/tima/Documents/SDK/vncccd-sdk/src/main/AndroidManifest.xml:25:13-50
+28            android:exported="false"
+28-->/Users/tima/Documents/SDK/vncccd-sdk/src/main/AndroidManifest.xml:26:13-37
+29            android:screenOrientation="portrait"
+29-->/Users/tima/Documents/SDK/vncccd-sdk/src/main/AndroidManifest.xml:27:13-49
+30            android:theme="@style/VnCccd.Theme.NfcReader" />
+30-->/Users/tima/Documents/SDK/vncccd-sdk/src/main/AndroidManifest.xml:28:13-58
+31    </application>
+32
+33</manifest>

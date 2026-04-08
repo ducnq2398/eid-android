@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.vncccd.sample.sample-app-merged_res-42:/layout_activity_result.xml.flat",
+        "source": "com.vncccd.sample.sample-app-main-44:/layout/activity_result.xml"
+    },
+    {
+        "merged": "com.vncccd.sample.sample-app-merged_res-42:/layout_activity_main.xml.flat",
+        "source": "com.vncccd.sample.sample-app-main-44:/layout/activity_main.xml"
+    }
+]

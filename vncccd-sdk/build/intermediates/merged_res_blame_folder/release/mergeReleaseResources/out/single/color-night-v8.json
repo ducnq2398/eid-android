@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/color-night-v8/material_timepicker_clockface.xml",
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-19:/color-night-v8/material_timepicker_clockface.xml"
+    },
+    {
+        "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/color-night-v8/material_timepicker_modebutton_tint.xml",
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-19:/color-night-v8/material_timepicker_modebutton_tint.xml"
+    },
+    {
+        "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/color-night-v8/material_timepicker_button_stroke.xml",
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-19:/color-night-v8/material_timepicker_button_stroke.xml"
+    }
+]

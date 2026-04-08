@@ -1,0 +1,29 @@
+R_DEF: Internal format may change without notice
+local
+id btnFullScan
+id btnMrzOnly
+id cardNfcStatus
+id cardStatus
+id ivFacePhoto
+id tvAppSubtitle
+id tvAppTitle
+id tvDateOfBirth
+id tvDateOfExpiry
+id tvDateOfIssue
+id tvEthnicity
+id tvFatherName
+id tvFullName
+id tvGender
+id tvIdNumber
+id tvMotherName
+id tvNationality
+id tvNfcStatus
+id tvPersonalId
+id tvPlaceOfOrigin
+id tvPlaceOfResidence
+id tvReligion
+id tvStatus
+layout activity_main
+layout activity_result
+string app_name
+style Theme.VNCCCDSample

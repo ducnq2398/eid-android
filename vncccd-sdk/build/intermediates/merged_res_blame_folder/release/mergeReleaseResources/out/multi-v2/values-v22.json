@@ -1,0 +1,36 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.vncccd.sdk.vncccd-sdk-mergeReleaseResources-41:/values-v22/values-v22.xml",
+            "map": [
+                {
+                    "source": "/Users/tima/.gradle/caches/8.12.1/transforms/dabb725201868360b2d0dc11e1c6c3bb/transformed/appcompat-1.6.1/res/values-v22/values-v22.xml",
+                    "from": {
+                        "startLines": "2,3,4,9",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,130,217,487",
+                        "endLines": "2,3,8,13",
+                        "endColumns": "74,86,12,12",
+                        "endOffsets": "125,212,482,764"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "com.vncccd.sdk.vncccd-sdk-release-43:/values-v22/values-v22.xml",
+            "map": [
+                {
+                    "source": "/Users/tima/.gradle/caches/8.12.1/transforms/dabb725201868360b2d0dc11e1c6c3bb/transformed/appcompat-1.6.1/res/values-v22/values-v22.xml",
+                    "from": {
+                        "startLines": "2,3,4,9",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,130,217,487",
+                        "endLines": "2,3,8,13",
+                        "endColumns": "74,86,12,12",
+                        "endOffsets": "125,212,482,764"
+                    }
+                }
+            ]
+        }
+    ]
+}

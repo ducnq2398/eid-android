@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.vncccd.sdk" >
+
+    <uses-sdk android:minSdkVersion="24" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.NFC" />
+
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
+    <application>
+        <activity
+            android:name="com.vncccd.sdk.mrz.MrzScannerActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/VnCccd.Theme.Scanner" />
+        <activity
+            android:name="com.vncccd.sdk.nfc.NfcReaderActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/VnCccd.Theme.NfcReader" />
+    </application>
+
+</manifest>

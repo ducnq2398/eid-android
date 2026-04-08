@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/layout-watch-v20/abc_alert_dialog_button_bar_material.xml",
+        "source": "com.vncccd.sdk.vncccd-sdk-appcompat-1.6.1-38:/layout-watch-v20/abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/layout-watch-v20/abc_alert_dialog_title_material.xml",
+        "source": "com.vncccd.sdk.vncccd-sdk-appcompat-1.6.1-38:/layout-watch-v20/abc_alert_dialog_title_material.xml"
+    }
+]

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary / Accent -->
+    <color name="vncccd_primary">#FF6B35</color>
+    <color name="vncccd_primary_dark">#E55A25</color>
+    <color name="vncccd_primary_light">#FF8F60</color>
+
+    <!-- Success / Error -->
+    <color name="vncccd_success">#4CAF50</color>
+    <color name="vncccd_error">#F44336</color>
+    <color name="vncccd_warning">#FF9800</color>
+
+    <!-- Background -->
+    <color name="vncccd_bg_dark">#FFF6F1</color>
+    <color name="vncccd_bg_card">#16213E</color>
+    <color name="vncccd_bg_surface">#0F3460</color>
+
+    <!-- Text -->
+    <color name="vncccd_text_primary">#FFFFFF</color>
+    <color name="vncccd_text_secondary">#B0B0B0</color>
+    <color name="vncccd_text_hint">#707070</color>
+
+    <!-- Button -->
+    <color name="vncccd_button_primary">#FF6B35</color>
+    <color name="vncccd_button_secondary">#33FFFFFF</color>
+
+    <!-- Scan overlay -->
+    <color name="vncccd_scan_border">#FF6B35</color>
+    <color name="vncccd_scan_dim">#99000000</color>
+    <color name="vncccd_scan_success">#4CAF50</color>
+</resources>

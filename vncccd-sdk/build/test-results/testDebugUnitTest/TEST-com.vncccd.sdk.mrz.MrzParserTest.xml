@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.vncccd.sdk.mrz.MrzParserTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2026-04-08T08:04:39" hostname="TImas-iMac.local" time="0.178">
+  <properties/>
+  <testcase name="fullDocumentNumber - reconstructs 12 digit number" classname="com.vncccd.sdk.mrz.MrzParserTest" time="0.013"/>
+  <testcase name="parse - invalid DOB check digit returns null" classname="com.vncccd.sdk.mrz.MrzParserTest" time="0.063"/>
+  <testcase name="fullDocumentNumber - truncates noisy over-length numeric result to 12" classname="com.vncccd.sdk.mrz.MrzParserTest" time="0.008"/>
+  <testcase name="parseRaw - from newline separated" classname="com.vncccd.sdk.mrz.MrzParserTest" time="0.078"/>
+  <testcase name="cleanOcrText - fixes common OCR errors" classname="com.vncccd.sdk.mrz.MrzParserTest" time="0.001"/>
+  <testcase name="computeCheckDigit - basic numeric input" classname="com.vncccd.sdk.mrz.MrzParserTest" time="0.001"/>
+  <testcase name="isMrzLine1 - valid Vietnam CCCD" classname="com.vncccd.sdk.mrz.MrzParserTest" time="0.0"/>
+  <testcase name="parse - valid TD1 Vietnam CCCD" classname="com.vncccd.sdk.mrz.MrzParserTest" time="0.001"/>
+  <testcase name="parseRaw - from continuous string" classname="com.vncccd.sdk.mrz.MrzParserTest" time="0.0"/>
+  <testcase name="isMrzLine1 - invalid line" classname="com.vncccd.sdk.mrz.MrzParserTest" time="0.001"/>
+  <testcase name="parse - invalid line count" classname="com.vncccd.sdk.mrz.MrzParserTest" time="0.0"/>
+  <testcase name="computeCheckDigit - all fillers" classname="com.vncccd.sdk.mrz.MrzParserTest" time="0.0"/>
+  <testcase name="fullDocumentNumber - no optional data" classname="com.vncccd.sdk.mrz.MrzParserTest" time="0.001"/>
+  <testcase name="fullDocumentNumber - only leading digits in optional data are used" classname="com.vncccd.sdk.mrz.MrzParserTest" time="0.0"/>
+  <testcase name="computeCheckDigit - with filler characters" classname="com.vncccd.sdk.mrz.MrzParserTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

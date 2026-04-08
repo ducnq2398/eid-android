@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/animator-v21/m3_appbar_state_list_animator.xml",
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-19:/animator-v21/m3_appbar_state_list_animator.xml"
+    },
+    {
+        "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/animator-v21/design_appbar_state_list_animator.xml",
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-19:/animator-v21/design_appbar_state_list_animator.xml"
+    }
+]

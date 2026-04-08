@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Common -->
+    <dimen name="vncccd_padding_small">8dp</dimen>
+    <dimen name="vncccd_padding_medium">16dp</dimen>
+    <dimen name="vncccd_padding_large">24dp</dimen>
+    <dimen name="vncccd_padding_xlarge">32dp</dimen>
+
+    <!-- Text sizes -->
+    <dimen name="vncccd_text_title">22sp</dimen>
+    <dimen name="vncccd_text_subtitle">16sp</dimen>
+    <dimen name="vncccd_text_body">14sp</dimen>
+    <dimen name="vncccd_text_caption">12sp</dimen>
+
+    <!-- NFC Icon -->
+    <dimen name="vncccd_nfc_icon_size">100dp</dimen>
+    <dimen name="vncccd_nfc_container_size">200dp</dimen>
+
+    <!-- Button -->
+    <dimen name="vncccd_button_height">52dp</dimen>
+    <dimen name="vncccd_button_corner_radius">26dp</dimen>
+
+    <!-- Scan overlay -->
+    <dimen name="vncccd_scan_corner_length">40dp</dimen>
+    <dimen name="vncccd_scan_border_width">3dp</dimen>
+    <dimen name="vncccd_scan_corner_width">6dp</dimen>
+</resources>

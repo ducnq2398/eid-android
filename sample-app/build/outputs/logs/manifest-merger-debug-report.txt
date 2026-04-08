@@ -1,0 +1,576 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/tima/Documents/SDK/sample-app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /Users/tima/Documents/SDK/sample-app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /Users/tima/Documents/SDK/sample-app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /Users/tima/Documents/SDK/sample-app/src/main/AndroidManifest.xml:2:1-37:12
+MERGED from [:vncccd-sdk] /Users/tima/Documents/SDK/vncccd-sdk/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:2:1-33:12
+MERGED from [androidx.databinding:viewbinding:8.5.2] /Users/tima/.gradle/caches/8.12.1/transforms/a85550b11005fb8bfb6228d195988c8a/transformed/viewbinding-8.5.2/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.material:material:1.11.0] /Users/tima/.gradle/caches/8.12.1/transforms/4f596f82cb01eeb8881adb1b13dd98eb/transformed/material-1.11.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/tima/.gradle/caches/8.12.1/transforms/5cf568020e533c43086db2818f37b5d3/transformed/constraintlayout-2.1.4/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.camera:camera-video:1.4.2] /Users/tima/.gradle/caches/8.12.1/transforms/7564098f539ad775c942c81d5dbf77aa/transformed/camera-video-1.4.2/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.camera:camera-lifecycle:1.4.2] /Users/tima/.gradle/caches/8.12.1/transforms/18094fdc07bc898ef7444d032fbd4c56/transformed/camera-lifecycle-1.4.2/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.camera:camera-camera2:1.4.2] /Users/tima/.gradle/caches/8.12.1/transforms/1a3e90d0cd1beb1165b143af3e45b229/transformed/camera-camera2-1.4.2/AndroidManifest.xml:17:1-36:12
+MERGED from [androidx.camera:camera-core:1.4.2] /Users/tima/.gradle/caches/8.12.1/transforms/4daf5d84638130d757b05a32306df45d/transformed/camera-core-1.4.2/AndroidManifest.xml:17:1-36:12
+MERGED from [androidx.camera:camera-view:1.4.2] /Users/tima/.gradle/caches/8.12.1/transforms/98fe10e5774194d070cbc6edbb28beea/transformed/camera-view-1.4.2/AndroidManifest.xml:2:1-7:12
+MERGED from [com.github.yalantis:ucrop:2.2.8] /Users/tima/.gradle/caches/8.12.1/transforms/4634d454499649862e833074196b5707/transformed/ucrop-2.2.8/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/tima/.gradle/caches/8.12.1/transforms/387217a541e390d5fb2606fd8f8ef44e/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-mlkit-text-recognition:19.0.1] /Users/tima/.gradle/caches/8.12.1/transforms/f544596a037f94e37ae1dd74d5befcbc/transformed/play-services-mlkit-text-recognition-19.0.1/AndroidManifest.xml:2:1-8:12
+MERGED from [com.google.android.gms:play-services-mlkit-text-recognition-common:19.1.0] /Users/tima/.gradle/caches/8.12.1/transforms/f4b9cdd8c22570bc397bfe59c0f84a05/transformed/play-services-mlkit-text-recognition-common-19.1.0/AndroidManifest.xml:2:1-18:12
+MERGED from [com.google.mlkit:vision-common:17.3.0] /Users/tima/.gradle/caches/8.12.1/transforms/9554ef6e7f4e308b4ef7639e7a19c0b8/transformed/vision-common-17.3.0/AndroidManifest.xml:2:1-18:12
+MERGED from [com.google.mlkit:common:18.11.0] /Users/tima/.gradle/caches/8.12.1/transforms/7e0c65ca9e88cb8f70a4f4a794f30914/transformed/common-18.11.0/AndroidManifest.xml:2:1-26:12
+MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/tima/.gradle/caches/8.12.1/transforms/dabb725201868360b2d0dc11e1c6c3bb/transformed/appcompat-1.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/tima/.gradle/caches/8.12.1/transforms/a4bab47b98844fe42e25ff5c3444e5a2/transformed/emoji2-views-helper-1.2.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/tima/.gradle/caches/8.12.1/transforms/4e91fe040a144f4b8a4778e335c514f2/transformed/emoji2-1.2.0/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/tima/.gradle/caches/8.12.1/transforms/3f863f114255f60de9fae381740709bc/transformed/viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-base:18.5.0] /Users/tima/.gradle/caches/8.12.1/transforms/d250a283297ad7c740e264056c66a901/transformed/play-services-base-18.5.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.mlkit:vision-interfaces:16.3.0] /Users/tima/.gradle/caches/8.12.1/transforms/8b3cbf4af36ae9b88ab0be0b23f867bc/transformed/vision-interfaces-16.3.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] /Users/tima/.gradle/caches/8.12.1/transforms/cf73ad34436fbaf1ebc995269be6808e/transformed/play-services-tasks-18.2.0/AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] /Users/tima/.gradle/caches/8.12.1/transforms/7eb1a6c9fbb0fd63b27c07b8daf62561/transformed/play-services-basement-18.4.0/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.fragment:fragment:1.3.6] /Users/tima/.gradle/caches/8.12.1/transforms/2fdc0b644213f66486dd7ee8174d34d7/transformed/fragment-1.3.6/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.8.0] /Users/tima/.gradle/caches/8.12.1/transforms/03e40a56fd4051be36c2b9d82bf13836/transformed/activity-1.8.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/tima/.gradle/caches/8.12.1/transforms/46526793e920fcb88a3e86412d7f7525/transformed/drawerlayout-1.1.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/tima/.gradle/caches/8.12.1/transforms/0c22240574dc1f35aba624948975e0de/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/tima/.gradle/caches/8.12.1/transforms/1a2bb764c79e8ac7f44a9ef4742ba6d2/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/tima/.gradle/caches/8.12.1/transforms/00636db923ae0f01233624e9914920be/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/tima/.gradle/caches/8.12.1/transforms/b32f228f320c24d4538ede456cd90bdd/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.4.1] /Users/tima/.gradle/caches/8.12.1/transforms/8f498a9f943af356bb69d2bc58f008a6/transformed/transition-1.4.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/tima/.gradle/caches/8.12.1/transforms/98afae149d280d2fc20757ea0cc6b100/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/tima/.gradle/caches/8.12.1/transforms/2043e80d3e0297e6e0d2cfd33ce1b0f8/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/tima/.gradle/caches/8.12.1/transforms/afd4df1b0df582a2976234ab8a73151c/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/tima/.gradle/caches/8.12.1/transforms/450e5bf731bc370eed7eb1e7f1944e3c/transformed/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.1.0] /Users/tima/.gradle/caches/8.12.1/transforms/bb7b29972f102bd5fc252d1fbc8dab4f/transformed/customview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.12.0] /Users/tima/.gradle/caches/8.12.1/transforms/1ed9d1003fb416d422e199d5b53e3f9b/transformed/core-1.12.0/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0] /Users/tima/.gradle/caches/8.12.1/transforms/01dbf7dc0fc04e0296de27b40eb44ce3/transformed/lifecycle-livedata-core-ktx-2.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.7.0] /Users/tima/.gradle/caches/8.12.1/transforms/ed2824299cac629d1fe33a45c627c822/transformed/lifecycle-livedata-core-2.7.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/tima/.gradle/caches/8.12.1/transforms/cc20f52da5b801b033c6b601e7df340f/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.7.0] /Users/tima/.gradle/caches/8.12.1/transforms/d2b4b7fdbd9e3aab74e6e89e300e6852/transformed/lifecycle-livedata-2.7.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/tima/.gradle/caches/8.12.1/transforms/b4fe862ffb531f60e113d488b8ddc33c/transformed/savedstate-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] /Users/tima/.gradle/caches/8.12.1/transforms/3a176161812ea1e0414a60cbd877dc07/transformed/lifecycle-viewmodel-2.7.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] /Users/tima/.gradle/caches/8.12.1/transforms/76fe7429b31a183910c764b229a85880/transformed/lifecycle-runtime-2.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.7.0] /Users/tima/.gradle/caches/8.12.1/transforms/a5d1aa19c5c3df6ceb2109fb08acfe91/transformed/lifecycle-runtime-ktx-2.7.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0] /Users/tima/.gradle/caches/8.12.1/transforms/6649fb7b6fbfe744d67e2181d35eddbe/transformed/lifecycle-viewmodel-ktx-2.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0] /Users/tima/.gradle/caches/8.12.1/transforms/9e9f34508adf7a47f8e5e296fe6b6ec5/transformed/lifecycle-viewmodel-savedstate-2.7.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core-ktx:1.12.0] /Users/tima/.gradle/caches/8.12.1/transforms/14ebc35c195d5225c1deb3e8bd902f72/transformed/core-ktx-1.12.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] /Users/tima/.gradle/caches/8.12.1/transforms/2ac6e5581d12026c6e405dff133eb8ff/transformed/annotation-experimental-1.4.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tima/.gradle/caches/8.12.1/transforms/a1894bbba3dd3ac90dd8ece0f0c14291/transformed/profileinstaller-1.3.0/AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/tima/.gradle/caches/8.12.1/transforms/acae1b1b6708042c1b152b128c0eab02/transformed/startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.2.0] /Users/tima/.gradle/caches/8.12.1/transforms/58aeb9a94600e5b721aefdcb5a31ac5e/transformed/tracing-1.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.tracing:tracing-ktx:1.2.0] /Users/tima/.gradle/caches/8.12.1/transforms/09cade606ed0077faf7e0c0bcb6ebf64/transformed/tracing-ktx-1.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/tima/.gradle/caches/8.12.1/transforms/7a014bb1273f76d6778e6e7336957ddd/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/tima/.gradle/caches/8.12.1/transforms/094dc3293ad7b9dbde425701280c9a7b/transformed/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.exifinterface:exifinterface:1.3.2] /Users/tima/.gradle/caches/8.12.1/transforms/846be2c1187617a3d483546157b6d499/transformed/exifinterface-1.3.2/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/tima/.gradle/caches/8.12.1/transforms/f3a387cfa5d90e16070f03426f79a925/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/tima/.gradle/caches/8.12.1/transforms/3496c3ac1983c3535bf82a31b7f79437/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/tima/.gradle/caches/8.12.1/transforms/6d0e8a393ae748dd42b8589df823a61d/transformed/core-runtime-2.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/tima/.gradle/caches/8.12.1/transforms/0636f114fcdb7b9f5ee243af5372f11a/transformed/transport-backend-cct-2.3.3/AndroidManifest.xml:15:1-38:12
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/tima/.gradle/caches/8.12.1/transforms/24669dedd2ccd13d4790784679415132/transformed/transport-runtime-2.2.6/AndroidManifest.xml:15:1-41:12
+MERGED from [com.google.android.datatransport:transport-api:2.2.1] /Users/tima/.gradle/caches/8.12.1/transforms/31b9c5047082b2758209b9171ee07bb6/transformed/transport-api-2.2.1/AndroidManifest.xml:15:1-22:12
+MERGED from [com.google.firebase:firebase-components:16.1.0] /Users/tima/.gradle/caches/8.12.1/transforms/efb44cfea2633aab5fd0b066b44425b4/transformed/firebase-components-16.1.0/AndroidManifest.xml:15:1-23:12
+MERGED from [com.google.firebase:firebase-encoders-json:17.1.0] /Users/tima/.gradle/caches/8.12.1/transforms/f27cfcb0f9652002352e146b150677d7/transformed/firebase-encoders-json-17.1.0/AndroidManifest.xml:15:1-23:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/tima/.gradle/caches/8.12.1/transforms/fccfb2d9064ac062bafe5cd9ccd99da6/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/tima/.gradle/caches/8.12.1/transforms/bb596e31843933c3df7bcbe7be46ead1/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /Users/tima/.gradle/caches/8.12.1/transforms/36421a3dcc4ce4bef145779a3f7db659/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [net.sf.scuba:scuba-sc-android:0.0.24] /Users/tima/.gradle/caches/8.12.1/transforms/db1887dedf4a97145f86faa02ec22f2a/transformed/scuba-sc-android-0.0.24/AndroidManifest.xml:2:1-13:12
+MERGED from [com.google.android.odml:image:1.0.0-beta1] /Users/tima/.gradle/caches/8.12.1/transforms/31dd0c4cabbd71186284ac16b0d3339c/transformed/image-1.0.0-beta1/AndroidManifest.xml:2:1-9:12
+	package
+		INJECTED from /Users/tima/Documents/SDK/sample-app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/tima/Documents/SDK/sample-app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/tima/Documents/SDK/sample-app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/tima/Documents/SDK/sample-app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.CAMERA
+ADDED from /Users/tima/Documents/SDK/sample-app/src/main/AndroidManifest.xml:4:5-65
+MERGED from [:vncccd-sdk] /Users/tima/Documents/SDK/vncccd-sdk/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:7:5-65
+MERGED from [:vncccd-sdk] /Users/tima/Documents/SDK/vncccd-sdk/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:7:5-65
+	android:name
+		ADDED from /Users/tima/Documents/SDK/sample-app/src/main/AndroidManifest.xml:4:22-62
+uses-permission#android.permission.NFC
+ADDED from /Users/tima/Documents/SDK/sample-app/src/main/AndroidManifest.xml:5:5-62
+MERGED from [:vncccd-sdk] /Users/tima/Documents/SDK/vncccd-sdk/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:8:5-62
+MERGED from [:vncccd-sdk] /Users/tima/Documents/SDK/vncccd-sdk/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:8:5-62
+MERGED from [net.sf.scuba:scuba-sc-android:0.0.24] /Users/tima/.gradle/caches/8.12.1/transforms/db1887dedf4a97145f86faa02ec22f2a/transformed/scuba-sc-android-0.0.24/AndroidManifest.xml:11:5-62
+MERGED from [net.sf.scuba:scuba-sc-android:0.0.24] /Users/tima/.gradle/caches/8.12.1/transforms/db1887dedf4a97145f86faa02ec22f2a/transformed/scuba-sc-android-0.0.24/AndroidManifest.xml:11:5-62
+	android:name
+		ADDED from /Users/tima/Documents/SDK/sample-app/src/main/AndroidManifest.xml:5:22-59
+uses-permission#android.permission.VIBRATE
+ADDED from /Users/tima/Documents/SDK/sample-app/src/main/AndroidManifest.xml:6:5-66
+	android:name
+		ADDED from /Users/tima/Documents/SDK/sample-app/src/main/AndroidManifest.xml:6:22-63
+uses-feature#android.hardware.nfc
+ADDED from /Users/tima/Documents/SDK/sample-app/src/main/AndroidManifest.xml:7:5-9:35
+MERGED from [:vncccd-sdk] /Users/tima/Documents/SDK/vncccd-sdk/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:10:5-12:35
+MERGED from [:vncccd-sdk] /Users/tima/Documents/SDK/vncccd-sdk/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:10:5-12:35
+	android:required
+		ADDED from /Users/tima/Documents/SDK/sample-app/src/main/AndroidManifest.xml:9:9-32
+	android:name
+		ADDED from /Users/tima/Documents/SDK/sample-app/src/main/AndroidManifest.xml:8:9-44
+uses-feature#android.hardware.camera
+ADDED from /Users/tima/Documents/SDK/sample-app/src/main/AndroidManifest.xml:10:5-12:35
+MERGED from [:vncccd-sdk] /Users/tima/Documents/SDK/vncccd-sdk/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:13:5-15:35
+MERGED from [:vncccd-sdk] /Users/tima/Documents/SDK/vncccd-sdk/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:13:5-15:35
+	android:required
+		ADDED from /Users/tima/Documents/SDK/sample-app/src/main/AndroidManifest.xml:12:9-32
+	android:name
+		ADDED from /Users/tima/Documents/SDK/sample-app/src/main/AndroidManifest.xml:11:9-47
+application
+ADDED from /Users/tima/Documents/SDK/sample-app/src/main/AndroidManifest.xml:14:5-35:19
+INJECTED from /Users/tima/Documents/SDK/sample-app/src/main/AndroidManifest.xml:14:5-35:19
+MERGED from [:vncccd-sdk] /Users/tima/Documents/SDK/vncccd-sdk/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:20:5-31:19
+MERGED from [:vncccd-sdk] /Users/tima/Documents/SDK/vncccd-sdk/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:20:5-31:19
+MERGED from [com.google.android.material:material:1.11.0] /Users/tima/.gradle/caches/8.12.1/transforms/4f596f82cb01eeb8881adb1b13dd98eb/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.11.0] /Users/tima/.gradle/caches/8.12.1/transforms/4f596f82cb01eeb8881adb1b13dd98eb/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/tima/.gradle/caches/8.12.1/transforms/5cf568020e533c43086db2818f37b5d3/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/tima/.gradle/caches/8.12.1/transforms/5cf568020e533c43086db2818f37b5d3/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
+MERGED from [androidx.camera:camera-camera2:1.4.2] /Users/tima/.gradle/caches/8.12.1/transforms/1a3e90d0cd1beb1165b143af3e45b229/transformed/camera-camera2-1.4.2/AndroidManifest.xml:23:5-34:19
+MERGED from [androidx.camera:camera-camera2:1.4.2] /Users/tima/.gradle/caches/8.12.1/transforms/1a3e90d0cd1beb1165b143af3e45b229/transformed/camera-camera2-1.4.2/AndroidManifest.xml:23:5-34:19
+MERGED from [androidx.camera:camera-core:1.4.2] /Users/tima/.gradle/caches/8.12.1/transforms/4daf5d84638130d757b05a32306df45d/transformed/camera-core-1.4.2/AndroidManifest.xml:23:5-34:19
+MERGED from [androidx.camera:camera-core:1.4.2] /Users/tima/.gradle/caches/8.12.1/transforms/4daf5d84638130d757b05a32306df45d/transformed/camera-core-1.4.2/AndroidManifest.xml:23:5-34:19
+MERGED from [com.google.android.gms:play-services-mlkit-text-recognition-common:19.1.0] /Users/tima/.gradle/caches/8.12.1/transforms/f4b9cdd8c22570bc397bfe59c0f84a05/transformed/play-services-mlkit-text-recognition-common-19.1.0/AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.android.gms:play-services-mlkit-text-recognition-common:19.1.0] /Users/tima/.gradle/caches/8.12.1/transforms/f4b9cdd8c22570bc397bfe59c0f84a05/transformed/play-services-mlkit-text-recognition-common-19.1.0/AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.mlkit:vision-common:17.3.0] /Users/tima/.gradle/caches/8.12.1/transforms/9554ef6e7f4e308b4ef7639e7a19c0b8/transformed/vision-common-17.3.0/AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.mlkit:vision-common:17.3.0] /Users/tima/.gradle/caches/8.12.1/transforms/9554ef6e7f4e308b4ef7639e7a19c0b8/transformed/vision-common-17.3.0/AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.mlkit:common:18.11.0] /Users/tima/.gradle/caches/8.12.1/transforms/7e0c65ca9e88cb8f70a4f4a794f30914/transformed/common-18.11.0/AndroidManifest.xml:8:5-24:19
+MERGED from [com.google.mlkit:common:18.11.0] /Users/tima/.gradle/caches/8.12.1/transforms/7e0c65ca9e88cb8f70a4f4a794f30914/transformed/common-18.11.0/AndroidManifest.xml:8:5-24:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/tima/.gradle/caches/8.12.1/transforms/4e91fe040a144f4b8a4778e335c514f2/transformed/emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/tima/.gradle/caches/8.12.1/transforms/4e91fe040a144f4b8a4778e335c514f2/transformed/emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
+MERGED from [com.google.android.gms:play-services-base:18.5.0] /Users/tima/.gradle/caches/8.12.1/transforms/d250a283297ad7c740e264056c66a901/transformed/play-services-base-18.5.0/AndroidManifest.xml:4:5-6:19
+MERGED from [com.google.android.gms:play-services-base:18.5.0] /Users/tima/.gradle/caches/8.12.1/transforms/d250a283297ad7c740e264056c66a901/transformed/play-services-base-18.5.0/AndroidManifest.xml:4:5-6:19
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] /Users/tima/.gradle/caches/8.12.1/transforms/cf73ad34436fbaf1ebc995269be6808e/transformed/play-services-tasks-18.2.0/AndroidManifest.xml:4:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] /Users/tima/.gradle/caches/8.12.1/transforms/cf73ad34436fbaf1ebc995269be6808e/transformed/play-services-tasks-18.2.0/AndroidManifest.xml:4:5-20
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] /Users/tima/.gradle/caches/8.12.1/transforms/7eb1a6c9fbb0fd63b27c07b8daf62561/transformed/play-services-basement-18.4.0/AndroidManifest.xml:5:5-7:19
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] /Users/tima/.gradle/caches/8.12.1/transforms/7eb1a6c9fbb0fd63b27c07b8daf62561/transformed/play-services-basement-18.4.0/AndroidManifest.xml:5:5-7:19
+MERGED from [androidx.core:core:1.12.0] /Users/tima/.gradle/caches/8.12.1/transforms/1ed9d1003fb416d422e199d5b53e3f9b/transformed/core-1.12.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.12.0] /Users/tima/.gradle/caches/8.12.1/transforms/1ed9d1003fb416d422e199d5b53e3f9b/transformed/core-1.12.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/tima/.gradle/caches/8.12.1/transforms/cc20f52da5b801b033c6b601e7df340f/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/tima/.gradle/caches/8.12.1/transforms/cc20f52da5b801b033c6b601e7df340f/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tima/.gradle/caches/8.12.1/transforms/a1894bbba3dd3ac90dd8ece0f0c14291/transformed/profileinstaller-1.3.0/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tima/.gradle/caches/8.12.1/transforms/a1894bbba3dd3ac90dd8ece0f0c14291/transformed/profileinstaller-1.3.0/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/tima/.gradle/caches/8.12.1/transforms/acae1b1b6708042c1b152b128c0eab02/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/tima/.gradle/caches/8.12.1/transforms/acae1b1b6708042c1b152b128c0eab02/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/tima/.gradle/caches/8.12.1/transforms/3496c3ac1983c3535bf82a31b7f79437/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/tima/.gradle/caches/8.12.1/transforms/3496c3ac1983c3535bf82a31b7f79437/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/tima/.gradle/caches/8.12.1/transforms/0636f114fcdb7b9f5ee243af5372f11a/transformed/transport-backend-cct-2.3.3/AndroidManifest.xml:28:5-36:19
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/tima/.gradle/caches/8.12.1/transforms/0636f114fcdb7b9f5ee243af5372f11a/transformed/transport-backend-cct-2.3.3/AndroidManifest.xml:28:5-36:19
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/tima/.gradle/caches/8.12.1/transforms/24669dedd2ccd13d4790784679415132/transformed/transport-runtime-2.2.6/AndroidManifest.xml:25:5-39:19
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/tima/.gradle/caches/8.12.1/transforms/24669dedd2ccd13d4790784679415132/transformed/transport-runtime-2.2.6/AndroidManifest.xml:25:5-39:19
+MERGED from [com.google.android.odml:image:1.0.0-beta1] /Users/tima/.gradle/caches/8.12.1/transforms/31dd0c4cabbd71186284ac16b0d3339c/transformed/image-1.0.0-beta1/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.odml:image:1.0.0-beta1] /Users/tima/.gradle/caches/8.12.1/transforms/31dd0c4cabbd71186284ac16b0d3339c/transformed/image-1.0.0-beta1/AndroidManifest.xml:7:5-20
+	android:extractNativeLibs
+		INJECTED from /Users/tima/Documents/SDK/sample-app/src/main/AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.12.0] /Users/tima/.gradle/caches/8.12.1/transforms/1ed9d1003fb416d422e199d5b53e3f9b/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
+	android:supportsRtl
+		ADDED from /Users/tima/Documents/SDK/sample-app/src/main/AndroidManifest.xml:18:9-35
+	android:label
+		ADDED from /Users/tima/Documents/SDK/sample-app/src/main/AndroidManifest.xml:17:9-41
+	android:icon
+		ADDED from /Users/tima/Documents/SDK/sample-app/src/main/AndroidManifest.xml:16:9-58
+	android:allowBackup
+		ADDED from /Users/tima/Documents/SDK/sample-app/src/main/AndroidManifest.xml:15:9-35
+	android:theme
+		ADDED from /Users/tima/Documents/SDK/sample-app/src/main/AndroidManifest.xml:19:9-50
+activity#com.vncccd.sample.MainActivity
+ADDED from /Users/tima/Documents/SDK/sample-app/src/main/AndroidManifest.xml:21:9-28:20
+	android:exported
+		ADDED from /Users/tima/Documents/SDK/sample-app/src/main/AndroidManifest.xml:23:13-36
+	android:name
+		ADDED from /Users/tima/Documents/SDK/sample-app/src/main/AndroidManifest.xml:22:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/tima/Documents/SDK/sample-app/src/main/AndroidManifest.xml:24:13-27:29
+action#android.intent.action.MAIN
+ADDED from /Users/tima/Documents/SDK/sample-app/src/main/AndroidManifest.xml:25:17-69
+	android:name
+		ADDED from /Users/tima/Documents/SDK/sample-app/src/main/AndroidManifest.xml:25:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/tima/Documents/SDK/sample-app/src/main/AndroidManifest.xml:26:17-77
+	android:name
+		ADDED from /Users/tima/Documents/SDK/sample-app/src/main/AndroidManifest.xml:26:27-74
+activity#com.vncccd.sample.ResultActivity
+ADDED from /Users/tima/Documents/SDK/sample-app/src/main/AndroidManifest.xml:30:9-34:57
+	android:parentActivityName
+		ADDED from /Users/tima/Documents/SDK/sample-app/src/main/AndroidManifest.xml:33:13-55
+	android:exported
+		ADDED from /Users/tima/Documents/SDK/sample-app/src/main/AndroidManifest.xml:32:13-37
+	android:theme
+		ADDED from /Users/tima/Documents/SDK/sample-app/src/main/AndroidManifest.xml:34:13-54
+	android:name
+		ADDED from /Users/tima/Documents/SDK/sample-app/src/main/AndroidManifest.xml:31:13-43
+uses-sdk
+INJECTED from /Users/tima/Documents/SDK/sample-app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/tima/Documents/SDK/sample-app/src/main/AndroidManifest.xml
+INJECTED from /Users/tima/Documents/SDK/sample-app/src/main/AndroidManifest.xml
+MERGED from [:vncccd-sdk] /Users/tima/Documents/SDK/vncccd-sdk/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:5:5-44
+MERGED from [:vncccd-sdk] /Users/tima/Documents/SDK/vncccd-sdk/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:5:5-44
+MERGED from [androidx.databinding:viewbinding:8.5.2] /Users/tima/.gradle/caches/8.12.1/transforms/a85550b11005fb8bfb6228d195988c8a/transformed/viewbinding-8.5.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.databinding:viewbinding:8.5.2] /Users/tima/.gradle/caches/8.12.1/transforms/a85550b11005fb8bfb6228d195988c8a/transformed/viewbinding-8.5.2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.material:material:1.11.0] /Users/tima/.gradle/caches/8.12.1/transforms/4f596f82cb01eeb8881adb1b13dd98eb/transformed/material-1.11.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.11.0] /Users/tima/.gradle/caches/8.12.1/transforms/4f596f82cb01eeb8881adb1b13dd98eb/transformed/material-1.11.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/tima/.gradle/caches/8.12.1/transforms/5cf568020e533c43086db2818f37b5d3/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/tima/.gradle/caches/8.12.1/transforms/5cf568020e533c43086db2818f37b5d3/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.camera:camera-video:1.4.2] /Users/tima/.gradle/caches/8.12.1/transforms/7564098f539ad775c942c81d5dbf77aa/transformed/camera-video-1.4.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.camera:camera-video:1.4.2] /Users/tima/.gradle/caches/8.12.1/transforms/7564098f539ad775c942c81d5dbf77aa/transformed/camera-video-1.4.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.camera:camera-lifecycle:1.4.2] /Users/tima/.gradle/caches/8.12.1/transforms/18094fdc07bc898ef7444d032fbd4c56/transformed/camera-lifecycle-1.4.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.camera:camera-lifecycle:1.4.2] /Users/tima/.gradle/caches/8.12.1/transforms/18094fdc07bc898ef7444d032fbd4c56/transformed/camera-lifecycle-1.4.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.camera:camera-camera2:1.4.2] /Users/tima/.gradle/caches/8.12.1/transforms/1a3e90d0cd1beb1165b143af3e45b229/transformed/camera-camera2-1.4.2/AndroidManifest.xml:21:5-44
+MERGED from [androidx.camera:camera-camera2:1.4.2] /Users/tima/.gradle/caches/8.12.1/transforms/1a3e90d0cd1beb1165b143af3e45b229/transformed/camera-camera2-1.4.2/AndroidManifest.xml:21:5-44
+MERGED from [androidx.camera:camera-core:1.4.2] /Users/tima/.gradle/caches/8.12.1/transforms/4daf5d84638130d757b05a32306df45d/transformed/camera-core-1.4.2/AndroidManifest.xml:21:5-44
+MERGED from [androidx.camera:camera-core:1.4.2] /Users/tima/.gradle/caches/8.12.1/transforms/4daf5d84638130d757b05a32306df45d/transformed/camera-core-1.4.2/AndroidManifest.xml:21:5-44
+MERGED from [androidx.camera:camera-view:1.4.2] /Users/tima/.gradle/caches/8.12.1/transforms/98fe10e5774194d070cbc6edbb28beea/transformed/camera-view-1.4.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.camera:camera-view:1.4.2] /Users/tima/.gradle/caches/8.12.1/transforms/98fe10e5774194d070cbc6edbb28beea/transformed/camera-view-1.4.2/AndroidManifest.xml:5:5-44
+MERGED from [com.github.yalantis:ucrop:2.2.8] /Users/tima/.gradle/caches/8.12.1/transforms/4634d454499649862e833074196b5707/transformed/ucrop-2.2.8/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.yalantis:ucrop:2.2.8] /Users/tima/.gradle/caches/8.12.1/transforms/4634d454499649862e833074196b5707/transformed/ucrop-2.2.8/AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/tima/.gradle/caches/8.12.1/transforms/387217a541e390d5fb2606fd8f8ef44e/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/tima/.gradle/caches/8.12.1/transforms/387217a541e390d5fb2606fd8f8ef44e/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-mlkit-text-recognition:19.0.1] /Users/tima/.gradle/caches/8.12.1/transforms/f544596a037f94e37ae1dd74d5befcbc/transformed/play-services-mlkit-text-recognition-19.0.1/AndroidManifest.xml:6:5-44
+MERGED from [com.google.android.gms:play-services-mlkit-text-recognition:19.0.1] /Users/tima/.gradle/caches/8.12.1/transforms/f544596a037f94e37ae1dd74d5befcbc/transformed/play-services-mlkit-text-recognition-19.0.1/AndroidManifest.xml:6:5-44
+MERGED from [com.google.android.gms:play-services-mlkit-text-recognition-common:19.1.0] /Users/tima/.gradle/caches/8.12.1/transforms/f4b9cdd8c22570bc397bfe59c0f84a05/transformed/play-services-mlkit-text-recognition-common-19.1.0/AndroidManifest.xml:6:5-44
+MERGED from [com.google.android.gms:play-services-mlkit-text-recognition-common:19.1.0] /Users/tima/.gradle/caches/8.12.1/transforms/f4b9cdd8c22570bc397bfe59c0f84a05/transformed/play-services-mlkit-text-recognition-common-19.1.0/AndroidManifest.xml:6:5-44
+MERGED from [com.google.mlkit:vision-common:17.3.0] /Users/tima/.gradle/caches/8.12.1/transforms/9554ef6e7f4e308b4ef7639e7a19c0b8/transformed/vision-common-17.3.0/AndroidManifest.xml:6:5-44
+MERGED from [com.google.mlkit:vision-common:17.3.0] /Users/tima/.gradle/caches/8.12.1/transforms/9554ef6e7f4e308b4ef7639e7a19c0b8/transformed/vision-common-17.3.0/AndroidManifest.xml:6:5-44
+MERGED from [com.google.mlkit:common:18.11.0] /Users/tima/.gradle/caches/8.12.1/transforms/7e0c65ca9e88cb8f70a4f4a794f30914/transformed/common-18.11.0/AndroidManifest.xml:6:5-44
+MERGED from [com.google.mlkit:common:18.11.0] /Users/tima/.gradle/caches/8.12.1/transforms/7e0c65ca9e88cb8f70a4f4a794f30914/transformed/common-18.11.0/AndroidManifest.xml:6:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/tima/.gradle/caches/8.12.1/transforms/dabb725201868360b2d0dc11e1c6c3bb/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/tima/.gradle/caches/8.12.1/transforms/dabb725201868360b2d0dc11e1c6c3bb/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/tima/.gradle/caches/8.12.1/transforms/a4bab47b98844fe42e25ff5c3444e5a2/transformed/emoji2-views-helper-1.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/tima/.gradle/caches/8.12.1/transforms/a4bab47b98844fe42e25ff5c3444e5a2/transformed/emoji2-views-helper-1.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/tima/.gradle/caches/8.12.1/transforms/4e91fe040a144f4b8a4778e335c514f2/transformed/emoji2-1.2.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/tima/.gradle/caches/8.12.1/transforms/4e91fe040a144f4b8a4778e335c514f2/transformed/emoji2-1.2.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/tima/.gradle/caches/8.12.1/transforms/3f863f114255f60de9fae381740709bc/transformed/viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/tima/.gradle/caches/8.12.1/transforms/3f863f114255f60de9fae381740709bc/transformed/viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.gms:play-services-base:18.5.0] /Users/tima/.gradle/caches/8.12.1/transforms/d250a283297ad7c740e264056c66a901/transformed/play-services-base-18.5.0/AndroidManifest.xml:3:5-44
+MERGED from [com.google.android.gms:play-services-base:18.5.0] /Users/tima/.gradle/caches/8.12.1/transforms/d250a283297ad7c740e264056c66a901/transformed/play-services-base-18.5.0/AndroidManifest.xml:3:5-44
+MERGED from [com.google.mlkit:vision-interfaces:16.3.0] /Users/tima/.gradle/caches/8.12.1/transforms/8b3cbf4af36ae9b88ab0be0b23f867bc/transformed/vision-interfaces-16.3.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.mlkit:vision-interfaces:16.3.0] /Users/tima/.gradle/caches/8.12.1/transforms/8b3cbf4af36ae9b88ab0be0b23f867bc/transformed/vision-interfaces-16.3.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] /Users/tima/.gradle/caches/8.12.1/transforms/cf73ad34436fbaf1ebc995269be6808e/transformed/play-services-tasks-18.2.0/AndroidManifest.xml:3:5-44
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] /Users/tima/.gradle/caches/8.12.1/transforms/cf73ad34436fbaf1ebc995269be6808e/transformed/play-services-tasks-18.2.0/AndroidManifest.xml:3:5-44
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] /Users/tima/.gradle/caches/8.12.1/transforms/7eb1a6c9fbb0fd63b27c07b8daf62561/transformed/play-services-basement-18.4.0/AndroidManifest.xml:3:5-44
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] /Users/tima/.gradle/caches/8.12.1/transforms/7eb1a6c9fbb0fd63b27c07b8daf62561/transformed/play-services-basement-18.4.0/AndroidManifest.xml:3:5-44
+MERGED from [androidx.fragment:fragment:1.3.6] /Users/tima/.gradle/caches/8.12.1/transforms/2fdc0b644213f66486dd7ee8174d34d7/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] /Users/tima/.gradle/caches/8.12.1/transforms/2fdc0b644213f66486dd7ee8174d34d7/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.8.0] /Users/tima/.gradle/caches/8.12.1/transforms/03e40a56fd4051be36c2b9d82bf13836/transformed/activity-1.8.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.8.0] /Users/tima/.gradle/caches/8.12.1/transforms/03e40a56fd4051be36c2b9d82bf13836/transformed/activity-1.8.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/tima/.gradle/caches/8.12.1/transforms/46526793e920fcb88a3e86412d7f7525/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/tima/.gradle/caches/8.12.1/transforms/46526793e920fcb88a3e86412d7f7525/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/tima/.gradle/caches/8.12.1/transforms/0c22240574dc1f35aba624948975e0de/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/tima/.gradle/caches/8.12.1/transforms/0c22240574dc1f35aba624948975e0de/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/tima/.gradle/caches/8.12.1/transforms/1a2bb764c79e8ac7f44a9ef4742ba6d2/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/tima/.gradle/caches/8.12.1/transforms/1a2bb764c79e8ac7f44a9ef4742ba6d2/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/tima/.gradle/caches/8.12.1/transforms/00636db923ae0f01233624e9914920be/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/tima/.gradle/caches/8.12.1/transforms/00636db923ae0f01233624e9914920be/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/tima/.gradle/caches/8.12.1/transforms/b32f228f320c24d4538ede456cd90bdd/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/tima/.gradle/caches/8.12.1/transforms/b32f228f320c24d4538ede456cd90bdd/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.4.1] /Users/tima/.gradle/caches/8.12.1/transforms/8f498a9f943af356bb69d2bc58f008a6/transformed/transition-1.4.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.4.1] /Users/tima/.gradle/caches/8.12.1/transforms/8f498a9f943af356bb69d2bc58f008a6/transformed/transition-1.4.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/tima/.gradle/caches/8.12.1/transforms/98afae149d280d2fc20757ea0cc6b100/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/tima/.gradle/caches/8.12.1/transforms/98afae149d280d2fc20757ea0cc6b100/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/tima/.gradle/caches/8.12.1/transforms/2043e80d3e0297e6e0d2cfd33ce1b0f8/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/tima/.gradle/caches/8.12.1/transforms/2043e80d3e0297e6e0d2cfd33ce1b0f8/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/tima/.gradle/caches/8.12.1/transforms/afd4df1b0df582a2976234ab8a73151c/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/tima/.gradle/caches/8.12.1/transforms/afd4df1b0df582a2976234ab8a73151c/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/tima/.gradle/caches/8.12.1/transforms/450e5bf731bc370eed7eb1e7f1944e3c/transformed/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/tima/.gradle/caches/8.12.1/transforms/450e5bf731bc370eed7eb1e7f1944e3c/transformed/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] /Users/tima/.gradle/caches/8.12.1/transforms/bb7b29972f102bd5fc252d1fbc8dab4f/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] /Users/tima/.gradle/caches/8.12.1/transforms/bb7b29972f102bd5fc252d1fbc8dab4f/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.12.0] /Users/tima/.gradle/caches/8.12.1/transforms/1ed9d1003fb416d422e199d5b53e3f9b/transformed/core-1.12.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.12.0] /Users/tima/.gradle/caches/8.12.1/transforms/1ed9d1003fb416d422e199d5b53e3f9b/transformed/core-1.12.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0] /Users/tima/.gradle/caches/8.12.1/transforms/01dbf7dc0fc04e0296de27b40eb44ce3/transformed/lifecycle-livedata-core-ktx-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0] /Users/tima/.gradle/caches/8.12.1/transforms/01dbf7dc0fc04e0296de27b40eb44ce3/transformed/lifecycle-livedata-core-ktx-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.7.0] /Users/tima/.gradle/caches/8.12.1/transforms/ed2824299cac629d1fe33a45c627c822/transformed/lifecycle-livedata-core-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.7.0] /Users/tima/.gradle/caches/8.12.1/transforms/ed2824299cac629d1fe33a45c627c822/transformed/lifecycle-livedata-core-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/tima/.gradle/caches/8.12.1/transforms/cc20f52da5b801b033c6b601e7df340f/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/tima/.gradle/caches/8.12.1/transforms/cc20f52da5b801b033c6b601e7df340f/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.7.0] /Users/tima/.gradle/caches/8.12.1/transforms/d2b4b7fdbd9e3aab74e6e89e300e6852/transformed/lifecycle-livedata-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.7.0] /Users/tima/.gradle/caches/8.12.1/transforms/d2b4b7fdbd9e3aab74e6e89e300e6852/transformed/lifecycle-livedata-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/tima/.gradle/caches/8.12.1/transforms/b4fe862ffb531f60e113d488b8ddc33c/transformed/savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/tima/.gradle/caches/8.12.1/transforms/b4fe862ffb531f60e113d488b8ddc33c/transformed/savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] /Users/tima/.gradle/caches/8.12.1/transforms/3a176161812ea1e0414a60cbd877dc07/transformed/lifecycle-viewmodel-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] /Users/tima/.gradle/caches/8.12.1/transforms/3a176161812ea1e0414a60cbd877dc07/transformed/lifecycle-viewmodel-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] /Users/tima/.gradle/caches/8.12.1/transforms/76fe7429b31a183910c764b229a85880/transformed/lifecycle-runtime-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] /Users/tima/.gradle/caches/8.12.1/transforms/76fe7429b31a183910c764b229a85880/transformed/lifecycle-runtime-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.7.0] /Users/tima/.gradle/caches/8.12.1/transforms/a5d1aa19c5c3df6ceb2109fb08acfe91/transformed/lifecycle-runtime-ktx-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.7.0] /Users/tima/.gradle/caches/8.12.1/transforms/a5d1aa19c5c3df6ceb2109fb08acfe91/transformed/lifecycle-runtime-ktx-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0] /Users/tima/.gradle/caches/8.12.1/transforms/6649fb7b6fbfe744d67e2181d35eddbe/transformed/lifecycle-viewmodel-ktx-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0] /Users/tima/.gradle/caches/8.12.1/transforms/6649fb7b6fbfe744d67e2181d35eddbe/transformed/lifecycle-viewmodel-ktx-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0] /Users/tima/.gradle/caches/8.12.1/transforms/9e9f34508adf7a47f8e5e296fe6b6ec5/transformed/lifecycle-viewmodel-savedstate-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0] /Users/tima/.gradle/caches/8.12.1/transforms/9e9f34508adf7a47f8e5e296fe6b6ec5/transformed/lifecycle-viewmodel-savedstate-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core-ktx:1.12.0] /Users/tima/.gradle/caches/8.12.1/transforms/14ebc35c195d5225c1deb3e8bd902f72/transformed/core-ktx-1.12.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.12.0] /Users/tima/.gradle/caches/8.12.1/transforms/14ebc35c195d5225c1deb3e8bd902f72/transformed/core-ktx-1.12.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] /Users/tima/.gradle/caches/8.12.1/transforms/2ac6e5581d12026c6e405dff133eb8ff/transformed/annotation-experimental-1.4.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] /Users/tima/.gradle/caches/8.12.1/transforms/2ac6e5581d12026c6e405dff133eb8ff/transformed/annotation-experimental-1.4.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tima/.gradle/caches/8.12.1/transforms/a1894bbba3dd3ac90dd8ece0f0c14291/transformed/profileinstaller-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tima/.gradle/caches/8.12.1/transforms/a1894bbba3dd3ac90dd8ece0f0c14291/transformed/profileinstaller-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/tima/.gradle/caches/8.12.1/transforms/acae1b1b6708042c1b152b128c0eab02/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/tima/.gradle/caches/8.12.1/transforms/acae1b1b6708042c1b152b128c0eab02/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.2.0] /Users/tima/.gradle/caches/8.12.1/transforms/58aeb9a94600e5b721aefdcb5a31ac5e/transformed/tracing-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.tracing:tracing:1.2.0] /Users/tima/.gradle/caches/8.12.1/transforms/58aeb9a94600e5b721aefdcb5a31ac5e/transformed/tracing-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.tracing:tracing-ktx:1.2.0] /Users/tima/.gradle/caches/8.12.1/transforms/09cade606ed0077faf7e0c0bcb6ebf64/transformed/tracing-ktx-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.tracing:tracing-ktx:1.2.0] /Users/tima/.gradle/caches/8.12.1/transforms/09cade606ed0077faf7e0c0bcb6ebf64/transformed/tracing-ktx-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/tima/.gradle/caches/8.12.1/transforms/7a014bb1273f76d6778e6e7336957ddd/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/tima/.gradle/caches/8.12.1/transforms/7a014bb1273f76d6778e6e7336957ddd/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/tima/.gradle/caches/8.12.1/transforms/094dc3293ad7b9dbde425701280c9a7b/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/tima/.gradle/caches/8.12.1/transforms/094dc3293ad7b9dbde425701280c9a7b/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.3.2] /Users/tima/.gradle/caches/8.12.1/transforms/846be2c1187617a3d483546157b6d499/transformed/exifinterface-1.3.2/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.2] /Users/tima/.gradle/caches/8.12.1/transforms/846be2c1187617a3d483546157b6d499/transformed/exifinterface-1.3.2/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/tima/.gradle/caches/8.12.1/transforms/f3a387cfa5d90e16070f03426f79a925/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/tima/.gradle/caches/8.12.1/transforms/f3a387cfa5d90e16070f03426f79a925/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/tima/.gradle/caches/8.12.1/transforms/3496c3ac1983c3535bf82a31b7f79437/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/tima/.gradle/caches/8.12.1/transforms/3496c3ac1983c3535bf82a31b7f79437/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/tima/.gradle/caches/8.12.1/transforms/6d0e8a393ae748dd42b8589df823a61d/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/tima/.gradle/caches/8.12.1/transforms/6d0e8a393ae748dd42b8589df823a61d/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/tima/.gradle/caches/8.12.1/transforms/0636f114fcdb7b9f5ee243af5372f11a/transformed/transport-backend-cct-2.3.3/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/tima/.gradle/caches/8.12.1/transforms/0636f114fcdb7b9f5ee243af5372f11a/transformed/transport-backend-cct-2.3.3/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/tima/.gradle/caches/8.12.1/transforms/24669dedd2ccd13d4790784679415132/transformed/transport-runtime-2.2.6/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/tima/.gradle/caches/8.12.1/transforms/24669dedd2ccd13d4790784679415132/transformed/transport-runtime-2.2.6/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-api:2.2.1] /Users/tima/.gradle/caches/8.12.1/transforms/31b9c5047082b2758209b9171ee07bb6/transformed/transport-api-2.2.1/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-api:2.2.1] /Users/tima/.gradle/caches/8.12.1/transforms/31b9c5047082b2758209b9171ee07bb6/transformed/transport-api-2.2.1/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-components:16.1.0] /Users/tima/.gradle/caches/8.12.1/transforms/efb44cfea2633aab5fd0b066b44425b4/transformed/firebase-components-16.1.0/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-components:16.1.0] /Users/tima/.gradle/caches/8.12.1/transforms/efb44cfea2633aab5fd0b066b44425b4/transformed/firebase-components-16.1.0/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-encoders-json:17.1.0] /Users/tima/.gradle/caches/8.12.1/transforms/f27cfcb0f9652002352e146b150677d7/transformed/firebase-encoders-json-17.1.0/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-encoders-json:17.1.0] /Users/tima/.gradle/caches/8.12.1/transforms/f27cfcb0f9652002352e146b150677d7/transformed/firebase-encoders-json-17.1.0/AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/tima/.gradle/caches/8.12.1/transforms/fccfb2d9064ac062bafe5cd9ccd99da6/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/tima/.gradle/caches/8.12.1/transforms/fccfb2d9064ac062bafe5cd9ccd99da6/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/tima/.gradle/caches/8.12.1/transforms/bb596e31843933c3df7bcbe7be46ead1/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/tima/.gradle/caches/8.12.1/transforms/bb596e31843933c3df7bcbe7be46ead1/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/tima/.gradle/caches/8.12.1/transforms/36421a3dcc4ce4bef145779a3f7db659/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/tima/.gradle/caches/8.12.1/transforms/36421a3dcc4ce4bef145779a3f7db659/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [net.sf.scuba:scuba-sc-android:0.0.24] /Users/tima/.gradle/caches/8.12.1/transforms/db1887dedf4a97145f86faa02ec22f2a/transformed/scuba-sc-android-0.0.24/AndroidManifest.xml:7:5-9:41
+MERGED from [net.sf.scuba:scuba-sc-android:0.0.24] /Users/tima/.gradle/caches/8.12.1/transforms/db1887dedf4a97145f86faa02ec22f2a/transformed/scuba-sc-android-0.0.24/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.android.odml:image:1.0.0-beta1] /Users/tima/.gradle/caches/8.12.1/transforms/31dd0c4cabbd71186284ac16b0d3339c/transformed/image-1.0.0-beta1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.odml:image:1.0.0-beta1] /Users/tima/.gradle/caches/8.12.1/transforms/31dd0c4cabbd71186284ac16b0d3339c/transformed/image-1.0.0-beta1/AndroidManifest.xml:5:5-44
+	android:targetSdkVersion
+		INJECTED from /Users/tima/Documents/SDK/sample-app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/tima/Documents/SDK/sample-app/src/main/AndroidManifest.xml
+uses-feature#android.hardware.camera.autofocus
+ADDED from [:vncccd-sdk] /Users/tima/Documents/SDK/vncccd-sdk/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:16:5-18:36
+	android:required
+		ADDED from [:vncccd-sdk] /Users/tima/Documents/SDK/vncccd-sdk/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:18:9-33
+	android:name
+		ADDED from [:vncccd-sdk] /Users/tima/Documents/SDK/vncccd-sdk/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:17:9-57
+activity#com.vncccd.sdk.mrz.MrzScannerActivity
+ADDED from [:vncccd-sdk] /Users/tima/Documents/SDK/vncccd-sdk/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:21:9-25:59
+	android:screenOrientation
+		ADDED from [:vncccd-sdk] /Users/tima/Documents/SDK/vncccd-sdk/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:24:13-49
+	android:exported
+		ADDED from [:vncccd-sdk] /Users/tima/Documents/SDK/vncccd-sdk/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:23:13-37
+	android:theme
+		ADDED from [:vncccd-sdk] /Users/tima/Documents/SDK/vncccd-sdk/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:25:13-56
+	android:name
+		ADDED from [:vncccd-sdk] /Users/tima/Documents/SDK/vncccd-sdk/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:22:13-65
+activity#com.vncccd.sdk.nfc.NfcReaderActivity
+ADDED from [:vncccd-sdk] /Users/tima/Documents/SDK/vncccd-sdk/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:26:9-30:61
+	android:screenOrientation
+		ADDED from [:vncccd-sdk] /Users/tima/Documents/SDK/vncccd-sdk/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:29:13-49
+	android:exported
+		ADDED from [:vncccd-sdk] /Users/tima/Documents/SDK/vncccd-sdk/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:28:13-37
+	android:theme
+		ADDED from [:vncccd-sdk] /Users/tima/Documents/SDK/vncccd-sdk/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:30:13-58
+	android:name
+		ADDED from [:vncccd-sdk] /Users/tima/Documents/SDK/vncccd-sdk/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:27:13-64
+service#androidx.camera.core.impl.MetadataHolderService
+ADDED from [androidx.camera:camera-camera2:1.4.2] /Users/tima/.gradle/caches/8.12.1/transforms/1a3e90d0cd1beb1165b143af3e45b229/transformed/camera-camera2-1.4.2/AndroidManifest.xml:24:9-33:19
+MERGED from [androidx.camera:camera-core:1.4.2] /Users/tima/.gradle/caches/8.12.1/transforms/4daf5d84638130d757b05a32306df45d/transformed/camera-core-1.4.2/AndroidManifest.xml:29:9-33:78
+MERGED from [androidx.camera:camera-core:1.4.2] /Users/tima/.gradle/caches/8.12.1/transforms/4daf5d84638130d757b05a32306df45d/transformed/camera-core-1.4.2/AndroidManifest.xml:29:9-33:78
+	tools:node
+		ADDED from [androidx.camera:camera-camera2:1.4.2] /Users/tima/.gradle/caches/8.12.1/transforms/1a3e90d0cd1beb1165b143af3e45b229/transformed/camera-camera2-1.4.2/AndroidManifest.xml:29:13-31
+	android:enabled
+		ADDED from [androidx.camera:camera-camera2:1.4.2] /Users/tima/.gradle/caches/8.12.1/transforms/1a3e90d0cd1beb1165b143af3e45b229/transformed/camera-camera2-1.4.2/AndroidManifest.xml:26:13-36
+	android:exported
+		ADDED from [androidx.camera:camera-camera2:1.4.2] /Users/tima/.gradle/caches/8.12.1/transforms/1a3e90d0cd1beb1165b143af3e45b229/transformed/camera-camera2-1.4.2/AndroidManifest.xml:27:13-37
+	tools:ignore
+		ADDED from [androidx.camera:camera-camera2:1.4.2] /Users/tima/.gradle/caches/8.12.1/transforms/1a3e90d0cd1beb1165b143af3e45b229/transformed/camera-camera2-1.4.2/AndroidManifest.xml:28:13-75
+	android:name
+		ADDED from [androidx.camera:camera-camera2:1.4.2] /Users/tima/.gradle/caches/8.12.1/transforms/1a3e90d0cd1beb1165b143af3e45b229/transformed/camera-camera2-1.4.2/AndroidManifest.xml:25:13-75
+meta-data#androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER
+ADDED from [androidx.camera:camera-camera2:1.4.2] /Users/tima/.gradle/caches/8.12.1/transforms/1a3e90d0cd1beb1165b143af3e45b229/transformed/camera-camera2-1.4.2/AndroidManifest.xml:30:13-32:89
+	android:value
+		ADDED from [androidx.camera:camera-camera2:1.4.2] /Users/tima/.gradle/caches/8.12.1/transforms/1a3e90d0cd1beb1165b143af3e45b229/transformed/camera-camera2-1.4.2/AndroidManifest.xml:32:17-86
+	android:name
+		ADDED from [androidx.camera:camera-camera2:1.4.2] /Users/tima/.gradle/caches/8.12.1/transforms/1a3e90d0cd1beb1165b143af3e45b229/transformed/camera-camera2-1.4.2/AndroidManifest.xml:31:17-103
+service#com.google.mlkit.common.internal.MlKitComponentDiscoveryService
+ADDED from [com.google.android.gms:play-services-mlkit-text-recognition-common:19.1.0] /Users/tima/.gradle/caches/8.12.1/transforms/f4b9cdd8c22570bc397bfe59c0f84a05/transformed/play-services-mlkit-text-recognition-common-19.1.0/AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.mlkit:vision-common:17.3.0] /Users/tima/.gradle/caches/8.12.1/transforms/9554ef6e7f4e308b4ef7639e7a19c0b8/transformed/vision-common-17.3.0/AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.mlkit:vision-common:17.3.0] /Users/tima/.gradle/caches/8.12.1/transforms/9554ef6e7f4e308b4ef7639e7a19c0b8/transformed/vision-common-17.3.0/AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.mlkit:common:18.11.0] /Users/tima/.gradle/caches/8.12.1/transforms/7e0c65ca9e88cb8f70a4f4a794f30914/transformed/common-18.11.0/AndroidManifest.xml:15:9-23:19
+MERGED from [com.google.mlkit:common:18.11.0] /Users/tima/.gradle/caches/8.12.1/transforms/7e0c65ca9e88cb8f70a4f4a794f30914/transformed/common-18.11.0/AndroidManifest.xml:15:9-23:19
+	android:exported
+		ADDED from [com.google.android.gms:play-services-mlkit-text-recognition-common:19.1.0] /Users/tima/.gradle/caches/8.12.1/transforms/f4b9cdd8c22570bc397bfe59c0f84a05/transformed/play-services-mlkit-text-recognition-common-19.1.0/AndroidManifest.xml:11:13-37
+	tools:targetApi
+		ADDED from [com.google.mlkit:common:18.11.0] /Users/tima/.gradle/caches/8.12.1/transforms/7e0c65ca9e88cb8f70a4f4a794f30914/transformed/common-18.11.0/AndroidManifest.xml:19:13-32
+	android:directBootAware
+		ADDED from [com.google.mlkit:common:18.11.0] /Users/tima/.gradle/caches/8.12.1/transforms/7e0c65ca9e88cb8f70a4f4a794f30914/transformed/common-18.11.0/AndroidManifest.xml:17:13-43
+	android:name
+		ADDED from [com.google.android.gms:play-services-mlkit-text-recognition-common:19.1.0] /Users/tima/.gradle/caches/8.12.1/transforms/f4b9cdd8c22570bc397bfe59c0f84a05/transformed/play-services-mlkit-text-recognition-common-19.1.0/AndroidManifest.xml:10:13-91
+meta-data#com.google.firebase.components:com.google.mlkit.vision.text.internal.TextRegistrar
+ADDED from [com.google.android.gms:play-services-mlkit-text-recognition-common:19.1.0] /Users/tima/.gradle/caches/8.12.1/transforms/f4b9cdd8c22570bc397bfe59c0f84a05/transformed/play-services-mlkit-text-recognition-common-19.1.0/AndroidManifest.xml:12:13-14:85
+	android:value
+		ADDED from [com.google.android.gms:play-services-mlkit-text-recognition-common:19.1.0] /Users/tima/.gradle/caches/8.12.1/transforms/f4b9cdd8c22570bc397bfe59c0f84a05/transformed/play-services-mlkit-text-recognition-common-19.1.0/AndroidManifest.xml:14:17-82
+	android:name
+		ADDED from [com.google.android.gms:play-services-mlkit-text-recognition-common:19.1.0] /Users/tima/.gradle/caches/8.12.1/transforms/f4b9cdd8c22570bc397bfe59c0f84a05/transformed/play-services-mlkit-text-recognition-common-19.1.0/AndroidManifest.xml:13:17-114
+meta-data#com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar
+ADDED from [com.google.mlkit:vision-common:17.3.0] /Users/tima/.gradle/caches/8.12.1/transforms/9554ef6e7f4e308b4ef7639e7a19c0b8/transformed/vision-common-17.3.0/AndroidManifest.xml:12:13-14:85
+	android:value
+		ADDED from [com.google.mlkit:vision-common:17.3.0] /Users/tima/.gradle/caches/8.12.1/transforms/9554ef6e7f4e308b4ef7639e7a19c0b8/transformed/vision-common-17.3.0/AndroidManifest.xml:14:17-82
+	android:name
+		ADDED from [com.google.mlkit:vision-common:17.3.0] /Users/tima/.gradle/caches/8.12.1/transforms/9554ef6e7f4e308b4ef7639e7a19c0b8/transformed/vision-common-17.3.0/AndroidManifest.xml:13:17-124
+provider#com.google.mlkit.common.internal.MlKitInitProvider
+ADDED from [com.google.mlkit:common:18.11.0] /Users/tima/.gradle/caches/8.12.1/transforms/7e0c65ca9e88cb8f70a4f4a794f30914/transformed/common-18.11.0/AndroidManifest.xml:9:9-13:38
+	android:authorities
+		ADDED from [com.google.mlkit:common:18.11.0] /Users/tima/.gradle/caches/8.12.1/transforms/7e0c65ca9e88cb8f70a4f4a794f30914/transformed/common-18.11.0/AndroidManifest.xml:11:13-69
+	android:exported
+		ADDED from [com.google.mlkit:common:18.11.0] /Users/tima/.gradle/caches/8.12.1/transforms/7e0c65ca9e88cb8f70a4f4a794f30914/transformed/common-18.11.0/AndroidManifest.xml:12:13-37
+	android:initOrder
+		ADDED from [com.google.mlkit:common:18.11.0] /Users/tima/.gradle/caches/8.12.1/transforms/7e0c65ca9e88cb8f70a4f4a794f30914/transformed/common-18.11.0/AndroidManifest.xml:13:13-35
+	android:name
+		ADDED from [com.google.mlkit:common:18.11.0] /Users/tima/.gradle/caches/8.12.1/transforms/7e0c65ca9e88cb8f70a4f4a794f30914/transformed/common-18.11.0/AndroidManifest.xml:10:13-78
+meta-data#com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar
+ADDED from [com.google.mlkit:common:18.11.0] /Users/tima/.gradle/caches/8.12.1/transforms/7e0c65ca9e88cb8f70a4f4a794f30914/transformed/common-18.11.0/AndroidManifest.xml:20:13-22:85
+	android:value
+		ADDED from [com.google.mlkit:common:18.11.0] /Users/tima/.gradle/caches/8.12.1/transforms/7e0c65ca9e88cb8f70a4f4a794f30914/transformed/common-18.11.0/AndroidManifest.xml:22:17-82
+	android:name
+		ADDED from [com.google.mlkit:common:18.11.0] /Users/tima/.gradle/caches/8.12.1/transforms/7e0c65ca9e88cb8f70a4f4a794f30914/transformed/common-18.11.0/AndroidManifest.xml:21:17-120
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/tima/.gradle/caches/8.12.1/transforms/4e91fe040a144f4b8a4778e335c514f2/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/tima/.gradle/caches/8.12.1/transforms/cc20f52da5b801b033c6b601e7df340f/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/tima/.gradle/caches/8.12.1/transforms/cc20f52da5b801b033c6b601e7df340f/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tima/.gradle/caches/8.12.1/transforms/a1894bbba3dd3ac90dd8ece0f0c14291/transformed/profileinstaller-1.3.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tima/.gradle/caches/8.12.1/transforms/a1894bbba3dd3ac90dd8ece0f0c14291/transformed/profileinstaller-1.3.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/tima/.gradle/caches/8.12.1/transforms/acae1b1b6708042c1b152b128c0eab02/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/tima/.gradle/caches/8.12.1/transforms/acae1b1b6708042c1b152b128c0eab02/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/tima/.gradle/caches/8.12.1/transforms/4e91fe040a144f4b8a4778e335c514f2/transformed/emoji2-1.2.0/AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/tima/.gradle/caches/8.12.1/transforms/4e91fe040a144f4b8a4778e335c514f2/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/tima/.gradle/caches/8.12.1/transforms/4e91fe040a144f4b8a4778e335c514f2/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/tima/.gradle/caches/8.12.1/transforms/4e91fe040a144f4b8a4778e335c514f2/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/tima/.gradle/caches/8.12.1/transforms/4e91fe040a144f4b8a4778e335c514f2/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/tima/.gradle/caches/8.12.1/transforms/4e91fe040a144f4b8a4778e335c514f2/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/tima/.gradle/caches/8.12.1/transforms/4e91fe040a144f4b8a4778e335c514f2/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:18.5.0] /Users/tima/.gradle/caches/8.12.1/transforms/d250a283297ad7c740e264056c66a901/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:9-173
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:18.5.0] /Users/tima/.gradle/caches/8.12.1/transforms/d250a283297ad7c740e264056c66a901/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:146-170
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:18.5.0] /Users/tima/.gradle/caches/8.12.1/transforms/d250a283297ad7c740e264056c66a901/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:86-145
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:18.5.0] /Users/tima/.gradle/caches/8.12.1/transforms/d250a283297ad7c740e264056c66a901/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:19-85
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:18.4.0] /Users/tima/.gradle/caches/8.12.1/transforms/7eb1a6c9fbb0fd63b27c07b8daf62561/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:9-122
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:18.4.0] /Users/tima/.gradle/caches/8.12.1/transforms/7eb1a6c9fbb0fd63b27c07b8daf62561/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:66-119
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:18.4.0] /Users/tima/.gradle/caches/8.12.1/transforms/7eb1a6c9fbb0fd63b27c07b8daf62561/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:20-65
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] /Users/tima/.gradle/caches/8.12.1/transforms/1ed9d1003fb416d422e199d5b53e3f9b/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.12.0] /Users/tima/.gradle/caches/8.12.1/transforms/1ed9d1003fb416d422e199d5b53e3f9b/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.12.0] /Users/tima/.gradle/caches/8.12.1/transforms/1ed9d1003fb416d422e199d5b53e3f9b/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+permission#com.vncccd.sample.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] /Users/tima/.gradle/caches/8.12.1/transforms/1ed9d1003fb416d422e199d5b53e3f9b/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.12.0] /Users/tima/.gradle/caches/8.12.1/transforms/1ed9d1003fb416d422e199d5b53e3f9b/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.12.0] /Users/tima/.gradle/caches/8.12.1/transforms/1ed9d1003fb416d422e199d5b53e3f9b/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] /Users/tima/.gradle/caches/8.12.1/transforms/1ed9d1003fb416d422e199d5b53e3f9b/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.12.0] /Users/tima/.gradle/caches/8.12.1/transforms/1ed9d1003fb416d422e199d5b53e3f9b/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+uses-permission#com.vncccd.sample.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] /Users/tima/.gradle/caches/8.12.1/transforms/1ed9d1003fb416d422e199d5b53e3f9b/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.12.0] /Users/tima/.gradle/caches/8.12.1/transforms/1ed9d1003fb416d422e199d5b53e3f9b/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/tima/.gradle/caches/8.12.1/transforms/cc20f52da5b801b033c6b601e7df340f/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/tima/.gradle/caches/8.12.1/transforms/cc20f52da5b801b033c6b601e7df340f/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/tima/.gradle/caches/8.12.1/transforms/cc20f52da5b801b033c6b601e7df340f/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:30:17-78
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tima/.gradle/caches/8.12.1/transforms/a1894bbba3dd3ac90dd8ece0f0c14291/transformed/profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tima/.gradle/caches/8.12.1/transforms/a1894bbba3dd3ac90dd8ece0f0c14291/transformed/profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tima/.gradle/caches/8.12.1/transforms/a1894bbba3dd3ac90dd8ece0f0c14291/transformed/profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tima/.gradle/caches/8.12.1/transforms/a1894bbba3dd3ac90dd8ece0f0c14291/transformed/profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tima/.gradle/caches/8.12.1/transforms/a1894bbba3dd3ac90dd8ece0f0c14291/transformed/profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tima/.gradle/caches/8.12.1/transforms/a1894bbba3dd3ac90dd8ece0f0c14291/transformed/profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tima/.gradle/caches/8.12.1/transforms/a1894bbba3dd3ac90dd8ece0f0c14291/transformed/profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tima/.gradle/caches/8.12.1/transforms/a1894bbba3dd3ac90dd8ece0f0c14291/transformed/profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tima/.gradle/caches/8.12.1/transforms/a1894bbba3dd3ac90dd8ece0f0c14291/transformed/profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tima/.gradle/caches/8.12.1/transforms/a1894bbba3dd3ac90dd8ece0f0c14291/transformed/profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tima/.gradle/caches/8.12.1/transforms/a1894bbba3dd3ac90dd8ece0f0c14291/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tima/.gradle/caches/8.12.1/transforms/a1894bbba3dd3ac90dd8ece0f0c14291/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tima/.gradle/caches/8.12.1/transforms/a1894bbba3dd3ac90dd8ece0f0c14291/transformed/profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+action#androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tima/.gradle/caches/8.12.1/transforms/a1894bbba3dd3ac90dd8ece0f0c14291/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tima/.gradle/caches/8.12.1/transforms/a1894bbba3dd3ac90dd8ece0f0c14291/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tima/.gradle/caches/8.12.1/transforms/a1894bbba3dd3ac90dd8ece0f0c14291/transformed/profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+action#androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tima/.gradle/caches/8.12.1/transforms/a1894bbba3dd3ac90dd8ece0f0c14291/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tima/.gradle/caches/8.12.1/transforms/a1894bbba3dd3ac90dd8ece0f0c14291/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tima/.gradle/caches/8.12.1/transforms/a1894bbba3dd3ac90dd8ece0f0c14291/transformed/profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+action#androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tima/.gradle/caches/8.12.1/transforms/a1894bbba3dd3ac90dd8ece0f0c14291/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tima/.gradle/caches/8.12.1/transforms/a1894bbba3dd3ac90dd8ece0f0c14291/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/tima/.gradle/caches/8.12.1/transforms/0636f114fcdb7b9f5ee243af5372f11a/transformed/transport-backend-cct-2.3.3/AndroidManifest.xml:25:5-79
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/tima/.gradle/caches/8.12.1/transforms/24669dedd2ccd13d4790784679415132/transformed/transport-runtime-2.2.6/AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/tima/.gradle/caches/8.12.1/transforms/24669dedd2ccd13d4790784679415132/transformed/transport-runtime-2.2.6/AndroidManifest.xml:22:5-79
+	android:name
+		ADDED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/tima/.gradle/caches/8.12.1/transforms/0636f114fcdb7b9f5ee243af5372f11a/transformed/transport-backend-cct-2.3.3/AndroidManifest.xml:25:22-76
+uses-permission#android.permission.INTERNET
+ADDED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/tima/.gradle/caches/8.12.1/transforms/0636f114fcdb7b9f5ee243af5372f11a/transformed/transport-backend-cct-2.3.3/AndroidManifest.xml:26:5-67
+	android:name
+		ADDED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/tima/.gradle/caches/8.12.1/transforms/0636f114fcdb7b9f5ee243af5372f11a/transformed/transport-backend-cct-2.3.3/AndroidManifest.xml:26:22-64
+service#com.google.android.datatransport.runtime.backends.TransportBackendDiscovery
+ADDED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/tima/.gradle/caches/8.12.1/transforms/0636f114fcdb7b9f5ee243af5372f11a/transformed/transport-backend-cct-2.3.3/AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/tima/.gradle/caches/8.12.1/transforms/24669dedd2ccd13d4790784679415132/transformed/transport-runtime-2.2.6/AndroidManifest.xml:36:9-38:40
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/tima/.gradle/caches/8.12.1/transforms/24669dedd2ccd13d4790784679415132/transformed/transport-runtime-2.2.6/AndroidManifest.xml:36:9-38:40
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/tima/.gradle/caches/8.12.1/transforms/0636f114fcdb7b9f5ee243af5372f11a/transformed/transport-backend-cct-2.3.3/AndroidManifest.xml:31:13-37
+	android:name
+		ADDED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/tima/.gradle/caches/8.12.1/transforms/0636f114fcdb7b9f5ee243af5372f11a/transformed/transport-backend-cct-2.3.3/AndroidManifest.xml:30:13-103
+meta-data#backend:com.google.android.datatransport.cct.CctBackendFactory
+ADDED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/tima/.gradle/caches/8.12.1/transforms/0636f114fcdb7b9f5ee243af5372f11a/transformed/transport-backend-cct-2.3.3/AndroidManifest.xml:32:13-34:39
+	android:value
+		ADDED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/tima/.gradle/caches/8.12.1/transforms/0636f114fcdb7b9f5ee243af5372f11a/transformed/transport-backend-cct-2.3.3/AndroidManifest.xml:34:17-36
+	android:name
+		ADDED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/tima/.gradle/caches/8.12.1/transforms/0636f114fcdb7b9f5ee243af5372f11a/transformed/transport-backend-cct-2.3.3/AndroidManifest.xml:33:17-94
+service#com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService
+ADDED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/tima/.gradle/caches/8.12.1/transforms/24669dedd2ccd13d4790784679415132/transformed/transport-runtime-2.2.6/AndroidManifest.xml:26:9-30:19
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/tima/.gradle/caches/8.12.1/transforms/24669dedd2ccd13d4790784679415132/transformed/transport-runtime-2.2.6/AndroidManifest.xml:28:13-37
+	android:permission
+		ADDED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/tima/.gradle/caches/8.12.1/transforms/24669dedd2ccd13d4790784679415132/transformed/transport-runtime-2.2.6/AndroidManifest.xml:29:13-69
+	android:name
+		ADDED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/tima/.gradle/caches/8.12.1/transforms/24669dedd2ccd13d4790784679415132/transformed/transport-runtime-2.2.6/AndroidManifest.xml:27:13-117
+receiver#com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver
+ADDED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/tima/.gradle/caches/8.12.1/transforms/24669dedd2ccd13d4790784679415132/transformed/transport-runtime-2.2.6/AndroidManifest.xml:32:9-34:40
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/tima/.gradle/caches/8.12.1/transforms/24669dedd2ccd13d4790784679415132/transformed/transport-runtime-2.2.6/AndroidManifest.xml:34:13-37
+	android:name
+		ADDED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/tima/.gradle/caches/8.12.1/transforms/24669dedd2ccd13d4790784679415132/transformed/transport-runtime-2.2.6/AndroidManifest.xml:33:13-132

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- General -->
+    <string name="vncccd_app_name">VN CCCD SDK</string>
+    <string name="vncccd_cancel">Huỷ</string>
+    <string name="vncccd_close">Đóng</string>
+    <string name="vncccd_retry">Thử lại</string>
+    <string name="vncccd_ok">OK</string>
+
+    <!-- MRZ Scanner -->
+    <string name="vncccd_mrz_title">Quét mã MRZ</string>
+    <string name="vncccd_mrz_instruction">Vui lòng đặt chuỗi kí tự nằm vừa khung hình chữ nhật, chụp đủ ánh sáng và rõ nét.</string>
+    <string name="vncccd_mrz_scanning">Đang quét...</string>
+    <string name="vncccd_mrz_success">Đã nhận diện MRZ thành công!</string>
+    <string name="vncccd_mrz_failed">Không nhận diện được MRZ. Vui lòng thử lại.</string>
+
+    <!-- NFC Reader -->
+    <string name="vncccd_nfc_title">Đọc NFC</string>
+    <string name="vncccd_nfc_subtitle">ĐẶT THIẾT BỊ LÊN MẶT SAU CCCD GẮN CHÍP VÀ KHÔNG DI CHUYỂN</string>
+    <string name="vncccd_nfc_instruction">Giữ thẻ CCCD áp sát vào mặt sau điện thoại.\nGiữ yên cho đến khi đọc xong.</string>
+    <string name="vncccd_nfc_waiting">Sẵn sàng quét</string>
+    <string name="vncccd_nfc_connecting">Đang kết nối...</string>
+    <string name="vncccd_nfc_authenticating">Đang xác thực...</string>
+    <string name="vncccd_nfc_reading">Đang đọc dữ liệu...</string>
+    <string name="vncccd_nfc_success">Đọc thẻ thành công!</string>
+    <string name="vncccd_nfc_error_retry">Lỗi đọc thẻ. Vui lòng giữ thẻ ổn định và thử lại.</string>
+    <string name="vncccd_login_to_cccd">Đăng nhập vào thẻ CCCD</string>
+
+    <!-- Errors -->
+    <string name="vncccd_error_nfc_not_supported">Thiết bị không hỗ trợ NFC</string>
+    <string name="vncccd_error_nfc_disabled">Vui lòng bật NFC trong Cài đặt</string>
+    <string name="vncccd_error_camera">Không thể khởi tạo camera</string>
+    <string name="vncccd_camera_error">Không thể mở camera</string>
+    <string name="vncccd_camera_permission_denied">Cần quyền truy cập camera để quét MRZ</string>
+
+    <!-- Reading Status -->
+    <string name="vncccd_status_connecting">Đang kết nối với thẻ...</string>
+    <string name="vncccd_status_authenticating">Đang xác thực...</string>
+    <string name="vncccd_status_reading_mrz">Đang đọc thông tin MRZ...</string>
+    <string name="vncccd_status_reading_photo">Đang đọc ảnh chân dung...</string>
+    <string name="vncccd_status_reading_personal">Đang đọc thông tin cá nhân...</string>
+    <string name="vncccd_status_verifying">Đang xác minh dữ liệu...</string>
+    <string name="vncccd_status_completed">Hoàn thành!</string>
+</resources>
