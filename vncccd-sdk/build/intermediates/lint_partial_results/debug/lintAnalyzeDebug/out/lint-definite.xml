@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.5.2" type="incidents">
+
+    <incident
+        id="DiscouragedApi"
+        severity="warning"
+        message="Should not restrict activity to fixed orientation. This may not be suitable for different form factors, causing the app to be letterboxed.">
+        <location
+            file="${:vncccd-sdk*debug*MAIN*sourceProvider*0*manifest*0}"
+            line="21"
+            column="13"
+            startOffset="683"
+            endLine="21"
+            endColumn="49"
+            endOffset="719"/>
+    </incident>
+
+    <incident
+        id="DiscouragedApi"
+        severity="warning"
+        message="Should not restrict activity to fixed orientation. This may not be suitable for different form factors, causing the app to be letterboxed.">
+        <location
+            file="${:vncccd-sdk*debug*MAIN*sourceProvider*0*manifest*0}"
+            line="27"
+            column="13"
+            startOffset="897"
+            endLine="27"
+            endColumn="49"
+            endOffset="933"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Đóng&quot;, should use `@string` resource">
+        <location
+            file="${:vncccd-sdk*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_mrz_scanner.xml"
+            line="47"
+            column="13"
+            startOffset="1799"
+            endLine="47"
+            endColumn="46"
+            endOffset="1832"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set contentDescription"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="contentDescription"
+                value="TODO"
+                point="4"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAccessibility=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAccessibility"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:vncccd-sdk*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_nfc_reader.xml"
+            line="11"
+            column="6"
+            startOffset="413"
+            endLine="11"
+            endColumn="15"
+            endOffset="422"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set contentDescription"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="contentDescription"
+                value="TODO"
+                point="4"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAccessibility=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAccessibility"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:vncccd-sdk*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_nfc_reader.xml"
+            line="56"
+            column="6"
+            startOffset="2097"
+            endLine="56"
+            endColumn="15"
+            endOffset="2106"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set contentDescription"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="contentDescription"
+                value="TODO"
+                point="4"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAccessibility=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAccessibility"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:vncccd-sdk*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_nfc_reader.xml"
+            line="105"
+            column="14"
+            startOffset="4118"
+            endLine="105"
+            endColumn="23"
+            endOffset="4127"/>
+    </incident>
+
+    <incident
+        id="TypographyEllipsis"
+        severity="warning"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?">
+        <fix-replace
+            description="Replace with …"
+            oldString="..."
+            replacement="…"
+            priority="0"/>
+        <location
+            file="${:vncccd-sdk*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="13"
+            column="40"
+            startOffset="565"
+            endLine="13"
+            endColumn="52"
+            endOffset="577"/>
+    </incident>
+
+    <incident
+        id="TypographyEllipsis"
+        severity="warning"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?">
+        <fix-replace
+            description="Replace with …"
+            oldString="..."
+            replacement="…"
+            priority="0"/>
+        <location
+            file="${:vncccd-sdk*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="22"
+            column="42"
+            startOffset="1165"
+            endLine="22"
+            endColumn="57"
+            endOffset="1180"/>
+    </incident>
+
+    <incident
+        id="TypographyEllipsis"
+        severity="warning"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?">
+        <fix-replace
+            description="Replace with …"
+            oldString="..."
+            replacement="…"
+            priority="0"/>
+        <location
+            file="${:vncccd-sdk*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="23"
+            column="46"
+            startOffset="1235"
+            endLine="23"
+            endColumn="62"
+            endOffset="1251"/>
+    </incident>
+
+    <incident
+        id="TypographyEllipsis"
+        severity="warning"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?">
+        <fix-replace
+            description="Replace with …"
+            oldString="..."
+            replacement="…"
+            priority="0"/>
+        <location
+            file="${:vncccd-sdk*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="24"
+            column="39"
+            startOffset="1299"
+            endLine="24"
+            endColumn="58"
+            endOffset="1318"/>
+    </incident>
+
+    <incident
+        id="TypographyEllipsis"
+        severity="warning"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?">
+        <fix-replace
+            description="Replace with …"
+            oldString="..."
+            replacement="…"
+            priority="0"/>
+        <location
+            file="${:vncccd-sdk*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="37"
+            column="45"
+            startOffset="2072"
+            endLine="37"
+            endColumn="68"
+            endOffset="2095"/>
+    </incident>
+
+    <incident
+        id="TypographyEllipsis"
+        severity="warning"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?">
+        <fix-replace
+            description="Replace with …"
+            oldString="..."
+            replacement="…"
+            priority="0"/>
+        <location
+            file="${:vncccd-sdk*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="38"
+            column="49"
+            startOffset="2153"
+            endLine="38"
+            endColumn="65"
+            endOffset="2169"/>
+    </incident>
+
+    <incident
+        id="TypographyEllipsis"
+        severity="warning"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?">
+        <fix-replace
+            description="Replace with …"
+            oldString="..."
+            replacement="…"
+            priority="0"/>
+        <location
+            file="${:vncccd-sdk*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="39"
+            column="46"
+            startOffset="2224"
+            endLine="39"
+            endColumn="71"
+            endOffset="2249"/>
+    </incident>
+
+    <incident
+        id="TypographyEllipsis"
+        severity="warning"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?">
+        <fix-replace
+            description="Replace with …"
+            oldString="..."
+            replacement="…"
+            priority="0"/>
+        <location
+            file="${:vncccd-sdk*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="40"
+            column="48"
+            startOffset="2306"
+            endLine="40"
+            endColumn="73"
+            endOffset="2331"/>
+    </incident>
+
+    <incident
+        id="TypographyEllipsis"
+        severity="warning"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?">
+        <fix-replace
+            description="Replace with …"
+            oldString="..."
+            replacement="…"
+            priority="0"/>
+        <location
+            file="${:vncccd-sdk*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="41"
+            column="51"
+            startOffset="2391"
+            endLine="41"
+            endColumn="80"
+            endOffset="2420"/>
+    </incident>
+
+    <incident
+        id="TypographyEllipsis"
+        severity="warning"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?">
+        <fix-replace
+            description="Replace with …"
+            oldString="..."
+            replacement="…"
+            priority="0"/>
+        <location
+            file="${:vncccd-sdk*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="42"
+            column="44"
+            startOffset="2473"
+            endLine="42"
+            endColumn="68"
+            endOffset="2497"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.core:core-ktx than 1.12.0 is available: 1.18.0">
+        <fix-replace
+            description="Change to 1.18.0"
+            family="Update versions"
+            oldString="1.12.0"
+            replacement="1.18.0"
+            priority="0"/>
+        <location
+            file="${:vncccd-sdk*projectDir}/build.gradle.kts"
+            line="47"
+            column="20"
+            startOffset="864"
+            endLine="47"
+            endColumn="51"
+            endOffset="895"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.appcompat:appcompat than 1.6.1 is available: 1.7.1">
+        <fix-replace
+            description="Change to 1.7.1"
+            family="Update versions"
+            oldString="1.6.1"
+            replacement="1.7.1"
+            priority="0"/>
+        <location
+            file="${:vncccd-sdk*projectDir}/build.gradle.kts"
+            line="48"
+            column="20"
+            startOffset="916"
+            endLine="48"
+            endColumn="56"
+            endOffset="952"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of com.google.android.material:material than 1.11.0 is available: 1.13.0">
+        <fix-replace
+            description="Change to 1.13.0"
+            family="Update versions"
+            oldString="1.11.0"
+            replacement="1.13.0"
+            priority="0"/>
+        <location
+            file="${:vncccd-sdk*projectDir}/build.gradle.kts"
+            line="49"
+            column="20"
+            startOffset="973"
+            endLine="49"
+            endColumn="65"
+            endOffset="1018"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.constraintlayout:constraintlayout than 2.1.4 is available: 2.2.1">
+        <fix-replace
+            description="Change to 2.2.1"
+            family="Update versions"
+            oldString="2.1.4"
+            replacement="2.2.1"
+            priority="0"/>
+        <location
+            file="${:vncccd-sdk*projectDir}/build.gradle.kts"
+            line="50"
+            column="20"
+            startOffset="1039"
+            endLine="50"
+            endColumn="70"
+            endOffset="1089"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.lifecycle:lifecycle-runtime-ktx than 2.7.0 is available: 2.10.0">
+        <fix-replace
+            description="Change to 2.10.0"
+            family="Update versions"
+            oldString="2.7.0"
+            replacement="2.10.0"
+            priority="0"/>
+        <location
+            file="${:vncccd-sdk*projectDir}/build.gradle.kts"
+            line="53"
+            column="20"
+            startOffset="1128"
+            endLine="53"
+            endColumn="68"
+            endOffset="1176"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.lifecycle:lifecycle-viewmodel-ktx than 2.7.0 is available: 2.10.0">
+        <fix-replace
+            description="Change to 2.10.0"
+            family="Update versions"
+            oldString="2.7.0"
+            replacement="2.10.0"
+            priority="0"/>
+        <location
+            file="${:vncccd-sdk*projectDir}/build.gradle.kts"
+            line="54"
+            column="20"
+            startOffset="1197"
+            endLine="54"
+            endColumn="70"
+            endOffset="1247"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of org.jetbrains.kotlinx:kotlinx-coroutines-android than 1.7.3 is available: 1.10.2">
+        <fix-replace
+            description="Change to 1.10.2"
+            family="Update versions"
+            oldString="1.7.3"
+            replacement="1.10.2"
+            priority="0"/>
+        <location
+            file="${:vncccd-sdk*projectDir}/build.gradle.kts"
+            line="57"
+            column="20"
+            startOffset="1287"
+            endLine="57"
+            endColumn="76"
+            endOffset="1343"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of org.jetbrains.kotlinx:kotlinx-coroutines-core than 1.7.3 is available: 1.10.2">
+        <fix-replace
+            description="Change to 1.10.2"
+            family="Update versions"
+            oldString="1.7.3"
+            replacement="1.10.2"
+            priority="0"/>
+        <location
+            file="${:vncccd-sdk*projectDir}/build.gradle.kts"
+            line="58"
+            column="20"
+            startOffset="1364"
+            endLine="58"
+            endColumn="73"
+            endOffset="1417"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.camera:camera-core than 1.4.2 is available: 1.6.0">
+        <location
+            file="${:vncccd-sdk*projectDir}/build.gradle.kts"
+            line="62"
+            column="20"
+            startOffset="1487"
+            endLine="62"
+            endColumn="65"
+            endOffset="1532"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.camera:camera-camera2 than 1.4.2 is available: 1.6.0">
+        <location
+            file="${:vncccd-sdk*projectDir}/build.gradle.kts"
+            line="63"
+            column="20"
+            startOffset="1553"
+            endLine="63"
+            endColumn="68"
+            endOffset="1601"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.camera:camera-lifecycle than 1.4.2 is available: 1.6.0">
+        <location
+            file="${:vncccd-sdk*projectDir}/build.gradle.kts"
+            line="64"
+            column="20"
+            startOffset="1622"
+            endLine="64"
+            endColumn="70"
+            endOffset="1672"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.camera:camera-view than 1.4.2 is available: 1.6.0">
+        <location
+            file="${:vncccd-sdk*projectDir}/build.gradle.kts"
+            line="65"
+            column="20"
+            startOffset="1693"
+            endLine="65"
+            endColumn="65"
+            endOffset="1738"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of net.sf.scuba:scuba-sc-android than 0.0.24 is available: 0.0.25">
+        <fix-replace
+            description="Change to 0.0.25"
+            family="Update versions"
+            oldString="0.0.24"
+            replacement="0.0.25"
+            priority="0"/>
+        <location
+            file="${:vncccd-sdk*projectDir}/build.gradle.kts"
+            line="74"
+            column="20"
+            startOffset="2026"
+            endLine="74"
+            endColumn="58"
+            endOffset="2064"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.test.ext:junit than 1.1.5 is available: 1.3.0">
+        <fix-replace
+            description="Change to 1.3.0"
+            family="Update versions"
+            oldString="1.1.5"
+            replacement="1.3.0"
+            priority="0"/>
+        <location
+            file="${:vncccd-sdk*projectDir}/build.gradle.kts"
+            line="87"
+            column="31"
+            startOffset="2523"
+            endLine="87"
+            endColumn="62"
+            endOffset="2554"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.test.espresso:espresso-core than 3.5.1 is available: 3.7.0">
+        <fix-replace
+            description="Change to 3.7.0"
+            family="Update versions"
+            oldString="3.5.1"
+            replacement="3.7.0"
+            priority="0"/>
+        <location
+            file="${:vncccd-sdk*projectDir}/build.gradle.kts"
+            line="88"
+            column="31"
+            startOffset="2586"
+            endLine="88"
+            endColumn="75"
+            endOffset="2630"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `@android:color/black` with a theme that also paints a background (inferred theme is `@style/VnCccd_Theme_Scanner`)">
+        <location
+            file="${:vncccd-sdk*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_mrz_scanner.xml"
+            line="7"
+            column="5"
+            startOffset="294"
+            endLine="7"
+            endColumn="46"
+            endOffset="335"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `#FFF6F1` with a theme that also paints a background (inferred theme is `@style/VnCccd_Theme_NfcReader`)">
+        <location
+            file="${:vncccd-sdk*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_nfc_reader.xml"
+            line="8"
+            column="5"
+            startOffset="345"
+            endLine="8"
+            endColumn="33"
+            endOffset="373"/>
+    </incident>
+
+    <incident
+        id="IconLocation"
+        severity="warning"
+        message="Found bitmap drawable `res/drawable/nfc.png` in densityless folder">
+        <location
+            file="${:vncccd-sdk*debug*MAIN*sourceProvider*0*resDir*0}/drawable/nfc.png"/>
+    </incident>
+
+    <incident
+        id="IconLocation"
+        severity="warning"
+        message="Found bitmap drawable `res/drawable/scan.png` in densityless folder">
+        <location
+            file="${:vncccd-sdk*debug*MAIN*sourceProvider*0*resDir*0}/drawable/scan.png"/>
+    </incident>
+
+</incidents>

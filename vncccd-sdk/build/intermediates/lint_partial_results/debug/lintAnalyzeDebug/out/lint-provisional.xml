@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.5.2" type="conditional_incidents">
+
+    <incident
+        id="LockedOrientationActivity"
+        severity="warning"
+        message="Expecting `android:screenOrientation=&quot;unspecified&quot;` or `&quot;fullSensor&quot;` for this activity so the user can use the application in any orientation and provide a great experience on Chrome OS devices">
+        <fix-attribute
+            description="Set screenOrientation=&quot;fullSensor&quot;"
+            robot="true"
+            independent="true"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="screenOrientation"
+            value="fullSensor"/>
+        <location
+            file="${:vncccd-sdk*debug*MAIN*sourceProvider*0*manifest*0}"
+            line="21"
+            column="13"
+            startOffset="683"
+            endLine="21"
+            endColumn="49"
+            endOffset="719"/>
+        <map>
+            <condition library="false"/>
+        </map>
+    </incident>
+
+    <incident
+        id="LockedOrientationActivity"
+        severity="warning"
+        message="Expecting `android:screenOrientation=&quot;unspecified&quot;` or `&quot;fullSensor&quot;` for this activity so the user can use the application in any orientation and provide a great experience on Chrome OS devices">
+        <fix-attribute
+            description="Set screenOrientation=&quot;fullSensor&quot;"
+            robot="true"
+            independent="true"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="screenOrientation"
+            value="fullSensor"/>
+        <location
+            file="${:vncccd-sdk*debug*MAIN*sourceProvider*0*manifest*0}"
+            line="27"
+            column="13"
+            startOffset="897"
+            endLine="27"
+            endColumn="49"
+            endOffset="933"/>
+        <map>
+            <condition library="false"/>
+        </map>
+    </incident>
+
+    <incident
+        id="VectorRaster"
+        severity="warning"
+        message="">
+        <location
+            file="${:vncccd-sdk*debug*MAIN*sourceProvider*0*resDir*0}/drawable/ic_flash_off.xml"
+            line="8"
+            column="28"
+            startOffset="258"
+            endLine="8"
+            endColumn="48"
+            endOffset="278"/>
+        <map>
+            <entry
+                name="folderVersion"
+                int="-1"/>
+            <entry
+                name="containsFillType"
+                boolean="false"/>
+            <entry
+                name="message"
+                string="Resource references will not work correctly in images generated for this vector icon for API &lt; %1$d; check generated icon to make sure it looks acceptable"/>
+            <entry
+                name="containsGradient"
+                boolean="false"/>
+        </map>
+    </incident>
+
+    <incident
+        id="VectorRaster"
+        severity="warning"
+        message="">
+        <location
+            file="${:vncccd-sdk*debug*MAIN*sourceProvider*0*resDir*0}/drawable/ic_nfc_scan.xml"
+            line="7"
+            column="19"
+            startOffset="238"
+            endLine="7"
+            endColumn="43"
+            endOffset="262"/>
+        <map>
+            <entry
+                name="folderVersion"
+                int="-1"/>
+            <entry
+                name="containsFillType"
+                boolean="false"/>
+            <entry
+                name="message"
+                string="Resource references will not work correctly in images generated for this vector icon for API &lt; %1$d; check generated icon to make sure it looks acceptable"/>
+            <entry
+                name="containsGradient"
+                boolean="false"/>
+        </map>
+    </incident>
+
+    <incident
+        id="VectorRaster"
+        severity="warning"
+        message="">
+        <location
+            file="${:vncccd-sdk*debug*MAIN*sourceProvider*0*resDir*0}/drawable/ic_nfc_scan.xml"
+            line="9"
+            column="28"
+            startOffset="302"
+            endLine="9"
+            endColumn="48"
+            endOffset="322"/>
+        <map>
+            <entry
+                name="folderVersion"
+                int="-1"/>
+            <entry
+                name="containsFillType"
+                boolean="false"/>
+            <entry
+                name="message"
+                string="Resource references will not work correctly in images generated for this vector icon for API &lt; %1$d; check generated icon to make sure it looks acceptable"/>
+            <entry
+                name="containsGradient"
+                boolean="false"/>
+        </map>
+    </incident>
+
+    <incident
+        id="NewApi"
+        severity="error"
+        message="">
+        <fix-data minSdk="ffffffffff800000" requiresApi="fffffffffe000000"/>
+        <location
+            file="${:vncccd-sdk*debug*MAIN*sourceProvider*0*javaDir*2}/com/vncccd/sdk/mrz/MrzScannerActivity.kt"
+            line="164"
+            column="19"
+            startOffset="4836"
+            endLine="164"
+            endColumn="26"
+            endOffset="4843"/>
+        <map>
+            <entry
+                name="owner"
+                string="android.os.Vibrator"/>
+            <api-levels id="minSdk"
+                value="ffffffffff800000"/>
+            <api-levels id="requiresApi"
+                value="fffffffffe000000"/>
+            <entry
+                name="name"
+                string="vibrate"/>
+            <entry
+                name="message"
+                string="Call requires API level 26 (current min is %1$s): `android.os.Vibrator#vibrate`"/>
+            <entry
+                name="desc"
+                string="(Landroid.os.VibrationEffect;)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="MissingPermission"
+        severity="error"
+        message="">
+        <fix-data missing="android.permission.VIBRATE" message="Missing permissions required by Vibrator.vibrate: %1$s" lastApi="2147483647"/>
+        <location
+            file="${:vncccd-sdk*debug*MAIN*sourceProvider*0*javaDir*2}/com/vncccd/sdk/mrz/MrzScannerActivity.kt"
+            line="164"
+            column="9"
+            startOffset="4826"
+            endLine="164"
+            endColumn="97"
+            endOffset="4914"/>
+        <map>
+            <entry
+                name="requirement"
+                string="android.permission.VIBRATE"/>
+            <entry
+                name="message"
+                string="Missing permissions required by Vibrator.vibrate: %1$s"/>
+        </map>
+    </incident>
+
+    <incident
+        id="NewApi"
+        severity="error"
+        message="">
+        <fix-data minSdk="ffffffffff800000" requiresApi="fffffffffe000000"/>
+        <location
+            file="${:vncccd-sdk*debug*MAIN*sourceProvider*0*javaDir*2}/com/vncccd/sdk/mrz/MrzScannerActivity.kt"
+            line="164"
+            column="43"
+            startOffset="4860"
+            endLine="164"
+            endColumn="56"
+            endOffset="4873"/>
+        <map>
+            <entry
+                name="owner"
+                string="android.os.VibrationEffect"/>
+            <api-levels id="minSdk"
+                value="ffffffffff800000"/>
+            <api-levels id="requiresApi"
+                value="fffffffffe000000"/>
+            <entry
+                name="name"
+                string="createOneShot"/>
+            <entry
+                name="message"
+                string="Call requires API level 26 (current min is %1$s): `android.os.VibrationEffect#createOneShot`"/>
+            <entry
+                name="desc"
+                string="(JI)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="InlinedApi"
+        severity="warning"
+        message="">
+        <fix-data minSdk="ffffffffff800000" requiresApi="fffffffffe000000"/>
+        <location
+            file="${:vncccd-sdk*debug*MAIN*sourceProvider*0*javaDir*2}/com/vncccd/sdk/mrz/MrzScannerActivity.kt"
+            line="164"
+            column="62"
+            startOffset="4879"
+            endLine="164"
+            endColumn="95"
+            endOffset="4912"/>
+        <map>
+            <entry
+                name="owner"
+                string="android.os.VibrationEffect"/>
+            <api-levels id="minSdk"
+                value="ffffffffff800000"/>
+            <api-levels id="requiresApi"
+                value="fffffffffe000000"/>
+            <entry
+                name="name"
+                string="DEFAULT_AMPLITUDE"/>
+            <entry
+                name="message"
+                string="Field requires API level 26 (current min is %1$s): `android.os.VibrationEffect#DEFAULT_AMPLITUDE`"/>
+        </map>
+    </incident>
+
+    <incident
+        id="NewApi"
+        severity="error"
+        message="">
+        <fix-data minSdk="ffffffffff800000" requiresApi="fffffffffe000000"/>
+        <location
+            file="${:vncccd-sdk*debug*MAIN*sourceProvider*0*javaDir*2}/com/vncccd/sdk/nfc/NfcReaderActivity.kt"
+            line="241"
+            column="23"
+            startOffset="7492"
+            endLine="241"
+            endColumn="30"
+            endOffset="7499"/>
+        <map>
+            <entry
+                name="owner"
+                string="android.os.Vibrator"/>
+            <api-levels id="minSdk"
+                value="ffffffffff800000"/>
+            <api-levels id="requiresApi"
+                value="fffffffffe000000"/>
+            <entry
+                name="name"
+                string="vibrate"/>
+            <entry
+                name="message"
+                string="Call requires API level 26 (current min is %1$s): `android.os.Vibrator#vibrate`"/>
+            <entry
+                name="desc"
+                string="(Landroid.os.VibrationEffect;)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="MissingPermission"
+        severity="error"
+        message="">
+        <fix-data missing="android.permission.VIBRATE" message="Missing permissions required by Vibrator.vibrate: %1$s" lastApi="2147483647"/>
+        <location
+            file="${:vncccd-sdk*debug*MAIN*sourceProvider*0*javaDir*2}/com/vncccd/sdk/nfc/NfcReaderActivity.kt"
+            line="241"
+            column="13"
+            startOffset="7482"
+            endLine="241"
+            endColumn="101"
+            endOffset="7570"/>
+        <map>
+            <entry
+                name="requirement"
+                string="android.permission.VIBRATE"/>
+            <entry
+                name="message"
+                string="Missing permissions required by Vibrator.vibrate: %1$s"/>
+        </map>
+    </incident>
+
+    <incident
+        id="NewApi"
+        severity="error"
+        message="">
+        <fix-data minSdk="ffffffffff800000" requiresApi="fffffffffe000000"/>
+        <location
+            file="${:vncccd-sdk*debug*MAIN*sourceProvider*0*javaDir*2}/com/vncccd/sdk/nfc/NfcReaderActivity.kt"
+            line="241"
+            column="47"
+            startOffset="7516"
+            endLine="241"
+            endColumn="60"
+            endOffset="7529"/>
+        <map>
+            <entry
+                name="owner"
+                string="android.os.VibrationEffect"/>
+            <api-levels id="minSdk"
+                value="ffffffffff800000"/>
+            <api-levels id="requiresApi"
+                value="fffffffffe000000"/>
+            <entry
+                name="name"
+                string="createOneShot"/>
+            <entry
+                name="message"
+                string="Call requires API level 26 (current min is %1$s): `android.os.VibrationEffect#createOneShot`"/>
+            <entry
+                name="desc"
+                string="(JI)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="InlinedApi"
+        severity="warning"
+        message="">
+        <fix-data minSdk="ffffffffff800000" requiresApi="fffffffffe000000"/>
+        <location
+            file="${:vncccd-sdk*debug*MAIN*sourceProvider*0*javaDir*2}/com/vncccd/sdk/nfc/NfcReaderActivity.kt"
+            line="241"
+            column="66"
+            startOffset="7535"
+            endLine="241"
+            endColumn="99"
+            endOffset="7568"/>
+        <map>
+            <entry
+                name="owner"
+                string="android.os.VibrationEffect"/>
+            <api-levels id="minSdk"
+                value="ffffffffff800000"/>
+            <api-levels id="requiresApi"
+                value="fffffffffe000000"/>
+            <entry
+                name="name"
+                string="DEFAULT_AMPLITUDE"/>
+            <entry
+                name="message"
+                string="Field requires API level 26 (current min is %1$s): `android.os.VibrationEffect#DEFAULT_AMPLITUDE`"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlEnabled"
+        severity="warning"
+        message="The project references RTL attributes, but does not explicitly enable or disable RTL support with `android:supportsRtl` in the manifest">
+        <location
+            file="${:vncccd-sdk*debug*MAIN*sourceProvider*0*manifest*0}"/>
+        <map>
+            <entry
+                name="applies"
+                int="2"/>
+        </map>
+    </incident>
+
+</incidents>
