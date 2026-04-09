@@ -4,3 +4,4 @@
 /build
 /vncccd-sdk-ios/.build
 /vncccd-sdk-ios/.swiftpm
+/vncccd-sdk-ios/build

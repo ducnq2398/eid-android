@@ -10,6 +10,7 @@ let package = Package(
     products: [
         .library(
             name: "VNCCCDSDK",
+            type: .dynamic,
             targets: ["VNCCCDSDK"]
         )
     ],
