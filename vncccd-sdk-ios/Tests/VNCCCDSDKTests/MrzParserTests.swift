@@ -5,7 +5,7 @@ final class MrzParserTests: XCTestCase {
     func testParseTd1Success() {
         let mrz = [
             "I<VNM0123456785<<<123<<<<<<<<<<",
-            "9001011M3501019VNM<<<<<<<<<<<6",
+            "9001011M3501014VNM<<<<<<<<<<<6",
             "NGUYEN<<VAN<A<<<<<<<<<<<<<<<<<"
         ]
 
@@ -23,7 +23,7 @@ final class MrzParserTests: XCTestCase {
     func testRejectInvalidDobDigit() {
         let mrz = [
             "I<VNM0123456785<<<123<<<<<<<<<<",
-            "9001019M3501019VNM<<<<<<<<<<<6",
+            "9001019M3501014VNM<<<<<<<<<<<6",
             "NGUYEN<<VAN<A<<<<<<<<<<<<<<<<<"
         ]
         XCTAssertNil(MrzParser.parse(mrzLines: mrz))

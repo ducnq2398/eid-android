@@ -4,7 +4,8 @@ import PackageDescription
 let package = Package(
     name: "VNCCCDSDK",
     platforms: [
-        .iOS(.v15)
+        .iOS(.v15),
+        .macOS(.v10_15)
     ],
     products: [
         .library(
@@ -13,13 +14,17 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/AndyQ/NFCPassportReader.git", from: "2.3.0")
+        .package(url: "https://github.com/AndyQ/NFCPassportReader.git", exact: "2.1.2")
     ],
     targets: [
         .target(
             name: "VNCCCDSDK",
             dependencies: [
-                .product(name: "NFCPassportReader", package: "NFCPassportReader")
+                .product(
+                    name: "NFCPassportReader",
+                    package: "NFCPassportReader",
+                    condition: .when(platforms: [.iOS])
+                )
             ]
         ),
         .testTarget(

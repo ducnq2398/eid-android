@@ -1,3 +1,4 @@
+#if canImport(AVFoundation) && canImport(UIKit) && canImport(Vision)
 import AVFoundation
 import Foundation
 import UIKit
@@ -414,3 +415,15 @@ extension MrzScannerViewController: AVCaptureVideoDataOutputSampleBufferDelegate
         }
     }
 }
+#else
+import Foundation
+
+public struct VisionMrzScannerService: MrzScannerService {
+    public init() {}
+
+    public func scan(config: CCCDConfig) async throws -> MrzData {
+        _ = config
+        throw CCCDError.cameraNotAvailable
+    }
+}
+#endif
