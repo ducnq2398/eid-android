@@ -2,7 +2,7 @@ import Foundation
 
 #if canImport(CoreNFC) && canImport(NFCPassportReader)
 import CoreNFC
-import NFCPassportReader
+@_implementationOnly import NFCPassportReader
 import UIKit
 
 public final class CoreNfcCardReaderService: NSObject, NfcCardReaderService, @unchecked Sendable {
