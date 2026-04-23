@@ -327,20 +327,28 @@ private enum ReflectionExtractor {
         }
 
         // First pass: prefer obvious payload labels.
-        for child in mirror.children {
-            let label = child.label?.lowercased() ?? ""
-            if (label.contains("data") || label.contains("body") || label.contains("raw") || label.contains("value")),
-               let data = toData(child.value),
-               !data.isEmpty {
-                return data
+        var currentMirror: Mirror? = mirror
+        while let m = currentMirror {
+            for child in m.children {
+                let label = child.label?.lowercased() ?? ""
+                if (label.contains("data") || label.contains("body") || label.contains("raw") || label.contains("value")),
+                   let data = toData(child.value),
+                   !data.isEmpty {
+                    return data
+                }
             }
+            currentMirror = m.superclassMirror
         }
 
         // Second pass: recurse for nested payload.
-        for child in mirror.children {
-            if let data = extractPayload(from: child.value, depth: depth + 1, visited: &visited) {
-                return data
+        currentMirror = mirror
+        while let m = currentMirror {
+            for child in m.children {
+                if let data = extractPayload(from: child.value, depth: depth + 1, visited: &visited) {
+                    return data
+                }
             }
+            currentMirror = m.superclassMirror
         }
 
         return nil
@@ -370,29 +378,42 @@ private enum ReflectionExtractor {
             visited.insert(objectId)
         }
 
-        for child in mirror.children {
-            guard let label = child.label else { continue }
-            if candidates.contains(label) {
-                return child.value
+        var currentMirror: Mirror? = mirror
+        while let m = currentMirror {
+            for candidate in candidates {
+                if let child = m.children.first(where: { $0.label == candidate }) {
+                    return child.value
+                }
             }
+            currentMirror = m.superclassMirror
         }
 
-        for child in mirror.children {
-            if let nested = lookup(
-                child.value,
-                candidates: candidates,
-                depth: depth + 1,
-                visited: &visited
-            ) {
-                return nested
+        currentMirror = mirror
+        while let m = currentMirror {
+            for child in m.children {
+                if let nested = lookup(
+                    child.value,
+                    candidates: candidates,
+                    depth: depth + 1,
+                    visited: &visited
+                ) {
+                    return nested
+                }
             }
+            currentMirror = m.superclassMirror
         }
 
         return nil
     }
 
     static func mirrorChildren(_ object: Any) -> [Mirror.Child] {
-        Array(Mirror(reflecting: object).children)
+        var children = [Mirror.Child]()
+        var currentMirror: Mirror? = Mirror(reflecting: object)
+        while let m = currentMirror {
+            children.append(contentsOf: m.children)
+            currentMirror = m.superclassMirror
+        }
+        return children
     }
 
     private static func string(_ model: Any, _ keys: [String]) -> String? {
