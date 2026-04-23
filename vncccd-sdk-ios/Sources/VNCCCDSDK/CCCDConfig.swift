@@ -13,7 +13,7 @@ public struct CCCDConfig: Sendable, Codable, Equatable {
     public init(
         readFaceImage: Bool = true,
         readPersonalInfo: Bool = true,
-        nfcTimeoutMs: Int = 30_000,
+        nfcTimeoutMs: Int = 60_000,
         mrzTimeoutMs: Int = 0,
         mrzConsecutiveFrames: Int = 3,
         enableSoundEffects: Bool = true,

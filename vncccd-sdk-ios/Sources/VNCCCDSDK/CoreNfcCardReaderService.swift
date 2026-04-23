@@ -148,7 +148,7 @@ private enum ReflectionExtractor {
             return data.base64EncodedString()
         }
 
-        if let data = lookup(model, candidates: ["passportImageData", "faceImageData", "portraitImageData"]) as? Data {
+        if let data = toData(lookup(model, candidates: ["passportImageData", "faceImageData", "portraitImageData"])) {
             return data.base64EncodedString()
         }
 
@@ -194,7 +194,7 @@ private enum ReflectionExtractor {
     }
 
     static func extractDataGroupRaw(_ model: Any, groupCode: String) -> Data? {
-        if let direct = lookup(
+        if let direct = toData(lookup(
             model,
             candidates: [
                 "\(groupCode.lowercased())Data",
@@ -203,7 +203,7 @@ private enum ReflectionExtractor {
                 groupCode,
                 "raw\(groupCode)"
             ]
-        ) as? Data {
+        )) {
             return direct
         }
 
@@ -212,14 +212,20 @@ private enum ReflectionExtractor {
 
             for child in mirrorChildren(groups) {
                 guard let label = child.label else { continue }
-                if matchesGroupToken(label, tokens: tokens), let data = child.value as? Data {
+                if matchesGroupToken(label, tokens: tokens), let data = toData(child.value) {
                     return data
+                }
+                if matchesGroupToken(label, tokens: tokens), let payload = extractPayload(from: child.value) {
+                    return payload
                 }
 
                 let keyDescription = String(describing: child.value)
                 if matchesGroupToken(keyDescription, tokens: tokens) {
-                    if let data = lookup(child.value, candidates: ["data", "body", "rawData", "value"]) as? Data {
+                    if let data = toData(lookup(child.value, candidates: ["data", "body", "rawData", "value"])) {
                         return data
+                    }
+                    if let payload = extractPayload(from: child.value) {
+                        return payload
                     }
                 }
             }
@@ -227,11 +233,14 @@ private enum ReflectionExtractor {
             if let dict = groups as? [AnyHashable: Any] {
                 for (key, value) in dict {
                     if matchesGroupToken(String(describing: key), tokens: tokens) {
-                        if let data = value as? Data {
+                        if let data = toData(value) {
                             return data
                         }
-                        if let data = lookup(value, candidates: ["data", "body", "rawData", "value"]) as? Data {
+                        if let data = toData(lookup(value, candidates: ["data", "body", "rawData", "value"])) {
                             return data
+                        }
+                        if let payload = extractPayload(from: value) {
+                            return payload
                         }
                     }
                 }
@@ -263,6 +272,78 @@ private enum ReflectionExtractor {
         }
 
         return hints.sorted()
+    }
+
+    static func toData(_ value: Any?) -> Data? {
+        guard let value else { return nil }
+
+        // Unwrap Optional<...> values reflected from library models.
+        let mirror = Mirror(reflecting: value)
+        if mirror.displayStyle == .optional {
+            guard let wrapped = mirror.children.first?.value else { return nil }
+            return toData(wrapped)
+        }
+
+        if let data = value as? Data {
+            return data
+        }
+        if let data = value as? NSData {
+            return data as Data
+        }
+        if let bytes = value as? [UInt8] {
+            return Data(bytes)
+        }
+        if let bytes = value as? ArraySlice<UInt8> {
+            return Data(bytes)
+        }
+        if let numbers = value as? [NSNumber] {
+            return Data(numbers.map { UInt8(truncating: $0) })
+        }
+        return nil
+    }
+
+    static func extractPayload(from object: Any) -> Data? {
+        var visited = Set<ObjectIdentifier>()
+        return extractPayload(from: object, depth: 0, visited: &visited)
+    }
+
+    private static func extractPayload(
+        from object: Any,
+        depth: Int,
+        visited: inout Set<ObjectIdentifier>
+    ) -> Data? {
+        guard depth <= maxLookupDepth else { return nil }
+        if let data = toData(object), !data.isEmpty {
+            return data
+        }
+
+        let mirror = Mirror(reflecting: object)
+        if mirror.displayStyle == .class {
+            let objectId = ObjectIdentifier(object as AnyObject)
+            if visited.contains(objectId) {
+                return nil
+            }
+            visited.insert(objectId)
+        }
+
+        // First pass: prefer obvious payload labels.
+        for child in mirror.children {
+            let label = child.label?.lowercased() ?? ""
+            if (label.contains("data") || label.contains("body") || label.contains("raw") || label.contains("value")),
+               let data = toData(child.value),
+               !data.isEmpty {
+                return data
+            }
+        }
+
+        // Second pass: recurse for nested payload.
+        for child in mirror.children {
+            if let data = extractPayload(from: child.value, depth: depth + 1, visited: &visited) {
+                return data
+            }
+        }
+
+        return nil
     }
 
     static func lookup(_ object: Any, candidates: [String]) -> Any? {
