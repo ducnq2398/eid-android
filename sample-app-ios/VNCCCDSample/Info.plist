@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Ứng dụng cần truy cập camera để quét mã MRZ trên thẻ CCCD</string>
+	<key>NFCReaderUsageDescription</key>
+	<string>Ứng dụng cần sử dụng NFC để đọc chip trên thẻ CCCD</string>
+	<key>com.apple.developer.nfc.readersession.iso7816.select-identifiers</key>
+	<array>
+		<string>A0000002471001</string>
+		<string>A0000002472001</string>
+	</array>
+</dict>
+</plist>

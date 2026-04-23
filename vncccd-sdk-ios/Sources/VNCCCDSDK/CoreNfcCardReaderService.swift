@@ -18,55 +18,81 @@ public final class CoreNfcCardReaderService: NSObject, NfcCardReaderService, @un
         config: CCCDConfig,
         onProgress: @escaping @Sendable (ReadingStatus) -> Void
     ) async throws -> CCCDData {
+        debugLog("Start NFC read")
+        debugLog("Input MRZ number=\(mrzData.fullDocumentNumber), dob=\(mrzData.dateOfBirth), doe=\(mrzData.dateOfExpiry)")
+
         guard NFCNDEFReaderSession.readingAvailable else {
+            debugLog("NFC is not available on this device")
             throw CCCDError.nfcNotSupported
         }
 
-        let mrzKey = MrzKeyBuilder.build(from: mrzData)
+        
 
+        let mrzKey = MrzKeyBuilder.build(from: mrzData)
+        debugLog("Built MRZ key=\(masked(mrzKey))")
+
+        debugLog("Progress -> \(ReadingStatus.connecting.description)")
         onProgress(.connecting)
+        debugLog("Progress -> \(ReadingStatus.authenticating.description)")
         onProgress(.authenticating)
 
-        let tags: [DataGroupId] = [.COM, .SOD, .DG1, .DG2, .DG11, .DG12, .DG14, .DG15]
+        let tags: [DataGroupId] = [.COM, .SOD, .DG1, .DG2, .DG11, .DG12, .DG13, .DG14, .DG15]
+        debugLog("Requesting tags: \(tags.map { String(describing: $0) }.joined(separator: ", "))")
 
         let passportModel: Any
         do {
             passportModel = try await reader.readPassport(mrzKey: mrzKey, tags: tags)
+            debugLog("NFC readPassport succeeded")
+            debugLog("Available groups: \(ReflectionExtractor.availableGroupHints(passportModel).joined(separator: ", "))")
         } catch {
-            throw mapNfcError(error)
+            let mapped = mapNfcError(error)
+            debugLog("NFC readPassport failed: raw=\(error.localizedDescription), mapped=\(mapped.message)")
+            throw mapped
         }
 
+        debugLog("Progress -> \(ReadingStatus.readingDG1.description)")
         onProgress(.readingDG1)
 
         let rawDG1 = ReflectionExtractor.extractDataGroupRaw(passportModel, groupCode: "DG1")
+        debugLog("DG1 bytes=\(rawDG1?.count ?? 0)")
 
         var rawDG2: Data?
         var faceBase64: String?
         if config.readFaceImage {
+            debugLog("Progress -> \(ReadingStatus.readingDG2.description)")
             onProgress(.readingDG2)
             rawDG2 = ReflectionExtractor.extractDataGroupRaw(passportModel, groupCode: "DG2")
             faceBase64 = ReflectionExtractor.extractFaceImageBase64(passportModel)
+            debugLog("DG2 bytes=\(rawDG2?.count ?? 0), faceBase64=\(faceBase64 != nil ? "yes" : "no")")
         }
 
-        var rawDG13 = ReflectionExtractor.extractDataGroupRaw(passportModel, groupCode: "DG13")
+        let rawDG13 = ReflectionExtractor.extractDataGroupRaw(passportModel, groupCode: "DG13")
+        let rawDG11 = ReflectionExtractor.extractDataGroupRaw(passportModel, groupCode: "DG11")
         var personalInfo: PersonalInfo?
         if config.readPersonalInfo {
+            debugLog("Progress -> \(ReadingStatus.readingDG13.description)")
             onProgress(.readingDG13)
             if let dg13 = rawDG13 {
                 personalInfo = DG13Parser.parse(rawBytes: dg13)
+                if personalInfo != nil {
+                    debugLog("Personal info source=DG13")
+                }
             }
-            if personalInfo == nil {
-                personalInfo = ReflectionExtractor.extractPersonalInfo(passportModel)
+            if personalInfo == nil, let dg11 = rawDG11 {
+                personalInfo = DG13Parser.parse(rawBytes: dg11)
+                if personalInfo != nil {
+                    debugLog("DG13 unavailable/empty, personal info source=DG11")
+                }
             }
-            if rawDG13 == nil {
-                rawDG13 = ReflectionExtractor.extractDataGroupRaw(passportModel, groupCode: "DG11")
-            }
+            debugLog("DG13 bytes=\(rawDG13?.count ?? 0), DG11 bytes=\(rawDG11?.count ?? 0), personalInfo=\(personalInfo != nil ? "yes" : "no")")
         }
 
+        debugLog("Progress -> \(ReadingStatus.verifying.description)")
         onProgress(.verifying)
+        debugLog("Progress -> \(ReadingStatus.completed.description)")
         onProgress(.completed)
 
-        return CCCDData(
+        let result = CCCDData(
             mrzData: mrzData,
             personalInfo: personalInfo,
             faceImageBase64: faceBase64,
@@ -75,6 +101,8 @@ public final class CoreNfcCardReaderService: NSObject, NfcCardReaderService, @un
             rawDG13: rawDG13,
             isPassiveAuthSuccess: ReflectionExtractor.extractPassiveAuthResult(passportModel)
         )
+        debugLog("Finish NFC read: passiveAuth=\(result.isPassiveAuthSuccess.map(String.init(describing:)) ?? "nil")")
+        return result
     }
 
     private func mapNfcError(_ error: Error) -> CCCDError {
@@ -96,41 +124,24 @@ public final class CoreNfcCardReaderService: NSObject, NfcCardReaderService, @un
         }
         return .unknown(details: error.localizedDescription)
     }
-}
 
-private enum MrzKeyBuilder {
-    static func build(from mrzData: MrzData) -> String {
-        let doc = sanitizedDocument(mrzData)
-        let dob = String(mrzData.dateOfBirth.filter(\.isNumber).prefix(6))
-        let doe = String(mrzData.dateOfExpiry.filter(\.isNumber).prefix(6))
-
-        let docCd = MrzParser.computeCheckDigit(input: doc)
-        let dobCd = MrzParser.computeCheckDigit(input: dob)
-        let doeCd = MrzParser.computeCheckDigit(input: doe)
-
-        return "\(doc)\(docCd)\(dob)\(dobCd)\(doe)\(doeCd)"
+    private func debugLog(_ message: String) {
+        #if DEBUG
+        print("[VNCCCDSDK][NFC] \(message)")
+        #endif
     }
 
-    private static func sanitizedDocument(_ mrzData: MrzData) -> String {
-        let full = mrzData.fullDocumentNumber
-            .uppercased()
-            .replacingOccurrences(of: " ", with: "")
-            .replacingOccurrences(of: "<", with: "")
-
-        if !full.isEmpty {
-            return full
-        }
-
-        let raw = mrzData.documentNumber
-            .uppercased()
-            .replacingOccurrences(of: " ", with: "")
-            .replacingOccurrences(of: "<", with: "")
-
-        return raw
+    private func masked(_ value: String) -> String {
+        guard value.count > 6 else { return value }
+        let prefix = value.prefix(4)
+        let suffix = value.suffix(2)
+        return "\(prefix)****\(suffix)"
     }
 }
 
 private enum ReflectionExtractor {
+    private static let maxLookupDepth = 24
+
     static func extractFaceImageBase64(_ model: Any) -> String? {
         if let image = lookup(model, candidates: ["passportImage", "faceImage", "portraitImage"]) as? UIImage,
            let data = image.jpegData(compressionQuality: 0.95) {
@@ -183,19 +194,30 @@ private enum ReflectionExtractor {
     }
 
     static func extractDataGroupRaw(_ model: Any, groupCode: String) -> Data? {
-        if let direct = lookup(model, candidates: ["\(groupCode.lowercased())Data", "raw\(groupCode)", groupCode]) as? Data {
+        if let direct = lookup(
+            model,
+            candidates: [
+                "\(groupCode.lowercased())Data",
+                "\(groupCode)Data",
+                groupCode.lowercased(),
+                groupCode,
+                "raw\(groupCode)"
+            ]
+        ) as? Data {
             return direct
         }
 
         if let groups = lookup(model, candidates: ["dataGroupsRead", "dataGroups", "dataGroupMap"]) {
+            let tokens = groupTokens(for: groupCode)
+
             for child in mirrorChildren(groups) {
                 guard let label = child.label else { continue }
-                if label.uppercased().contains(groupCode.uppercased()), let data = child.value as? Data {
+                if matchesGroupToken(label, tokens: tokens), let data = child.value as? Data {
                     return data
                 }
 
                 let keyDescription = String(describing: child.value)
-                if keyDescription.uppercased().contains(groupCode.uppercased()) {
+                if matchesGroupToken(keyDescription, tokens: tokens) {
                     if let data = lookup(child.value, candidates: ["data", "body", "rawData", "value"]) as? Data {
                         return data
                     }
@@ -204,7 +226,7 @@ private enum ReflectionExtractor {
 
             if let dict = groups as? [AnyHashable: Any] {
                 for (key, value) in dict {
-                    if String(describing: key).uppercased().contains(groupCode.uppercased()) {
+                    if matchesGroupToken(String(describing: key), tokens: tokens) {
                         if let data = value as? Data {
                             return data
                         }
@@ -219,8 +241,53 @@ private enum ReflectionExtractor {
         return nil
     }
 
+    static func availableGroupHints(_ model: Any) -> [String] {
+        var hints = Set<String>()
+
+        if let groups = lookup(model, candidates: ["dataGroupsRead", "dataGroups", "dataGroupMap"]) {
+            if let dict = groups as? [AnyHashable: Any] {
+                for key in dict.keys {
+                    hints.insert(String(describing: key))
+                }
+            }
+
+            for child in mirrorChildren(groups) {
+                if let label = child.label, !label.isEmpty {
+                    hints.insert(label)
+                }
+                let valueDescription = String(describing: child.value)
+                if valueDescription.contains("DG") || valueDescription.contains("0x") || valueDescription.contains("DataGroup") {
+                    hints.insert(valueDescription)
+                }
+            }
+        }
+
+        return hints.sorted()
+    }
+
     static func lookup(_ object: Any, candidates: [String]) -> Any? {
+        var visited = Set<ObjectIdentifier>()
+        return lookup(object, candidates: candidates, depth: 0, visited: &visited)
+    }
+
+    private static func lookup(
+        _ object: Any,
+        candidates: [String],
+        depth: Int,
+        visited: inout Set<ObjectIdentifier>
+    ) -> Any? {
+        guard depth <= maxLookupDepth else { return nil }
+
         let mirror = Mirror(reflecting: object)
+
+        // Prevent infinite recursion when reflected object graph has cycles.
+        if mirror.displayStyle == .class {
+            let objectId = ObjectIdentifier(object as AnyObject)
+            if visited.contains(objectId) {
+                return nil
+            }
+            visited.insert(objectId)
+        }
 
         for child in mirror.children {
             guard let label = child.label else { continue }
@@ -230,7 +297,12 @@ private enum ReflectionExtractor {
         }
 
         for child in mirror.children {
-            if let nested = lookup(child.value, candidates: candidates) {
+            if let nested = lookup(
+                child.value,
+                candidates: candidates,
+                depth: depth + 1,
+                visited: &visited
+            ) {
                 return nested
             }
         }
@@ -273,6 +345,35 @@ private enum ReflectionExtractor {
 
     private static func hasPersonalData(_ info: PersonalInfo) -> Bool {
         !(info.fullName?.isEmpty ?? true) || !(info.idNumber?.isEmpty ?? true)
+    }
+
+    private static func groupTokens(for groupCode: String) -> [String] {
+        let normalized = groupCode.uppercased()
+        var tokens = [normalized]
+        switch normalized {
+        case "COM":
+            tokens += ["0X60", "96", "0X011E", "286"]
+        case "SOD":
+            tokens += ["0X77", "119", "0X011D", "285"]
+        case "DG11":
+            tokens += ["0X6B", "107", "0X010B", "267"]
+        case "DG12":
+            tokens += ["0X6C", "108", "0X010C", "268"]
+        case "DG13":
+            tokens += ["0X6D", "109", "0X010D", "269"]
+        case "DG14":
+            tokens += ["0X6E", "110", "0X010E", "270"]
+        case "DG15":
+            tokens += ["0X6F", "111", "0X010F", "271"]
+        default:
+            break
+        }
+        return tokens
+    }
+
+    private static func matchesGroupToken(_ value: String, tokens: [String]) -> Bool {
+        let upper = value.uppercased()
+        return tokens.contains { upper.contains($0) }
     }
 }
 

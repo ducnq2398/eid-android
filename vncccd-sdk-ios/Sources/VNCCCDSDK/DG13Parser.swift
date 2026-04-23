@@ -4,6 +4,9 @@ public enum DG13Parser {
     public static func parse(rawBytes: Data) -> PersonalInfo? {
         guard !rawBytes.isEmpty else { return nil }
 
+        if let info = parseVietnamSegmented(rawBytes: rawBytes), hasData(info) {
+            return info
+        }
         if let info = parseTextBased(rawBytes: rawBytes), hasData(info) {
             return info
         }
@@ -77,6 +80,99 @@ public enum DG13Parser {
             dateOfBirth: normalizeDate(dates.count > 0 ? dates[0] : nil),
             dateOfIssue: normalizeDate(dates.count > 1 ? dates[1] : nil),
             dateOfExpiry: normalizeDate(dates.count > 2 ? dates[2] : nil)
+        )
+    }
+
+    private static func parseVietnamSegmented(rawBytes: Data) -> PersonalInfo? {
+        let bytes = [UInt8](rawBytes)
+        guard bytes.count >= 8 else { return nil }
+
+        var separators: [Int] = []
+        var expectedIndex: UInt8 = 1
+        var position = 0
+        while position <= bytes.count - 5 {
+            let b0 = bytes[position]
+            let b2 = bytes[position + 2]
+            let b3 = bytes[position + 3]
+            let b4 = bytes[position + 4]
+            if b0 == 0x30, b2 == 0x02, b3 == 0x01, b4 == expectedIndex {
+                separators.append(position)
+                expectedIndex = expectedIndex &+ 1
+                if expectedIndex > 20 { break }
+            }
+            position += 1
+        }
+
+        guard !separators.isEmpty else { return nil }
+        separators.append(bytes.count)
+
+        var idNumber: String?
+        var fullName: String?
+        var dateOfBirth: String?
+        var gender: String?
+        var nationality: String?
+        var ethnicity: String?
+        var religion: String?
+        var placeOfOrigin: String?
+        var placeOfResidence: String?
+        var personalIdentification: String?
+        var dateOfIssue: String?
+        var dateOfExpiry: String?
+        var fatherName: String?
+        var motherName: String?
+        var oldIdNumber: String?
+
+        for index in 0..<(separators.count - 1) {
+            let start = separators[index]
+            let end = separators[index + 1]
+            if end - start < 6 { continue }
+            let subset = Array(bytes[start..<end])
+            let fieldIndex = Int(subset[4])
+
+            if fieldIndex == 14 { continue } // Card info is usually empty.
+
+            if fieldIndex == 13 {
+                let names = extractAsn1TextValues(from: subset)
+                fatherName = normalizeName(names.first)
+                motherName = normalizeName(names.count > 1 ? names[1] : nil)
+                continue
+            }
+
+            let value = extractSegmentTextValue(from: subset)
+            switch fieldIndex {
+            case 1: idNumber = normalizeId(value)
+            case 2: fullName = normalizeName(value)
+            case 3: dateOfBirth = normalizeDate(value)
+            case 4: gender = normalizeGender(value)
+            case 5: nationality = normalizeShortText(value, maxLen: 32)
+            case 6: ethnicity = normalizeShortText(value, maxLen: 64)
+            case 7: religion = normalizeShortText(value, maxLen: 64)
+            case 8: placeOfOrigin = normalizeShortText(value, maxLen: 200)
+            case 9: placeOfResidence = normalizeShortText(value, maxLen: 200)
+            case 10: personalIdentification = normalizeShortText(value, maxLen: 200)
+            case 11: dateOfIssue = normalizeDate(value)
+            case 12: dateOfExpiry = normalizeDate(value)
+            case 15: oldIdNumber = normalizeId(value)
+            default: break
+            }
+        }
+
+        return PersonalInfo(
+            fullName: fullName,
+            idNumber: idNumber,
+            dateOfBirth: dateOfBirth,
+            gender: gender,
+            nationality: nationality,
+            ethnicity: ethnicity,
+            religion: religion,
+            placeOfOrigin: placeOfOrigin,
+            placeOfResidence: placeOfResidence,
+            personalIdentification: personalIdentification,
+            dateOfIssue: dateOfIssue,
+            dateOfExpiry: dateOfExpiry,
+            fatherName: fatherName,
+            motherName: motherName,
+            oldIdNumber: oldIdNumber
         )
     }
 
@@ -158,6 +254,71 @@ public enum DG13Parser {
         guard !value.isEmpty else { return Int.min / 2 }
         let base = value.filter { $0.isLetter || $0.isNumber || " /.-|:;,".contains($0) }.count
         return base
+    }
+
+    private static func extractSegmentTextValue(from segment: [UInt8]) -> String? {
+        let values = extractAsn1TextValues(from: segment)
+        if let first = values.first {
+            return first
+        }
+
+        guard segment.count > 5 else { return nil }
+        let fallback = String(decoding: segment.suffix(from: 5), as: UTF8.self)
+        return cleanupText(fallback).isEmpty ? nil : cleanupText(fallback)
+    }
+
+    private static func extractAsn1TextValues(from bytes: [UInt8]) -> [String] {
+        guard !bytes.isEmpty else { return [] }
+
+        var results: [String] = []
+        var index = 0
+        while index < bytes.count {
+            let tag = bytes[index]
+            if (tag == 0x0C || tag == 0x13), index + 1 < bytes.count,
+               let (length, lengthOffset) = readAsn1Length(from: bytes, at: index + 1) {
+                let valueStart = index + 1 + lengthOffset
+                let valueEnd = valueStart + length
+                if valueStart <= bytes.count, valueEnd <= bytes.count {
+                    let text = cleanupText(String(decoding: bytes[valueStart..<valueEnd], as: UTF8.self))
+                    if !text.isEmpty {
+                        results.append(text)
+                    }
+                    index = valueEnd
+                    continue
+                }
+            }
+
+            // Best-effort skip for other TLV nodes.
+            if index + 1 < bytes.count,
+               let (length, lengthOffset) = readAsn1Length(from: bytes, at: index + 1) {
+                let next = index + 1 + lengthOffset + length
+                if next > index, next <= bytes.count {
+                    index = next
+                    continue
+                }
+            }
+
+            index += 1
+        }
+        return results
+    }
+
+    private static func readAsn1Length(from bytes: [UInt8], at index: Int) -> (Int, Int)? {
+        guard index < bytes.count else { return nil }
+
+        let first = Int(bytes[index])
+        if (first & 0x80) == 0 {
+            return (first, 1)
+        }
+
+        let count = first & 0x7F
+        guard count > 0, count <= 4, index + count < bytes.count else { return nil }
+
+        var length = 0
+        for position in 0..<count {
+            length = (length << 8) | Int(bytes[index + 1 + position])
+        }
+        return (length, 1 + count)
     }
 
     private static func firstMatch(regex: NSRegularExpression?, in text: String) -> String? {

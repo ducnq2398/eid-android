@@ -12,14 +12,14 @@ public enum ReadingStatus: String, Sendable, Codable, CaseIterable {
 
     public var description: String {
         switch self {
-        case .connecting: return "Dang ket noi voi the..."
-        case .authenticating: return "Dang xac thuc..."
-        case .readingDG1: return "Dang doc thong tin MRZ..."
-        case .readingDG2: return "Dang doc anh chan dung..."
-        case .readingDG13: return "Dang doc thong tin ca nhan..."
-        case .verifying: return "Dang xac minh du lieu..."
-        case .completed: return "Hoan thanh!"
-        case .error: return "Co loi xay ra"
+        case .connecting: return "Đang kết nối với thẻ..."
+        case .authenticating: return "Đang xác thực..."
+        case .readingDG1: return "Đang đọc thông tin MRZ..."
+        case .readingDG2: return "Đang đọc ảnh chân dung..."
+        case .readingDG13: return "Đang đọc thông tin cá nhân..."
+        case .verifying: return "Đang xác minh dữ liệu..."
+        case .completed: return "Hoàn thành!"
+        case .error: return "Có lỗi xảy ra"
         }
     }
 }

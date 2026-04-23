@@ -1,130 +1,147 @@
 import Foundation
 
 public enum MrzParser {
-    private static let td1LineLength = 30
-    private static let td1NumLines = 3
+
+    // MARK: - Constants
+
+    private static let lineLength = 30
+    private static let numLines = 3
     private static let filler: Character = "<"
     private static let weights = [7, 3, 1]
 
+    // MARK: - Public API
+
     public static func parse(mrzLines: [String]) -> MrzData? {
-        guard mrzLines.count == td1NumLines else { return nil }
+        guard mrzLines.count == numLines else { return nil }
 
-        let line1 = padOrTrim(mrzLines[0])
-        let line2 = padOrTrim(mrzLines[1])
-        let line3 = padOrTrim(mrzLines[2])
+        let l1 = normalize(mrzLines[0])
+        let l2 = normalize(mrzLines[1])
+        let l3 = normalize(mrzLines[2])
 
-        guard line1.count == td1LineLength, line2.count == td1LineLength, line3.count == td1LineLength else {
+        guard l1.count == lineLength,
+              l2.count == lineLength,
+              l3.count == lineLength else {
             return nil
         }
 
-        let documentType = substr(line1, 0, 2)
-        guard documentType.hasPrefix("I") || documentType.hasPrefix("A") || documentType.hasPrefix("C") else {
+        // MARK: Document type
+
+        let documentType = slice(l1, 0, 2)
+        guard documentType.first == "I" || documentType.first == "A" || documentType.first == "C" else {
             return nil
         }
 
-        let documentNumber = substr(line1, 5, 9).replacingOccurrences(of: String(filler), with: "")
-        let optionalData1 = substr(line1, 15, 15)
+        // MARK: Line 1
 
-        let dateOfBirth = substr(line2, 0, 6)
-        let dobCheckDigit = charToValue(charAt(line2, 6))
-        let sex = substr(line2, 7, 1)
-        let dateOfExpiry = substr(line2, 8, 6)
-        let doeCheckDigit = charToValue(charAt(line2, 14))
-        let nationality = substr(line2, 15, 3).replacingOccurrences(of: String(filler), with: "")
-        let optionalData2 = substr(line2, 18, 11)
+        let docNumberRaw = slice(l1, 5, 9)
+        let docNumberCD = digit(l1, 14)
+        let optional1 = slice(l1, 15, 15)
 
-        guard computeCheckDigit(input: dateOfBirth) == dobCheckDigit else { return nil }
-        guard computeCheckDigit(input: dateOfExpiry) == doeCheckDigit else { return nil }
+        guard check(docNumberRaw, docNumberCD) else { return nil }
 
-        let nameParts = line3.components(separatedBy: "<<")
-        let surname = nameParts.first?.replacingOccurrences(of: String(filler), with: " ").trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
-        let givenNames: String
-        if nameParts.count > 1 {
-            givenNames = nameParts.dropFirst().joined(separator: " ").replacingOccurrences(of: String(filler), with: " ").trimmingCharacters(in: .whitespacesAndNewlines)
-        } else {
-            givenNames = ""
+        // MARK: Line 2
+
+        let dob = slice(l2, 0, 6)
+        let dobCD = digit(l2, 6)
+
+        let sex = slice(l2, 7, 1)
+
+        let expiry = slice(l2, 8, 6)
+        let expiryCD = digit(l2, 14)
+
+        let nationality = clean(slice(l2, 15, 3))
+        let optional2 = slice(l2, 18, 11)
+
+        let compositeCD = digit(l2, 29)
+
+        guard check(dob, dobCD),
+              check(expiry, expiryCD) else {
+            return nil
         }
-        let fullName = "\(surname) \(givenNames)".trimmingCharacters(in: .whitespacesAndNewlines)
+
+        // MARK: Composite check (ICAO)
+
+        let compositeInput =
+            docNumberRaw +
+            slice(l1, 14, 1) +
+            optional1 +
+            dob +
+            slice(l2, 6, 1) +
+            expiry +
+            slice(l2, 14, 1) +
+            optional2
+
+        guard computeCheckDigit(compositeInput) == compositeCD else {
+            return nil
+        }
+
+        // MARK: Name
+
+        let fullName = parseName(l3)
 
         return MrzData(
-            documentNumber: documentNumber,
-            dateOfBirth: dateOfBirth,
-            dateOfExpiry: dateOfExpiry,
-            gender: sex,
+            documentNumber: clean(docNumberRaw),
+            dateOfBirth: dob,
+            dateOfExpiry: expiry,
+            gender: normalizeGender(sex),
             nationality: nationality,
             fullNameMrz: fullName,
-            rawMrz: "\(line1)\n\(line2)\n\(line3)",
-            optionalData1: optionalData1,
-            optionalData2: optionalData2
+            rawMrz: "\(l1)\n\(l2)\n\(l3)",
+            optionalData1: optional1,
+            optionalData2: optional2
         )
     }
 
     public static func parseRaw(rawMrz: String) -> MrzData? {
-        let cleaned = rawMrz.replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "\r", with: "")
-        let lines = cleaned.components(separatedBy: "\n").filter { !$0.isEmpty }
-        if lines.count == td1NumLines {
+        let cleaned = rawMrz
+            .replacingOccurrences(of: " ", with: "")
+            .replacingOccurrences(of: "\r", with: "")
+
+        let lines = cleaned
+            .components(separatedBy: "\n")
+            .filter { !$0.isEmpty }
+
+        if lines.count == numLines {
             return parse(mrzLines: lines)
         }
 
-        if cleaned.count == td1LineLength * td1NumLines {
+        if cleaned.count == lineLength * numLines {
             return parse(mrzLines: [
-                substr(cleaned, 0, 30),
-                substr(cleaned, 30, 30),
-                substr(cleaned, 60, 30)
+                slice(cleaned, 0, 30),
+                slice(cleaned, 30, 30),
+                slice(cleaned, 60, 30)
             ])
         }
+
         return nil
     }
 
-    public static func computeCheckDigit(input: String) -> Int {
-        var sum = 0
-        for (index, char) in input.enumerated() {
-            sum += charToValue(char) * weights[index % 3]
-        }
-        return sum % 10
-    }
-
-    public static func isMrzLine1(text: String) -> Bool {
-        let cleaned = text.replacingOccurrences(of: " ", with: "").uppercased()
-        return (cleaned.hasPrefix("I<VNM") || cleaned.hasPrefix("IDVNM") ||
-                cleaned.hasPrefix("I0VNM") || cleaned.hasPrefix("ICVNM")) &&
-        cleaned.count >= td1LineLength - 5
-    }
+    // MARK: - OCR Helpers
 
     public static func cleanOcrText(_ text: String) -> String {
         text.uppercased()
-            .replacingOccurrences(of: "«", with: "<<")
-            .replacingOccurrences(of: "»", with: ">>")
             .replacingOccurrences(of: " ", with: "")
-            .replacingOccurrences(of: "O", with: "0")
+            .replacingOccurrences(of: "«", with: "<<")
             .replacingOccurrences(of: "{", with: "<")
-            .replacingOccurrences(of: "}", with: ">")
             .replacingOccurrences(of: "[", with: "<")
-            .replacingOccurrences(of: "]", with: ">")
             .replacingOccurrences(of: "(", with: "<")
-            .replacingOccurrences(of: ")", with: ">")
     }
 
     public static func smartCleanMrzLine(_ line: String, lineNumber: Int) -> String {
         var chars = Array(line.uppercased())
 
+        func fix(_ i: Int) {
+            guard i < chars.count else { return }
+            chars[i] = fixToDigit(chars[i])
+        }
+
         switch lineNumber {
         case 1:
-            if chars.count >= 15 {
-                for index in 5...13 where index < chars.count {
-                    chars[index] = fixToDigit(chars[index])
-                }
-                chars[14] = fixToDigit(chars[14])
-            }
+            (5...14).forEach { fix($0) }
         case 2:
-            if chars.count >= 15 {
-                for index in 0...6 where index < chars.count {
-                    chars[index] = fixToDigit(chars[index])
-                }
-                for index in 8...14 where index < chars.count {
-                    chars[index] = fixToDigit(chars[index])
-                }
-            }
+            (0...6).forEach { fix($0) }
+            (8...14).forEach { fix($0) }
+            fix(29)
         default:
             break
         }
@@ -132,22 +149,70 @@ public enum MrzParser {
         return String(chars)
     }
 
-    private static func padOrTrim(_ value: String) -> String {
-        if value.count == td1LineLength { return value }
-        if value.count > td1LineLength { return substr(value, 0, td1LineLength) }
-        return value + String(repeating: String(filler), count: td1LineLength - value.count)
+    // MARK: - Core Logic
+
+    public static func computeCheckDigit(_ input: String) -> Int {
+        input.enumerated().reduce(0) { sum, pair in
+            sum + value(pair.element) * weights[pair.offset % 3]
+        } % 10
     }
 
-    private static func charToValue(_ char: Character) -> Int {
+    // MARK: - Helpers
+
+    private static func check(_ value: String, _ digit: Int) -> Bool {
+        computeCheckDigit(value) == digit
+    }
+
+    private static func parseName(_ line: String) -> String {
+        let parts = line.components(separatedBy: "<<")
+
+        let surname = clean(parts.first ?? "")
+
+        let given = parts
+            .dropFirst()
+            .joined(separator: " ")
+            .replacingOccurrences(of: "<", with: " ")
+            .trimmingCharacters(in: .whitespaces)
+
+        return "\(surname) \(given)".trimmingCharacters(in: .whitespaces)
+    }
+
+    private static func normalize(_ line: String) -> String {
+        let uppercased = line.uppercased()
+        if line.count > lineLength {
+            return slice(uppercased, 0, lineLength)
+        }
+        if line.count < lineLength {
+            return uppercased + String(repeating: String(filler), count: lineLength - line.count)
+        }
+        return uppercased
+    }
+
+    private static func clean(_ value: String) -> String {
+        value.replacingOccurrences(of: String(filler), with: "")
+    }
+
+    private static func slice(_ str: String, _ start: Int, _ length: Int) -> String {
+        guard start < str.count else { return "" }
+
+        let s = str.index(str.startIndex, offsetBy: start)
+        let e = str.index(s, offsetBy: min(length, str.distance(from: s, to: str.endIndex)), limitedBy: str.endIndex) ?? str.endIndex
+
+        return String(str[s..<e])
+    }
+
+    private static func digit(_ str: String, _ index: Int) -> Int {
+        guard index < str.count else { return 0 }
+        return value(str[str.index(str.startIndex, offsetBy: index)])
+    }
+
+    private static func value(_ char: Character) -> Int {
         if char == filler { return 0 }
-        if let digit = char.wholeNumberValue { return digit }
-        let scalar = String(char).unicodeScalars.first?.value ?? 0
-        if scalar >= 65 && scalar <= 90 {
-            return Int(scalar - 65 + 10)
-        }
-        if scalar >= 97 && scalar <= 122 {
-            return Int(scalar - 97 + 10)
-        }
+        if let d = char.wholeNumberValue { return d }
+
+        let scalar = char.unicodeScalars.first!.value
+        if scalar >= 65 && scalar <= 90 { return Int(scalar - 55) }
+
         return 0
     }
 
@@ -162,14 +227,10 @@ public enum MrzParser {
         }
     }
 
-    private static func substr(_ string: String, _ start: Int, _ length: Int) -> String {
-        let startIndex = string.index(string.startIndex, offsetBy: min(max(start, 0), string.count))
-        let endIndex = string.index(startIndex, offsetBy: min(length, string.distance(from: startIndex, to: string.endIndex)), limitedBy: string.endIndex) ?? string.endIndex
-        return String(string[startIndex..<endIndex])
-    }
-
-    private static func charAt(_ string: String, _ index: Int) -> Character {
-        guard index >= 0, index < string.count else { return filler }
-        return string[string.index(string.startIndex, offsetBy: index)]
+    private static func normalizeGender(_ value: String) -> String {
+        if value == "M" || value == "F" || value == "X" {
+            return value
+        }
+        return "X"
     }
 }
