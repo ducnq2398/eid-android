@@ -5,3 +5,5 @@
 /vncccd-sdk-ios/.build
 /vncccd-sdk-ios/.swiftpm
 /vncccd-sdk-ios/build
+/sample-app-ios/.build
+/sample-app-ios/.swiftpm
