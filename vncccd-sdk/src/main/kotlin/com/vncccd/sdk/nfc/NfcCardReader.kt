@@ -83,26 +83,41 @@ class NfcCardReader {
             // Read DG1
             onProgress(ReadingStatus.READING_DG1)
             val dg1Result = readDG1(ps)
+            val dg1Base64 = dg1Result.second?.let { Base64.encodeToString(it, Base64.NO_WRAP) }
 
             // Read DG2 (face image) if enabled
             var faceImageBase64: String? = null
             var rawDG2: ByteArray? = null
+            var dg2Base64: String? = null
             if (config.readFaceImage) {
                 onProgress(ReadingStatus.READING_DG2)
                 val dg2Result = readDG2(ps)
                 faceImageBase64 = encodeBitmapToBase64(dg2Result.first)
                 rawDG2 = dg2Result.second
+                dg2Base64 = rawDG2?.let { Base64.encodeToString(it, Base64.NO_WRAP) }
             }
 
             // Read DG13 (personal info) if enabled
             var personalInfo: PersonalInfo? = null
             var rawDG13: ByteArray? = null
+            var dg13Base64: String? = null
             if (config.readPersonalInfo) {
                 onProgress(ReadingStatus.READING_DG13)
                 val dg13Result = readDG13(ps)
                 personalInfo = dg13Result.first
                 rawDG13 = dg13Result.second
+                dg13Base64 = rawDG13?.let { Base64.encodeToString(it, Base64.NO_WRAP) }
             }
+
+            // Read SOD for dsCert
+            val sodResult = readSOD(ps)
+
+            // Read DG14, DG15
+            val rawDG14 = readDG14(ps)
+            val dg14Base64 = rawDG14?.let { Base64.encodeToString(it, Base64.NO_WRAP) }
+
+            val rawDG15 = readDG15(ps)
+            val dg15Base64 = rawDG15?.let { Base64.encodeToString(it, Base64.NO_WRAP) }
 
             onProgress(ReadingStatus.COMPLETED)
 
@@ -113,7 +128,14 @@ class NfcCardReader {
                 rawDG1 = dg1Result.second,
                 rawDG2 = rawDG2,
                 rawDG13 = rawDG13,
-                isPassiveAuthSuccess = true
+                isPassiveAuthSuccess = true,
+                dsCert = sodResult.first,
+                sod_data_base64 = sodResult.second?.let { Base64.encodeToString(it, Base64.NO_WRAP) },
+                dg1_data_base64 = dg1Base64,
+                dg2_data_base64 = dg2Base64,
+                dg13_data_base64 = dg13Base64,
+                dg14_data_base64 = dg14Base64,
+                dg15_data_base64 = dg15Base64
             )
 
         } catch (e: Exception) {
@@ -314,6 +336,53 @@ class NfcCardReader {
         } catch (e: Exception) {
             Log.e(TAG, "Error reading DG13", e)
             Pair(null, null)
+        }
+    }
+
+    /**
+     * Đọc SOD và trích xuất dsCert.
+     * @return Pair(dsCertBase64?, raw bytes?)
+     */
+    private fun readSOD(ps: PassportService): Pair<String?, ByteArray?> {
+        return try {
+            val inputStream = ps.getInputStream(PassportService.EF_SOD)
+            val rawBytes = inputStream.readBytes()
+            val sodFile = org.jmrtd.lds.SODFile(ByteArrayInputStream(rawBytes))
+            val docSignCert = sodFile.docSigningCertificate
+            val dsCertBase64 = if (docSignCert != null) {
+                Base64.encodeToString(docSignCert.encoded, Base64.NO_WRAP)
+            } else null
+            
+            Pair(dsCertBase64, rawBytes)
+        } catch (e: Exception) {
+            Log.e(TAG, "Error reading SOD", e)
+            Pair(null, null)
+        }
+    }
+
+    /**
+     * Đọc DG14.
+     */
+    private fun readDG14(ps: PassportService): ByteArray? {
+        return try {
+            val inputStream = ps.getInputStream(PassportService.EF_DG14)
+            inputStream.readBytes()
+        } catch (e: Exception) {
+            Log.e(TAG, "Error reading DG14", e)
+            null
+        }
+    }
+
+    /**
+     * Đọc DG15.
+     */
+    private fun readDG15(ps: PassportService): ByteArray? {
+        return try {
+            val inputStream = ps.getInputStream(PassportService.EF_DG15)
+            inputStream.readBytes()
+        } catch (e: Exception) {
+            Log.e(TAG, "Error reading DG15", e)
+            null
         }
     }
 

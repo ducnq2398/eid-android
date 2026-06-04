@@ -38,10 +38,10 @@ com.vncccd.sdk.vncccd-sdk-transition-1.4.1-36 /Users/tima/.gradle/caches/8.10.2/
 com.vncccd.sdk.vncccd-sdk-lifecycle-viewmodel-2.7.0-37 /Users/tima/.gradle/caches/8.10.2/transforms/f16207338ac82575c737dd78395c34c6/transformed/lifecycle-viewmodel-2.7.0/res
 com.vncccd.sdk.vncccd-sdk-appcompat-resources-1.6.1-38 /Users/tima/.gradle/caches/8.10.2/transforms/f65069302b931c6e9e477b2658ebd95d/transformed/appcompat-resources-1.6.1/res
 com.vncccd.sdk.vncccd-sdk-fragment-1.3.6-39 /Users/tima/.gradle/caches/8.10.2/transforms/f782222197578cc0bdd8977b314cdc1e/transformed/fragment-1.3.6/res
-com.vncccd.sdk.vncccd-sdk-pngs-40 /Users/tima/Documents/SDK/vncccd-sdk/build/generated/res/pngs/release
-com.vncccd.sdk.vncccd-sdk-resValues-41 /Users/tima/Documents/SDK/vncccd-sdk/build/generated/res/resValues/release
-com.vncccd.sdk.vncccd-sdk-mergeReleaseResources-42 /Users/tima/Documents/SDK/vncccd-sdk/build/intermediates/incremental/release/mergeReleaseResources/merged.dir
-com.vncccd.sdk.vncccd-sdk-mergeReleaseResources-43 /Users/tima/Documents/SDK/vncccd-sdk/build/intermediates/incremental/release/mergeReleaseResources/stripped.dir
-com.vncccd.sdk.vncccd-sdk-release-44 /Users/tima/Documents/SDK/vncccd-sdk/build/intermediates/merged_res/release/mergeReleaseResources
-com.vncccd.sdk.vncccd-sdk-main-45 /Users/tima/Documents/SDK/vncccd-sdk/src/main/res
-com.vncccd.sdk.vncccd-sdk-release-46 /Users/tima/Documents/SDK/vncccd-sdk/src/release/res
+com.vncccd.sdk.vncccd-sdk-pngs-40 /Users/tima/DucNQ/eid-android/vncccd-sdk/build/generated/res/pngs/release
+com.vncccd.sdk.vncccd-sdk-resValues-41 /Users/tima/DucNQ/eid-android/vncccd-sdk/build/generated/res/resValues/release
+com.vncccd.sdk.vncccd-sdk-mergeReleaseResources-42 /Users/tima/DucNQ/eid-android/vncccd-sdk/build/intermediates/incremental/release/mergeReleaseResources/merged.dir
+com.vncccd.sdk.vncccd-sdk-mergeReleaseResources-43 /Users/tima/DucNQ/eid-android/vncccd-sdk/build/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+com.vncccd.sdk.vncccd-sdk-release-44 /Users/tima/DucNQ/eid-android/vncccd-sdk/build/intermediates/merged_res/release/mergeReleaseResources
+com.vncccd.sdk.vncccd-sdk-main-45 /Users/tima/DucNQ/eid-android/vncccd-sdk/src/main/res
+com.vncccd.sdk.vncccd-sdk-release-46 /Users/tima/DucNQ/eid-android/vncccd-sdk/src/release/res

@@ -28,7 +28,15 @@ data class CCCDData(
     val rawDG13: ByteArray? = null,
 
     /** Kết quả passive authentication (nếu có) */
-    val isPassiveAuthSuccess: Boolean? = null
+    val isPassiveAuthSuccess: Boolean? = null,
+
+    val dsCert: String? = null,
+    val sod_data_base64: String? = null,
+    val dg1_data_base64: String? = null,
+    val dg2_data_base64: String? = null,
+    val dg13_data_base64: String? = null,
+    val dg14_data_base64: String? = null,
+    val dg15_data_base64: String? = null
 ) : Serializable {
     companion object {
         private const val serialVersionUID = 1L
@@ -43,7 +51,14 @@ data class CCCDData(
                 rawDG1.contentEqualsNullable(other.rawDG1) &&
                 rawDG2.contentEqualsNullable(other.rawDG2) &&
                 rawDG13.contentEqualsNullable(other.rawDG13) &&
-                isPassiveAuthSuccess == other.isPassiveAuthSuccess
+                isPassiveAuthSuccess == other.isPassiveAuthSuccess &&
+                dsCert == other.dsCert &&
+                sod_data_base64 == other.sod_data_base64 &&
+                dg1_data_base64 == other.dg1_data_base64 &&
+                dg2_data_base64 == other.dg2_data_base64 &&
+                dg13_data_base64 == other.dg13_data_base64 &&
+                dg14_data_base64 == other.dg14_data_base64 &&
+                dg15_data_base64 == other.dg15_data_base64
     }
 
     private fun ByteArray?.contentEqualsNullable(other: ByteArray?): Boolean {
@@ -59,6 +74,13 @@ data class CCCDData(
         result = 31 * result + (rawDG2?.contentHashCode() ?: 0)
         result = 31 * result + (rawDG13?.contentHashCode() ?: 0)
         result = 31 * result + isPassiveAuthSuccess.hashCode()
+        result = 31 * result + (dsCert?.hashCode() ?: 0)
+        result = 31 * result + (sod_data_base64?.hashCode() ?: 0)
+        result = 31 * result + (dg1_data_base64?.hashCode() ?: 0)
+        result = 31 * result + (dg2_data_base64?.hashCode() ?: 0)
+        result = 31 * result + (dg13_data_base64?.hashCode() ?: 0)
+        result = 31 * result + (dg14_data_base64?.hashCode() ?: 0)
+        result = 31 * result + (dg15_data_base64?.hashCode() ?: 0)
         return result
     }
 }
