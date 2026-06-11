@@ -1,7 +1,7 @@
 [
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/interpolator/mtrl_linear.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/interpolator/mtrl_linear.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/interpolator/mtrl_linear.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/interpolator/btn_checkbox_checked_mtrl_animation_interpolator_0.xml",

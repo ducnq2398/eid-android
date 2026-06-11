@@ -1,7 +1,7 @@
 [
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/ucrop_scale.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-ucrop-2.2.8-28:/drawable/ucrop_scale.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-ucrop-2.2.8-10:/drawable/ucrop_scale.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/tooltip_frame_dark.xml",
@@ -9,7 +9,7 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/ucrop_vector_loader_animated.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-ucrop-2.2.8-28:/drawable/ucrop_vector_loader_animated.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-ucrop-2.2.8-10:/drawable/ucrop_vector_loader_animated.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/dot_green.xml",
@@ -29,23 +29,23 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/mtrl_ic_arrow_drop_down.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/mtrl_ic_arrow_drop_down.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/mtrl_ic_arrow_drop_down.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/design_ic_visibility_off.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/design_ic_visibility_off.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/design_ic_visibility_off.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/mtrl_dropdown_arrow.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/mtrl_dropdown_arrow.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/mtrl_dropdown_arrow.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/ic_mtrl_checked_circle.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/ic_mtrl_checked_circle.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/ic_mtrl_checked_circle.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/mtrl_switch_track.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/mtrl_switch_track.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/mtrl_switch_track.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/ic_flash_off.xml",
@@ -77,7 +77,7 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/ucrop_ic_next.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-ucrop-2.2.8-28:/drawable/ucrop_ic_next.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-ucrop-2.2.8-10:/drawable/ucrop_ic_next.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/abc_switch_thumb_material.xml",
@@ -85,11 +85,11 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/common_google_signin_btn_text_disabled.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-play-services-base-18.5.0-26:/drawable/common_google_signin_btn_text_disabled.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-play-services-base-18.5.0-27:/drawable/common_google_signin_btn_text_disabled.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/mtrl_ic_cancel.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/mtrl_ic_cancel.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/mtrl_ic_cancel.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/test_level_drawable.xml",
@@ -105,11 +105,11 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/ucrop_shadow_upside.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-ucrop-2.2.8-28:/drawable/ucrop_shadow_upside.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-ucrop-2.2.8-10:/drawable/ucrop_shadow_upside.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/ucrop_ic_crop.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-ucrop-2.2.8-28:/drawable/ucrop_ic_crop.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-ucrop-2.2.8-10:/drawable/ucrop_ic_crop.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/abc_ic_go_search_api_material.xml",
@@ -117,11 +117,11 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/mtrl_switch_thumb_checked_pressed.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/mtrl_switch_thumb_checked_pressed.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/mtrl_switch_thumb_checked_pressed.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/material_ic_keyboard_arrow_left_black_24dp.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/material_ic_keyboard_arrow_left_black_24dp.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/material_ic_keyboard_arrow_left_black_24dp.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/abc_ic_voice_search_api_material.xml",
@@ -129,11 +129,11 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/mtrl_switch_thumb_checked.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/mtrl_switch_thumb_checked.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/mtrl_switch_thumb_checked.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/mtrl_switch_track_decoration.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/mtrl_switch_track_decoration.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/mtrl_switch_track_decoration.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/abc_list_selector_background_transition_holo_light.xml",
@@ -141,11 +141,11 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/ucrop_crop.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-ucrop-2.2.8-28:/drawable/ucrop_crop.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-ucrop-2.2.8-10:/drawable/ucrop_crop.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/ucrop_vector_ic_crop.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-ucrop-2.2.8-28:/drawable/ucrop_vector_ic_crop.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-ucrop-2.2.8-10:/drawable/ucrop_vector_ic_crop.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/abc_ratingbar_indicator_material.xml",
@@ -153,19 +153,19 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/ic_mtrl_chip_checked_circle.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/ic_mtrl_chip_checked_circle.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/ic_mtrl_chip_checked_circle.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/common_google_signin_btn_text_light_focused.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-play-services-base-18.5.0-26:/drawable/common_google_signin_btn_text_light_focused.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-play-services-base-18.5.0-27:/drawable/common_google_signin_btn_text_light_focused.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/notification_bg_low.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-core-1.12.0-6:/drawable/notification_bg_low.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-core-1.12.0-19:/drawable/notification_bg_low.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/ic_search_black_24.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/ic_search_black_24.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/ic_search_black_24.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/abc_ic_menu_selectall_mtrl_alpha.xml",
@@ -181,27 +181,27 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/mtrl_tabs_default_indicator.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/mtrl_tabs_default_indicator.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/mtrl_tabs_default_indicator.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/ucrop_ic_rotate_unselected.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-ucrop-2.2.8-28:/drawable/ucrop_ic_rotate_unselected.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-ucrop-2.2.8-10:/drawable/ucrop_ic_rotate_unselected.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/ucrop_ic_scale_unselected.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-ucrop-2.2.8-28:/drawable/ucrop_ic_scale_unselected.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-ucrop-2.2.8-10:/drawable/ucrop_ic_scale_unselected.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/m3_tabs_rounded_line_indicator.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/m3_tabs_rounded_line_indicator.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/m3_tabs_rounded_line_indicator.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/m3_bottom_sheet_drag_handle.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/m3_bottom_sheet_drag_handle.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/m3_bottom_sheet_drag_handle.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/mtrl_ic_checkbox_checked.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/mtrl_ic_checkbox_checked.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/mtrl_ic_checkbox_checked.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/progress_bar_bg.xml",
@@ -209,7 +209,7 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/ucrop_ic_crop_unselected.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-ucrop-2.2.8-28:/drawable/ucrop_ic_crop_unselected.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-ucrop-2.2.8-10:/drawable/ucrop_ic_crop_unselected.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/abc_ic_menu_cut_mtrl_alpha.xml",
@@ -221,11 +221,11 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/avd_show_password.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/avd_show_password.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/avd_show_password.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/ic_clear_black_24.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/ic_clear_black_24.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/ic_clear_black_24.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/btn_radio_off_mtrl.xml",
@@ -233,7 +233,7 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/mtrl_popupmenu_background.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/mtrl_popupmenu_background.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/mtrl_popupmenu_background.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/abc_btn_check_material.xml",
@@ -241,23 +241,23 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/material_ic_keyboard_arrow_right_black_24dp.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/material_ic_keyboard_arrow_right_black_24dp.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/material_ic_keyboard_arrow_right_black_24dp.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/notification_bg.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-core-1.12.0-6:/drawable/notification_bg.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-core-1.12.0-19:/drawable/notification_bg.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/ucrop_ic_scale.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-ucrop-2.2.8-28:/drawable/ucrop_ic_scale.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-ucrop-2.2.8-10:/drawable/ucrop_ic_scale.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/mtrl_checkbox_button_icon_indeterminate_checked.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/mtrl_checkbox_button_icon_indeterminate_checked.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/mtrl_checkbox_button_icon_indeterminate_checked.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/common_google_signin_btn_icon_light_focused.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-play-services-base-18.5.0-26:/drawable/common_google_signin_btn_icon_light_focused.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-play-services-base-18.5.0-27:/drawable/common_google_signin_btn_icon_light_focused.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/scan.png",
@@ -265,19 +265,19 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/m3_popupmenu_background_overlay.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/m3_popupmenu_background_overlay.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/m3_popupmenu_background_overlay.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/ic_mtrl_chip_close_circle.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/ic_mtrl_chip_close_circle.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/ic_mtrl_chip_close_circle.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/abc_vector_test.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-appcompat-resources-1.6.1-38:/drawable/abc_vector_test.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-appcompat-resources-1.6.1-3:/drawable/abc_vector_test.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/navigation_empty_icon.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/navigation_empty_icon.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/navigation_empty_icon.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/btn_radio_on_mtrl.xml",
@@ -285,23 +285,23 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/design_snackbar_background.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/design_snackbar_background.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/design_snackbar_background.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/mtrl_switch_thumb_pressed_unchecked.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/mtrl_switch_thumb_pressed_unchecked.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/mtrl_switch_thumb_pressed_unchecked.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/common_google_signin_btn_text_light.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-play-services-base-18.5.0-26:/drawable/common_google_signin_btn_text_light.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-play-services-base-18.5.0-27:/drawable/common_google_signin_btn_text_light.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/ucrop_rotate.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-ucrop-2.2.8-28:/drawable/ucrop_rotate.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-ucrop-2.2.8-10:/drawable/ucrop_rotate.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/mtrl_checkbox_button.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/mtrl_checkbox_button.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/mtrl_checkbox_button.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/abc_textfield_search_material.xml",
@@ -309,7 +309,7 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/mtrl_checkbox_button_icon.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/mtrl_checkbox_button_icon.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/mtrl_checkbox_button_icon.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/abc_star_half_black_48dp.xml",
@@ -321,11 +321,11 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/design_password_eye.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/design_password_eye.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/design_password_eye.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/mtrl_checkbox_button_icon_unchecked_indeterminate.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/mtrl_checkbox_button_icon_unchecked_indeterminate.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/mtrl_checkbox_button_icon_unchecked_indeterminate.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/circle_bg_orange_stroke.xml",
@@ -337,19 +337,19 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/mtrl_ic_error.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/mtrl_ic_error.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/mtrl_ic_error.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/mtrl_switch_thumb_unchecked_pressed.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/mtrl_switch_thumb_unchecked_pressed.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/mtrl_switch_thumb_unchecked_pressed.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/ic_m3_chip_checked_circle.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/ic_m3_chip_checked_circle.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/ic_m3_chip_checked_circle.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/mtrl_ic_indeterminate.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/mtrl_ic_indeterminate.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/mtrl_ic_indeterminate.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/abc_cab_background_internal_bg.xml",
@@ -365,19 +365,19 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/ic_mtrl_chip_checked_black.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/ic_mtrl_chip_checked_black.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/ic_mtrl_chip_checked_black.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/m3_password_eye.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/m3_password_eye.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/m3_password_eye.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/common_google_signin_btn_icon_light.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-play-services-base-18.5.0-26:/drawable/common_google_signin_btn_icon_light.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-play-services-base-18.5.0-27:/drawable/common_google_signin_btn_icon_light.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/mtrl_ic_checkbox_unchecked.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/mtrl_ic_checkbox_unchecked.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/mtrl_ic_checkbox_unchecked.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/nfc.png",
@@ -389,7 +389,7 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/notification_icon_background.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-core-1.12.0-6:/drawable/notification_icon_background.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-core-1.12.0-19:/drawable/notification_icon_background.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/abc_ic_arrow_drop_right_black_24dp.xml",
@@ -405,7 +405,7 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/avd_hide_password.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/avd_hide_password.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/avd_hide_password.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/abc_ic_menu_overflow_material.xml",
@@ -417,35 +417,35 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/mtrl_checkbox_button_icon_checked_indeterminate.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/mtrl_checkbox_button_icon_checked_indeterminate.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/mtrl_checkbox_button_icon_checked_indeterminate.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/mtrl_checkbox_button_icon_indeterminate_unchecked.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/mtrl_checkbox_button_icon_indeterminate_unchecked.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/mtrl_checkbox_button_icon_indeterminate_unchecked.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/ic_m3_chip_close.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/ic_m3_chip_close.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/ic_m3_chip_close.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/mtrl_switch_thumb_checked_unchecked.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/mtrl_switch_thumb_checked_unchecked.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/mtrl_switch_thumb_checked_unchecked.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/design_ic_visibility.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/design_ic_visibility.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/design_ic_visibility.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/mtrl_bottomsheet_drag_handle.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/mtrl_bottomsheet_drag_handle.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/mtrl_bottomsheet_drag_handle.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/material_ic_menu_arrow_up_black_24dp.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/material_ic_menu_arrow_up_black_24dp.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/material_ic_menu_arrow_up_black_24dp.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/mtrl_switch_thumb_unchecked_checked.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/mtrl_switch_thumb_unchecked_checked.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/mtrl_switch_thumb_unchecked_checked.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/circle_bg_orange.xml",
@@ -457,11 +457,11 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/m3_tabs_line_indicator.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/m3_tabs_line_indicator.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/m3_tabs_line_indicator.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/ucrop_ic_cross.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-ucrop-2.2.8-28:/drawable/ucrop_ic_cross.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-ucrop-2.2.8-10:/drawable/ucrop_ic_cross.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/btn_radio_off_to_on_mtrl_animation.xml",
@@ -469,7 +469,7 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/mtrl_ic_check_mark.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/mtrl_ic_check_mark.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/mtrl_ic_check_mark.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/abc_seekbar_track_material.xml",
@@ -477,7 +477,7 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/ucrop_wrapper_controls_shape.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-ucrop-2.2.8-28:/drawable/ucrop_wrapper_controls_shape.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-ucrop-2.2.8-10:/drawable/ucrop_wrapper_controls_shape.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/abc_btn_default_mtrl_shape.xml",
@@ -485,19 +485,19 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/mtrl_checkbox_button_checked_unchecked.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/mtrl_checkbox_button_checked_unchecked.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/mtrl_checkbox_button_checked_unchecked.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/common_google_signin_btn_text_light_normal.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-play-services-base-18.5.0-26:/drawable/common_google_signin_btn_text_light_normal.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-play-services-base-18.5.0-27:/drawable/common_google_signin_btn_text_light_normal.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/common_google_signin_btn_text_dark_focused.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-play-services-base-18.5.0-26:/drawable/common_google_signin_btn_text_dark_focused.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-play-services-base-18.5.0-27:/drawable/common_google_signin_btn_text_dark_focused.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/mtrl_ic_arrow_drop_up.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/mtrl_ic_arrow_drop_up.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/mtrl_ic_arrow_drop_up.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/btn_checkbox_unchecked_to_checked_mtrl_animation.xml",
@@ -505,7 +505,7 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/material_ic_calendar_black_24dp.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/material_ic_calendar_black_24dp.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/material_ic_calendar_black_24dp.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/bg_bottom_sheet.xml",
@@ -513,27 +513,27 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/common_google_signin_btn_text_dark_normal.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-play-services-base-18.5.0-26:/drawable/common_google_signin_btn_text_dark_normal.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-play-services-base-18.5.0-27:/drawable/common_google_signin_btn_text_dark_normal.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/mtrl_checkbox_button_unchecked_checked.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/mtrl_checkbox_button_unchecked_checked.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/mtrl_checkbox_button_unchecked_checked.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/ic_keyboard_black_24dp.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/ic_keyboard_black_24dp.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/ic_keyboard_black_24dp.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/ic_clock_black_24dp.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/ic_clock_black_24dp.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/ic_clock_black_24dp.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/m3_avd_show_password.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/m3_avd_show_password.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/m3_avd_show_password.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/common_google_signin_btn_icon_light_normal.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-play-services-base-18.5.0-26:/drawable/common_google_signin_btn_icon_light_normal.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-play-services-base-18.5.0-27:/drawable/common_google_signin_btn_icon_light_normal.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/abc_cab_background_top_material.xml",
@@ -541,11 +541,11 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/material_ic_edit_black_24dp.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/material_ic_edit_black_24dp.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/material_ic_edit_black_24dp.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/common_google_signin_btn_icon_dark_focused.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-play-services-base-18.5.0-26:/drawable/common_google_signin_btn_icon_dark_focused.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-play-services-base-18.5.0-27:/drawable/common_google_signin_btn_icon_dark_focused.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/btn_checkbox_checked_to_unchecked_mtrl_animation.xml",
@@ -557,15 +557,15 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/mtrl_checkbox_button_icon_checked_unchecked.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/mtrl_checkbox_button_icon_checked_unchecked.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/mtrl_checkbox_button_icon_checked_unchecked.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/common_google_signin_btn_icon_dark_normal.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-play-services-base-18.5.0-26:/drawable/common_google_signin_btn_icon_dark_normal.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-play-services-base-18.5.0-27:/drawable/common_google_signin_btn_icon_dark_normal.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/common_google_signin_btn_icon_disabled.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-play-services-base-18.5.0-26:/drawable/common_google_signin_btn_icon_disabled.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-play-services-base-18.5.0-27:/drawable/common_google_signin_btn_icon_disabled.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/abc_ic_menu_copy_mtrl_am_alpha.xml",
@@ -573,7 +573,7 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/ic_m3_chip_check.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/ic_m3_chip_check.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/ic_m3_chip_check.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/abc_ic_ab_back_material.xml",
@@ -585,11 +585,11 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/mtrl_checkbox_button_icon_unchecked_checked.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/mtrl_checkbox_button_icon_unchecked_checked.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/mtrl_checkbox_button_icon_unchecked_checked.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/m3_avd_hide_password.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/m3_avd_hide_password.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/m3_avd_hide_password.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/abc_text_cursor_material.xml",
@@ -601,7 +601,7 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/design_fab_background.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/design_fab_background.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/design_fab_background.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/ic_flash_on.xml",
@@ -609,39 +609,39 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/notification_tile_bg.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-core-1.12.0-6:/drawable/notification_tile_bg.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-core-1.12.0-19:/drawable/notification_tile_bg.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/mtrl_switch_thumb_unchecked.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/mtrl_switch_thumb_unchecked.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/mtrl_switch_thumb_unchecked.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/mtrl_switch_thumb_pressed_checked.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/mtrl_switch_thumb_pressed_checked.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/mtrl_switch_thumb_pressed_checked.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/ucrop_vector_loader.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-ucrop-2.2.8-28:/drawable/ucrop_vector_loader.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-ucrop-2.2.8-10:/drawable/ucrop_vector_loader.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/common_google_signin_btn_icon_dark.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-play-services-base-18.5.0-26:/drawable/common_google_signin_btn_icon_dark.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-play-services-base-18.5.0-27:/drawable/common_google_signin_btn_icon_dark.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/ucrop_ic_rotate.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-ucrop-2.2.8-28:/drawable/ucrop_ic_rotate.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-ucrop-2.2.8-10:/drawable/ucrop_ic_rotate.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/material_ic_clear_black_24dp.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/material_ic_clear_black_24dp.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/material_ic_clear_black_24dp.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/mtrl_switch_thumb.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/mtrl_switch_thumb.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/mtrl_switch_thumb.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/mtrl_switch_thumb_pressed.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/mtrl_switch_thumb_pressed.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/mtrl_switch_thumb_pressed.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/abc_ic_search_api_material.xml",
@@ -653,15 +653,15 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/common_google_signin_btn_text_dark.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-play-services-base-18.5.0-26:/drawable/common_google_signin_btn_text_dark.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-play-services-base-18.5.0-27:/drawable/common_google_signin_btn_text_dark.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/ucrop_ic_reset.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-ucrop-2.2.8-28:/drawable/ucrop_ic_reset.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-ucrop-2.2.8-10:/drawable/ucrop_ic_reset.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/material_ic_menu_arrow_down_black_24dp.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/material_ic_menu_arrow_down_black_24dp.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/material_ic_menu_arrow_down_black_24dp.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/abc_seekbar_thumb_material.xml",
@@ -669,10 +669,10 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/ic_arrow_back_black_24.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/ic_arrow_back_black_24.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/ic_arrow_back_black_24.xml"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable/mtrl_dialog_background.xml",
-        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-24:/drawable/mtrl_dialog_background.xml"
+        "source": "com.vncccd.sdk.vncccd-sdk-material-1.11.0-38:/drawable/mtrl_dialog_background.xml"
     }
 ]

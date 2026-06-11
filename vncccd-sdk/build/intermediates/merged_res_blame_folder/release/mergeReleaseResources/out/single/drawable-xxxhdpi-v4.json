@@ -1,7 +1,7 @@
 [
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable-xxxhdpi-v4/ic_call_answer_low.png",
-        "source": "com.vncccd.sdk.vncccd-sdk-core-1.12.0-6:/drawable-xxxhdpi-v4/ic_call_answer_low.png"
+        "source": "com.vncccd.sdk.vncccd-sdk-core-1.12.0-19:/drawable-xxxhdpi-v4/ic_call_answer_low.png"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable-xxxhdpi-v4/abc_btn_check_to_on_mtrl_015.png",
@@ -9,7 +9,7 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable-xxxhdpi-v4/ic_call_answer_video.png",
-        "source": "com.vncccd.sdk.vncccd-sdk-core-1.12.0-6:/drawable-xxxhdpi-v4/ic_call_answer_video.png"
+        "source": "com.vncccd.sdk.vncccd-sdk-core-1.12.0-19:/drawable-xxxhdpi-v4/ic_call_answer_video.png"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable-xxxhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png",
@@ -21,7 +21,7 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable-xxxhdpi-v4/ic_call_decline.png",
-        "source": "com.vncccd.sdk.vncccd-sdk-core-1.12.0-6:/drawable-xxxhdpi-v4/ic_call_decline.png"
+        "source": "com.vncccd.sdk.vncccd-sdk-core-1.12.0-19:/drawable-xxxhdpi-v4/ic_call_decline.png"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable-xxxhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png",
@@ -37,7 +37,7 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable-xxxhdpi-v4/ic_call_answer_video_low.png",
-        "source": "com.vncccd.sdk.vncccd-sdk-core-1.12.0-6:/drawable-xxxhdpi-v4/ic_call_answer_video_low.png"
+        "source": "com.vncccd.sdk.vncccd-sdk-core-1.12.0-19:/drawable-xxxhdpi-v4/ic_call_answer_video_low.png"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable-xxxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png",
@@ -49,7 +49,7 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable-xxxhdpi-v4/ic_call_decline_low.png",
-        "source": "com.vncccd.sdk.vncccd-sdk-core-1.12.0-6:/drawable-xxxhdpi-v4/ic_call_decline_low.png"
+        "source": "com.vncccd.sdk.vncccd-sdk-core-1.12.0-19:/drawable-xxxhdpi-v4/ic_call_decline_low.png"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable-xxxhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png",
@@ -65,11 +65,11 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable-xxxhdpi-v4/ucrop_ic_angle.png",
-        "source": "com.vncccd.sdk.vncccd-sdk-ucrop-2.2.8-28:/drawable-xxxhdpi-v4/ucrop_ic_angle.png"
+        "source": "com.vncccd.sdk.vncccd-sdk-ucrop-2.2.8-10:/drawable-xxxhdpi-v4/ucrop_ic_angle.png"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable-xxxhdpi-v4/ucrop_ic_done.png",
-        "source": "com.vncccd.sdk.vncccd-sdk-ucrop-2.2.8-28:/drawable-xxxhdpi-v4/ucrop_ic_done.png"
+        "source": "com.vncccd.sdk.vncccd-sdk-ucrop-2.2.8-10:/drawable-xxxhdpi-v4/ucrop_ic_done.png"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable-xxxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png",
@@ -81,6 +81,6 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable-xxxhdpi-v4/ic_call_answer.png",
-        "source": "com.vncccd.sdk.vncccd-sdk-core-1.12.0-6:/drawable-xxxhdpi-v4/ic_call_answer.png"
+        "source": "com.vncccd.sdk.vncccd-sdk-core-1.12.0-19:/drawable-xxxhdpi-v4/ic_call_answer.png"
     }
 ]

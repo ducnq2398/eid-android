@@ -59,7 +59,6 @@ id overlayView
 id previewView
 id progressBar
 id progressBarReading
-id topBar
 id tvInstruction
 id tvProgress
 id tvStatus

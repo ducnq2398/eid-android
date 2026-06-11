@@ -80,6 +80,7 @@ dependencies {
 //    implementation("org.bouncycastle:bcprov-jdk18on:1.77")
 //    implementation("org.bouncycastle:bcpkix-jdk18on:1.77")
     implementation("org.bouncycastle:bcprov-jdk15to18:1.70")
+    implementation("org.bouncycastle:bcpkix-jdk15to18:1.70")
 
     // JPEG2000 support
     implementation("com.github.yalantis:ucrop:2.2.8")

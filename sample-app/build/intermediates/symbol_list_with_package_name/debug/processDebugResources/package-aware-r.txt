@@ -3757,7 +3757,6 @@ id toggle
 id toolbar
 id toolbar_title
 id top
-id topBar
 id topPanel
 id touch_outside
 id transitionToEnd

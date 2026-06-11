@@ -9,7 +9,7 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png",
-        "source": "com.vncccd.sdk.vncccd-sdk-core-1.12.0-6:/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png"
+        "source": "com.vncccd.sdk.vncccd-sdk-core-1.12.0-19:/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable-xhdpi-v4/abc_list_focused_holo.9.png",
@@ -17,7 +17,7 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable-xhdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png",
-        "source": "com.vncccd.sdk.vncccd-sdk-play-services-base-18.5.0-26:/drawable-xhdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png"
+        "source": "com.vncccd.sdk.vncccd-sdk-play-services-base-18.5.0-27:/drawable-xhdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable-xhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png",
@@ -41,7 +41,7 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable-xhdpi-v4/ic_call_answer.png",
-        "source": "com.vncccd.sdk.vncccd-sdk-core-1.12.0-6:/drawable-xhdpi-v4/ic_call_answer.png"
+        "source": "com.vncccd.sdk.vncccd-sdk-core-1.12.0-19:/drawable-xhdpi-v4/ic_call_answer.png"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable-xhdpi-v4/abc_list_pressed_holo_dark.9.png",
@@ -49,7 +49,7 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable-xhdpi-v4/notification_bg_low_normal.9.png",
-        "source": "com.vncccd.sdk.vncccd-sdk-core-1.12.0-6:/drawable-xhdpi-v4/notification_bg_low_normal.9.png"
+        "source": "com.vncccd.sdk.vncccd-sdk-core-1.12.0-19:/drawable-xhdpi-v4/notification_bg_low_normal.9.png"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable-xhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png",
@@ -77,11 +77,11 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable-xhdpi-v4/common_google_signin_btn_text_light_normal_background.9.png",
-        "source": "com.vncccd.sdk.vncccd-sdk-play-services-base-18.5.0-26:/drawable-xhdpi-v4/common_google_signin_btn_text_light_normal_background.9.png"
+        "source": "com.vncccd.sdk.vncccd-sdk-play-services-base-18.5.0-27:/drawable-xhdpi-v4/common_google_signin_btn_text_light_normal_background.9.png"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable-xhdpi-v4/ic_call_answer_low.png",
-        "source": "com.vncccd.sdk.vncccd-sdk-core-1.12.0-6:/drawable-xhdpi-v4/ic_call_answer_low.png"
+        "source": "com.vncccd.sdk.vncccd-sdk-core-1.12.0-19:/drawable-xhdpi-v4/ic_call_answer_low.png"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable-xhdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png",
@@ -89,7 +89,7 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable-xhdpi-v4/ucrop_ic_angle.png",
-        "source": "com.vncccd.sdk.vncccd-sdk-ucrop-2.2.8-28:/drawable-xhdpi-v4/ucrop_ic_angle.png"
+        "source": "com.vncccd.sdk.vncccd-sdk-ucrop-2.2.8-10:/drawable-xhdpi-v4/ucrop_ic_angle.png"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable-xhdpi-v4/abc_scrubber_control_off_mtrl_alpha.png",
@@ -117,7 +117,7 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable-xhdpi-v4/common_full_open_on_phone.png",
-        "source": "com.vncccd.sdk.vncccd-sdk-play-services-base-18.5.0-26:/drawable-xhdpi-v4/common_full_open_on_phone.png"
+        "source": "com.vncccd.sdk.vncccd-sdk-play-services-base-18.5.0-27:/drawable-xhdpi-v4/common_full_open_on_phone.png"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable-xhdpi-v4/abc_cab_background_top_mtrl_alpha.9.png",
@@ -125,7 +125,7 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable-xhdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png",
-        "source": "com.vncccd.sdk.vncccd-sdk-play-services-base-18.5.0-26:/drawable-xhdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png"
+        "source": "com.vncccd.sdk.vncccd-sdk-play-services-base-18.5.0-27:/drawable-xhdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable-xhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png",
@@ -137,7 +137,7 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable-xhdpi-v4/ucrop_ic_done.png",
-        "source": "com.vncccd.sdk.vncccd-sdk-ucrop-2.2.8-28:/drawable-xhdpi-v4/ucrop_ic_done.png"
+        "source": "com.vncccd.sdk.vncccd-sdk-ucrop-2.2.8-10:/drawable-xhdpi-v4/ucrop_ic_done.png"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable-xhdpi-v4/abc_textfield_default_mtrl_alpha.9.png",
@@ -145,7 +145,7 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable-xhdpi-v4/notification_bg_low_pressed.9.png",
-        "source": "com.vncccd.sdk.vncccd-sdk-core-1.12.0-6:/drawable-xhdpi-v4/notification_bg_low_pressed.9.png"
+        "source": "com.vncccd.sdk.vncccd-sdk-core-1.12.0-19:/drawable-xhdpi-v4/notification_bg_low_pressed.9.png"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable-xhdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png",
@@ -161,15 +161,15 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable-xhdpi-v4/ic_call_decline.png",
-        "source": "com.vncccd.sdk.vncccd-sdk-core-1.12.0-6:/drawable-xhdpi-v4/ic_call_decline.png"
+        "source": "com.vncccd.sdk.vncccd-sdk-core-1.12.0-19:/drawable-xhdpi-v4/ic_call_decline.png"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable-xhdpi-v4/ic_call_decline_low.png",
-        "source": "com.vncccd.sdk.vncccd-sdk-core-1.12.0-6:/drawable-xhdpi-v4/ic_call_decline_low.png"
+        "source": "com.vncccd.sdk.vncccd-sdk-core-1.12.0-19:/drawable-xhdpi-v4/ic_call_decline_low.png"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable-xhdpi-v4/googleg_disabled_color_18.png",
-        "source": "com.vncccd.sdk.vncccd-sdk-play-services-base-18.5.0-26:/drawable-xhdpi-v4/googleg_disabled_color_18.png"
+        "source": "com.vncccd.sdk.vncccd-sdk-play-services-base-18.5.0-27:/drawable-xhdpi-v4/googleg_disabled_color_18.png"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable-xhdpi-v4/abc_scrubber_track_mtrl_alpha.9.png",
@@ -177,15 +177,15 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable-xhdpi-v4/ic_call_answer_video.png",
-        "source": "com.vncccd.sdk.vncccd-sdk-core-1.12.0-6:/drawable-xhdpi-v4/ic_call_answer_video.png"
+        "source": "com.vncccd.sdk.vncccd-sdk-core-1.12.0-19:/drawable-xhdpi-v4/ic_call_answer_video.png"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable-xhdpi-v4/notify_panel_notification_icon_bg.png",
-        "source": "com.vncccd.sdk.vncccd-sdk-core-1.12.0-6:/drawable-xhdpi-v4/notify_panel_notification_icon_bg.png"
+        "source": "com.vncccd.sdk.vncccd-sdk-core-1.12.0-19:/drawable-xhdpi-v4/notify_panel_notification_icon_bg.png"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable-xhdpi-v4/ic_call_answer_video_low.png",
-        "source": "com.vncccd.sdk.vncccd-sdk-core-1.12.0-6:/drawable-xhdpi-v4/ic_call_answer_video_low.png"
+        "source": "com.vncccd.sdk.vncccd-sdk-core-1.12.0-19:/drawable-xhdpi-v4/ic_call_answer_video_low.png"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable-xhdpi-v4/abc_btn_check_to_on_mtrl_000.png",
@@ -197,15 +197,15 @@
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable-xhdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png",
-        "source": "com.vncccd.sdk.vncccd-sdk-play-services-base-18.5.0-26:/drawable-xhdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png"
+        "source": "com.vncccd.sdk.vncccd-sdk-play-services-base-18.5.0-27:/drawable-xhdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable-xhdpi-v4/googleg_standard_color_18.png",
-        "source": "com.vncccd.sdk.vncccd-sdk-play-services-base-18.5.0-26:/drawable-xhdpi-v4/googleg_standard_color_18.png"
+        "source": "com.vncccd.sdk.vncccd-sdk-play-services-base-18.5.0-27:/drawable-xhdpi-v4/googleg_standard_color_18.png"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable-xhdpi-v4/notification_bg_normal.9.png",
-        "source": "com.vncccd.sdk.vncccd-sdk-core-1.12.0-6:/drawable-xhdpi-v4/notification_bg_normal.9.png"
+        "source": "com.vncccd.sdk.vncccd-sdk-core-1.12.0-19:/drawable-xhdpi-v4/notification_bg_normal.9.png"
     },
     {
         "merged": "com.vncccd.sdk.vncccd-sdk-release-43:/drawable-xhdpi-v4/abc_list_divider_mtrl_alpha.9.png",
