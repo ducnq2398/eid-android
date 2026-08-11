@@ -12,7 +12,7 @@ import com.vncccd.sdk.models.MrzData
  */
 object MrzParser {
 
-    private const val TD1_LINE_LENGTH = 30
+    const val TD1_LINE_LENGTH = 30
     private const val TD1_NUM_LINES = 3
 
     /** Ký tự fill trong MRZ */
@@ -21,6 +21,9 @@ object MrzParser {
     /** Weights cho check digit calculation */
     private val WEIGHTS = intArrayOf(7, 3, 1)
 
+    /** Bộ ký tự hợp lệ duy nhất của MRZ */
+    private const val MRZ_ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789<"
+
     /**
      * Parse MRZ text thành MrzData.
      *
@@ -28,17 +31,8 @@ object MrzParser {
      * @return MrzData nếu parse thành công, null nếu thất bại
      */
     fun parse(mrzLines: List<String>): MrzData? {
-        if (mrzLines.size != TD1_NUM_LINES) return null
-
-        val line1 = padOrTrim(mrzLines[0])
-        val line2 = padOrTrim(mrzLines[1])
-        val line3 = padOrTrim(mrzLines[2])
-
-        // Validate line lengths
-        if (line1.length != TD1_LINE_LENGTH ||
-            line2.length != TD1_LINE_LENGTH ||
-            line3.length != TD1_LINE_LENGTH
-        ) return null
+        val lines = normalize(mrzLines) ?: return null
+        val (line1, line2, line3) = lines
 
         // Parse Line 1
         val documentType = line1.substring(0, 2) // I<
@@ -46,37 +40,25 @@ object MrzParser {
             return null
         }
 
-        val issuingState = line1.substring(2, 5) // VNM
         val documentNumber = line1.substring(5, 14).replace(FILLER.toString(), "")
-        val docCheckDigit = charToValue(line1[14])
         val optionalData1 = line1.substring(15, 30)
-
-        // Validate document number check digit
-        val computedDocCheck = computeCheckDigit(line1.substring(5, 14))
-        if (computedDocCheck != docCheckDigit) {
-            // Try with optional data for long document numbers (Vietnam 12-digit)
-            // In some CCCD, the document number spans into optional data
-        }
 
         // Parse Line 2
         val dateOfBirth = line2.substring(0, 6)
-        val dobCheckDigit = charToValue(line2[6])
         val sex = line2.substring(7, 8)
         val dateOfExpiry = line2.substring(8, 14)
-        val doeCheckDigit = charToValue(line2[14])
         val nationality = line2.substring(15, 18).replace(FILLER.toString(), "")
         val optionalData2 = line2.substring(18, 29)
-        val compositeCheckDigit = charToValue(line2[29])
 
-        // Validate check digits
-        val computedDobCheck = computeCheckDigit(dateOfBirth)
-        val computedDoeCheck = computeCheckDigit(dateOfExpiry)
+        // Check digit ngày sinh / ngày hết hạn là điều kiện bắt buộc: đây là hai
+        // trường dùng để dẫn xuất khoá BAC, sai một ký tự là NFC không mở được.
+        if (computeCheckDigit(dateOfBirth) != charToValue(line2[6])) return null
+        if (computeCheckDigit(dateOfExpiry) != charToValue(line2[14])) return null
 
-        if (computedDobCheck != dobCheckDigit) return null
-        if (computedDoeCheck != doeCheckDigit) return null
+        // Ngày phải hợp lệ về mặt lịch, loại bỏ các frame nhiễu vô tình khớp check digit.
+        if (!isPlausibleYymmdd(dateOfBirth) || !isPlausibleYymmdd(dateOfExpiry)) return null
 
         // Parse Line 3 - Name
-        val nameField = line3.replace(FILLER, ' ').trim()
         val nameParts = line3.split("<<")
         val surname = nameParts.getOrElse(0) { "" }.replace(FILLER, ' ').trim()
         val givenNames = if (nameParts.size > 1) {
@@ -128,6 +110,71 @@ object MrzParser {
     }
 
     /**
+     * Chấm điểm độ tin cậy của một bộ 3 dòng MRZ.
+     *
+     * Không reject gì cả - chỉ trả về từng tín hiệu để caller tự quyết định.
+     * [MrzFrameAggregator] dùng kết quả này để rút ngắn số frame cần thiết
+     * khi mọi check digit đều khớp.
+     */
+    fun validate(mrzLines: List<String>): MrzValidation {
+        val lines = normalize(mrzLines) ?: return MrzValidation.NONE
+        val (line1, line2, line3) = lines
+
+        val dateOfBirth = line2.substring(0, 6)
+        val dateOfExpiry = line2.substring(8, 14)
+
+        val docValid = computeCheckDigit(line1.substring(5, 14)) == charToValue(line1[14])
+        val dobValid = computeCheckDigit(dateOfBirth) == charToValue(line2[6])
+        val doeValid = computeCheckDigit(dateOfExpiry) == charToValue(line2[14])
+        val compositeValid = computeCheckDigit(compositeInput(line1, line2)) == charToValue(line2[29])
+        val datesPlausible = isPlausibleYymmdd(dateOfBirth) && isPlausibleYymmdd(dateOfExpiry)
+
+        return MrzValidation(
+            documentNumberValid = docValid,
+            dateOfBirthValid = dobValid,
+            dateOfExpiryValid = doeValid,
+            compositeValid = compositeValid,
+            datesPlausible = datesPlausible,
+            vietnamConsistent = parse(listOf(line1, line2, line3))
+                ?.let { isVietnamConsistent(it) } ?: false
+        )
+    }
+
+    /**
+     * Chuỗi input cho composite check digit của TD1 theo ICAO 9303 Part 5.
+     * Gồm: line1[5..29], line2[0..6], line2[8..14], line2[18..28].
+     */
+    private fun compositeInput(line1: String, line2: String): String =
+        line1.substring(5, 30) +
+                line2.substring(0, 7) +
+                line2.substring(8, 15) +
+                line2.substring(18, 29)
+
+    /**
+     * Cross-check đặc thù CCCD Việt Nam (12 số).
+     *
+     * Cấu trúc số CCCD: [mã tỉnh 3][mã thế kỷ+giới tính 1][2 số năm sinh][6 số ngẫu nhiên].
+     * Ba trường này lấy từ ba vùng khác nhau của MRZ, nên việc chúng khớp nhau
+     * là bằng chứng độc lập rất mạnh rằng OCR đã đọc đúng.
+     */
+    fun isVietnamConsistent(data: MrzData): Boolean {
+        val id = data.fullDocumentNumber
+        if (id.length != 12 || !id.all { it.isDigit() }) return false
+
+        val province = id.substring(0, 3).toInt()
+        if (province !in 1..96) return false
+
+        // Mã thế kỷ/giới tính: chẵn = nam, lẻ = nữ.
+        val genderCode = id[3] - '0'
+        val expectedSex = if (genderCode % 2 == 0) "M" else "F"
+        if (data.gender != expectedSex) return false
+
+        // 2 số năm sinh trong CCCD phải khớp YY của ngày sinh trong MRZ.
+        if (data.dateOfBirth.length < 2) return false
+        return id.substring(4, 6) == data.dateOfBirth.substring(0, 2)
+    }
+
+    /**
      * Tính check digit theo ICAO 9303 algorithm.
      * Weight pattern: 7, 3, 1, 7, 3, 1, ...
      * Result = sum mod 10
@@ -139,6 +186,16 @@ object MrzParser {
             sum += value * WEIGHTS[i % 3]
         }
         return sum % 10
+    }
+
+    /**
+     * Kiểm tra chuỗi YYMMDD có hợp lệ về mặt lịch không.
+     */
+    fun isPlausibleYymmdd(date: String): Boolean {
+        if (date.length != 6 || !date.all { it.isDigit() }) return false
+        val month = date.substring(2, 4).toInt()
+        val day = date.substring(4, 6).toInt()
+        return month in 1..12 && day in 1..31
     }
 
     /**
@@ -155,6 +212,18 @@ object MrzParser {
             c in 'a'..'z' -> c - 'a' + 10
             else -> 0
         }
+    }
+
+    /**
+     * Chuẩn hoá về đúng 3 dòng × 30 ký tự, null nếu không đủ dòng.
+     */
+    private fun normalize(mrzLines: List<String>): Triple<String, String, String>? {
+        if (mrzLines.size != TD1_NUM_LINES) return null
+        return Triple(
+            padOrTrim(mrzLines[0]),
+            padOrTrim(mrzLines[1]),
+            padOrTrim(mrzLines[2])
+        )
     }
 
     /**
@@ -180,53 +249,70 @@ object MrzParser {
     }
 
     /**
-     * Clean OCR text - sửa các lỗi OCR phổ biến trong MRZ.
+     * Clean OCR text - đưa về đúng bộ ký tự MRZ.
+     *
+     * Chỉ sửa các lỗi *cấu trúc* (khoảng trắng ML Kit chèn giữa các element,
+     * ký tự không thuộc bảng chữ MRZ). Việc phân biệt chữ/số phải làm theo
+     * từng vị trí trường trong [smartCleanMrzLine] - thay O→0 toàn cục sẽ
+     * phá hỏng phần họ tên ở line 3.
      */
     fun cleanOcrText(text: String): String {
-        return text
-            .uppercase()
-            .replace("«", "<<")
-            .replace("»", ">>")
-            .replace(" ", "")
-            .replace("O", "0")  // Trong context number positions
-            .replace("{", "<")
-            .replace("}", ">")
-            .replace("[", "<")
-            .replace("]", ">")
-            .replace("(", "<")
-            .replace(")", ">")
+        val sb = StringBuilder(text.length)
+        for (c in text.uppercase()) {
+            when {
+                c.isWhitespace() -> Unit
+                // Guillemet là lỗi OCR rất phổ biến của cặp '<<'
+                c == '«' || c == '»' -> sb.append("<<")
+                c in MRZ_ALPHABET -> sb.append(c)
+                // Mọi ký tự lạ khác ({, [, (, -, ...) đều là filler đọc sai.
+                // Thay bằng '<' giữ nguyên độ dài nên các trường không bị lệch.
+                else -> sb.append(FILLER)
+            }
+        }
+        return sb.toString()
     }
 
     /**
-     * Smart clean - chỉ replace O→0 ở vị trí số.
+     * Smart clean - ép kiểu ký tự theo đúng vị trí trường của TD1.
+     *
+     * Mỗi trường MRZ chỉ nhận chữ hoặc chỉ nhận số, nên biết vị trí là biết
+     * chắc ký tự nào bị OCR đọc nhầm loại.
      */
     fun smartCleanMrzLine(line: String, lineNumber: Int): String {
         val chars = line.uppercase().toCharArray()
 
+        fun toDigits(from: Int, to: Int) {
+            for (i in from..to) if (i < chars.size) chars[i] = fixToDigit(chars[i])
+        }
+
+        fun toAlpha(from: Int, to: Int) {
+            for (i in from..to) if (i < chars.size) chars[i] = fixToAlpha(chars[i])
+        }
+
         when (lineNumber) {
             1 -> {
-                // Positions 5-14: document number (can be alphanumeric)
-                // Position 14: check digit (numeric)
-                // Vietnam CCCD dùng số, nên OCR chữ ở vùng này thường là lỗi cần sửa.
-                for (i in 5..13) {
-                    if (i < chars.size) chars[i] = fixToDigit(chars[i])
-                }
-                if (chars.size > 14) {
-                    chars[14] = fixToDigit(chars[14])
-                }
+                // 0-1: document type, 2-4: issuing state → chỉ chữ
+                toAlpha(0, 4)
+                // 5-13: document number, 14: check digit.
+                // CCCD Việt Nam toàn số nên chữ ở vùng này luôn là lỗi OCR.
+                toDigits(5, 14)
             }
+
             2 -> {
-                // Positions 0-5: DOB (numeric)
-                // Position 6: check digit (numeric)
-                // Position 7: sex (alpha M/F/X)
-                // Positions 8-13: DOE (numeric)
-                // Position 14: check digit (numeric)
-                for (i in 0..6) {
-                    if (i < chars.size) chars[i] = fixToDigit(chars[i])
-                }
-                for (i in 8..14) {
-                    if (i < chars.size) chars[i] = fixToDigit(chars[i])
-                }
+                // 0-5: DOB, 6: check digit
+                toDigits(0, 6)
+                // 7: sex (M/F/X/<) - để nguyên
+                // 8-13: DOE, 14: check digit
+                toDigits(8, 14)
+                // 15-17: nationality → chỉ chữ
+                toAlpha(15, 17)
+                // 29: composite check digit
+                if (chars.size > 29) chars[29] = fixToDigit(chars[29])
+            }
+
+            3 -> {
+                // Trường họ tên chỉ chứa A-Z và '<', mọi chữ số đều là lỗi OCR.
+                toAlpha(0, chars.size - 1)
             }
         }
 
@@ -235,11 +321,26 @@ object MrzParser {
 
     private fun fixToDigit(c: Char): Char {
         return when (c) {
-            'O' -> '0'
-            'I', 'L' -> '1'
+            'O', 'D', 'Q' -> '0'
+            'I', 'L', 'T' -> '1'
             'Z' -> '2'
+            'A' -> '4'
             'S' -> '5'
+            'G' -> '6'
             'B' -> '8'
+            else -> c
+        }
+    }
+
+    private fun fixToAlpha(c: Char): Char {
+        return when (c) {
+            '0' -> 'O'
+            '1' -> 'I'
+            '2' -> 'Z'
+            '4' -> 'A'
+            '5' -> 'S'
+            '6' -> 'G'
+            '8' -> 'B'
             else -> c
         }
     }

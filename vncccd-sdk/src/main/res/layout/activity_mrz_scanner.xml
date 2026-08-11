@@ -42,19 +42,38 @@
         app:layout_constraintTop_toTopOf="parent"
         app:tint="@android:color/white" />
 
+    <!-- Torch toggle - hiện khi thiết bị có đèn flash -->
+    <ImageButton
+        android:id="@+id/btnFlash"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="8dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/vncccd_mrz_flash"
+        android:padding="12dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_flash_off"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/btnClose"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btnClose"
+        app:tint="@android:color/white" />
+
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:ellipsize="end"
         android:fontFamily="sans-serif-medium"
         android:gravity="center"
+        android:maxLines="1"
         android:text="@string/vncccd_mrz_title"
         android:textColor="@android:color/white"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/btnClose"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnFlash"
+        app:layout_constraintStart_toEndOf="@id/btnClose"
         app:layout_constraintTop_toTopOf="@id/btnClose" />
 
     <!-- Instruction Text -->

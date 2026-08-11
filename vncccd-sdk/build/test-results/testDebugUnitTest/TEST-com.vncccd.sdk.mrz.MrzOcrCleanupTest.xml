@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.vncccd.sdk.mrz.MrzOcrCleanupTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-08-11T09:03:16" hostname="Timas-Mac-Pro.local" time="0.003">
+  <properties/>
+  <testcase name="cleanOcrText bo khoang trang ML Kit chen vao" classname="com.vncccd.sdk.mrz.MrzOcrCleanupTest" time="0.0"/>
+  <testcase name="smartClean ep so o vung so giay to cua line 1" classname="com.vncccd.sdk.mrz.MrzOcrCleanupTest" time="0.001"/>
+  <testcase name="cleanOcrText giu nguyen do dai khi gap ky tu la" classname="com.vncccd.sdk.mrz.MrzOcrCleanupTest" time="0.0"/>
+  <testcase name="cleanOcrText doi guillemet thanh cap filler" classname="com.vncccd.sdk.mrz.MrzOcrCleanupTest" time="0.0"/>
+  <testcase name="smartClean khong dung toi o gioi tinh" classname="com.vncccd.sdk.mrz.MrzOcrCleanupTest" time="0.001"/>
+  <testcase name="smartClean ep chu o truong ho ten cua line 3" classname="com.vncccd.sdk.mrz.MrzOcrCleanupTest" time="0.0"/>
+  <testcase name="cleanOcrText khong con pha ho ten chua chu O" classname="com.vncccd.sdk.mrz.MrzOcrCleanupTest" time="0.0"/>
+  <testcase name="chuoi OCR nhieu van parse duoc sau khi chuan hoa" classname="com.vncccd.sdk.mrz.MrzOcrCleanupTest" time="0.001"/>
+  <testcase name="smartClean ep chu o truong quoc tich cua line 2" classname="com.vncccd.sdk.mrz.MrzOcrCleanupTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -42,6 +42,7 @@
     <string name="vncccd_error_nfc_not_supported">Thiết bị không hỗ trợ NFC</string>
     <string name="vncccd_login_to_cccd">Đăng nhập vào thẻ CCCD</string>
     <string name="vncccd_mrz_failed">Không nhận diện được MRZ. Vui lòng thử lại.</string>
+    <string name="vncccd_mrz_flash">Bật/tắt đèn</string>
     <string name="vncccd_mrz_instruction">Vui lòng đặt chuỗi kí tự nằm vừa khung hình chữ nhật, chụp đủ ánh sáng và rõ nét.</string>
     <string name="vncccd_mrz_scanning">Đang quét...</string>
     <string name="vncccd_mrz_success">Đã nhận diện MRZ thành công!</string>

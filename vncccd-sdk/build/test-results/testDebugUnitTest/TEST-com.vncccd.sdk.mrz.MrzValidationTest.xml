@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.vncccd.sdk.mrz.MrzValidationTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-08-11T09:03:16" hostname="Timas-Mac-Pro.local" time="0.007">
+  <properties/>
+  <testcase name="check digit sai lam giam diem nhung khong crash" classname="com.vncccd.sdk.mrz.MrzValidationTest" time="0.0"/>
+  <testcase name="isPlausibleYymmdd chap nhan ngay hop le va loai ngay sai" classname="com.vncccd.sdk.mrz.MrzValidationTest" time="0.0"/>
+  <testcase name="composite check digit khop voi specimen ICAO 9303" classname="com.vncccd.sdk.mrz.MrzValidationTest" time="0.0"/>
+  <testcase name="specimen ICAO du manh de chap nhan ngay tu mot frame" classname="com.vncccd.sdk.mrz.MrzValidationTest" time="0.001"/>
+  <testcase name="CCCD Viet Nam hop le pass toan bo tin hieu" classname="com.vncccd.sdk.mrz.MrzValidationTest" time="0.0"/>
+  <testcase name="ngay khong hop le bi loai du check digit dung" classname="com.vncccd.sdk.mrz.MrzValidationTest" time="0.005"/>
+  <testcase name="cross-check CCCD bat duoc nam sinh khong khop" classname="com.vncccd.sdk.mrz.MrzValidationTest" time="0.0"/>
+  <testcase name="validate tra ve NONE khi khong du 3 dong" classname="com.vncccd.sdk.mrz.MrzValidationTest" time="0.0"/>
+  <testcase name="cross-check CCCD bat duoc gioi tinh khong khop" classname="com.vncccd.sdk.mrz.MrzValidationTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

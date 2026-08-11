@@ -20,6 +20,17 @@ class MrzOverlayView @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : View(context, attrs, defStyleAttr) {
 
+    companion object {
+        /** Màu khung khi chưa thấy MRZ */
+        private val IDLE_COLOR = Color.parseColor("#FF6B35")
+
+        /** Màu khung khi đã thấy dải MRZ và đang xác thực */
+        private val DETECTING_COLOR = Color.parseColor("#FFC107")
+
+        /** Màu khung khi đã đọc thành công */
+        private val SUCCESS_COLOR = Color.parseColor("#4CAF50")
+    }
+
     /** Paint cho vùng tối bao quanh */
     private val dimPaint = Paint().apply {
         color = Color.parseColor("#99000000")
@@ -79,6 +90,9 @@ class MrzOverlayView @JvmOverloads constructor(
 
     /** Trạng thái: đang scan hay đã thành công */
     private var isSuccess = false
+
+    /** Đã thấy thứ gì đó giống MRZ trong khung chưa */
+    private var isDetecting = false
 
     /** Text hướng dẫn */
     private var instructionText = ""
@@ -146,6 +160,31 @@ class MrzOverlayView @JvmOverloads constructor(
         drawCornerBrackets(canvas, cornerPaint)
     }
 
+    /**
+     * Vùng quét dưới dạng toạ độ chuẩn hoá 0..1 của chính view này.
+     *
+     * Analyzer dùng giá trị này để cắt ROI khỏi frame camera, nên phải nới rộng
+     * hơn khung vẽ một chút: người dùng hiếm khi đặt thẻ khít khung, và cắt hụt
+     * một dòng MRZ thì mất luôn cả lần quét.
+     *
+     * @param padRatio tỉ lệ nới thêm so với kích thước khung.
+     * @return null nếu view chưa được đo đạc.
+     */
+    @JvmOverloads
+    fun getNormalizedScanRect(padRatio: Float = 0.08f): RectF? {
+        if (width == 0 || height == 0 || scanRect.isEmpty) return null
+
+        val padX = scanRect.width() * padRatio
+        val padY = scanRect.height() * padRatio
+
+        return RectF(
+            ((scanRect.left - padX) / width).coerceIn(0f, 1f),
+            ((scanRect.top - padY) / height).coerceIn(0f, 1f),
+            ((scanRect.right + padX) / width).coerceIn(0f, 1f),
+            ((scanRect.bottom + padY) / height).coerceIn(0f, 1f)
+        )
+    }
+
     private fun drawSuccessFrame(canvas: Canvas) {
         canvas.drawRoundRect(scanRect, 12f, 12f, successPaint)
         drawCornerBrackets(canvas, successPaint)
@@ -195,12 +234,28 @@ class MrzOverlayView @JvmOverloads constructor(
     fun setSuccess(success: Boolean) {
         isSuccess = success
         if (success) {
-            instructionText = "Đã nhận diện MRZ thành công!"
-            cornerPaint.color = Color.parseColor("#4CAF50")
+            instructionText = context.getString(R.string.vncccd_mrz_success)
+            cornerPaint.color = SUCCESS_COLOR
+            borderPaint.color = SUCCESS_COLOR
         } else {
             instructionText = ""
-            cornerPaint.color = Color.parseColor("#FF6B35")
+            isDetecting = false
+            cornerPaint.color = IDLE_COLOR
+            borderPaint.color = IDLE_COLOR
         }
+        invalidate()
+    }
+
+    /**
+     * Báo cho người dùng biết khung đã "thấy" dải MRZ và đang xác thực,
+     * thay vì chỉ hiện một khung tĩnh không phản hồi gì.
+     */
+    fun setDetecting(detecting: Boolean) {
+        if (isDetecting == detecting || isSuccess) return
+        isDetecting = detecting
+        val color = if (detecting) DETECTING_COLOR else IDLE_COLOR
+        borderPaint.color = color
+        cornerPaint.color = color
         invalidate()
     }
 

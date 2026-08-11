@@ -13,6 +13,7 @@
     <string name="vncccd_mrz_scanning">Đang quét...</string>
     <string name="vncccd_mrz_success">Đã nhận diện MRZ thành công!</string>
     <string name="vncccd_mrz_failed">Không nhận diện được MRZ. Vui lòng thử lại.</string>
+    <string name="vncccd_mrz_flash">Bật/tắt đèn</string>
 
     <!-- NFC Reader -->
     <string name="vncccd_nfc_title">Đọc NFC</string>

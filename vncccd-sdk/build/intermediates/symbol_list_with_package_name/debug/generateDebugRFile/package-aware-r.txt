@@ -50,6 +50,7 @@ drawable scan
 id bottomSheet
 id btnCancel
 id btnClose
+id btnFlash
 id ivBack
 id ivNfcBackground
 id ivNfcIcon
@@ -75,6 +76,7 @@ string vncccd_error_nfc_disabled
 string vncccd_error_nfc_not_supported
 string vncccd_login_to_cccd
 string vncccd_mrz_failed
+string vncccd_mrz_flash
 string vncccd_mrz_instruction
 string vncccd_mrz_scanning
 string vncccd_mrz_success
