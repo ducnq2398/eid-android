@@ -303,8 +303,18 @@ object DG13Parser {
         if (rawBytes.isEmpty()) return ""
 
         val payload = stripOuterTlv(rawBytes)
+
+        // Priority 1: Try UTF-8 first
+        val utf8Decoded = runCatching { String(payload, Charsets.UTF_8) }.getOrNull()
+        if (utf8Decoded != null) {
+            val cleaned = cleanupTextWithoutRepair(utf8Decoded)
+            if (cleaned.isNotBlank() && !hasMojibakePattern(cleaned)) {
+                return Normalizer.normalize(cleaned, Normalizer.Form.NFC)
+            }
+        }
+
+        // Priority 2: Try other charsets
         val candidates = listOf(
-            Charset.forName("UTF-8"),
             Charset.forName("windows-1258"),
             Charset.forName("windows-1252"),
             Charset.forName("UTF-16LE"),
@@ -312,8 +322,8 @@ object DG13Parser {
             Charset.forName("ISO-8859-1")
         )
 
-        var best = ""
-        var bestScore = -1
+        var best = utf8Decoded?.let { cleanupText(it) } ?: ""
+        var bestScore = textScore(best)
         for (charset in candidates) {
             val decoded = runCatching { String(payload, charset) }.getOrElse { "" }
             val cleaned = cleanupText(decoded)
@@ -550,8 +560,18 @@ object DG13Parser {
 
     private fun decodePrimitiveBestEffort(rawBytes: ByteArray): String {
         if (rawBytes.isEmpty()) return ""
+
+        // Priority 1: Try UTF-8 first — DG13 data from Vietnam CCCD is almost always UTF-8
+        val utf8Decoded = runCatching { String(rawBytes, Charsets.UTF_8) }.getOrNull()
+        if (utf8Decoded != null) {
+            val cleaned = cleanupTextWithoutRepair(utf8Decoded)
+            if (cleaned.isNotBlank() && !hasMojibakePattern(cleaned)) {
+                return Normalizer.normalize(cleaned, Normalizer.Form.NFC)
+            }
+        }
+
+        // Priority 2: Try other charsets
         val candidates = listOf(
-            Charset.forName("UTF-8"),
             Charset.forName("windows-1258"),
             Charset.forName("windows-1252"),
             Charset.forName("UTF-16LE"),
@@ -559,8 +579,8 @@ object DG13Parser {
             Charset.forName("ISO-8859-1")
         )
 
-        var best = ""
-        var bestScore = -1
+        var best = utf8Decoded?.let { cleanupText(it) } ?: ""
+        var bestScore = textScore(best)
         for (charset in candidates) {
             val decoded = runCatching { String(rawBytes, charset) }.getOrElse { "" }
             val cleaned = cleanupText(decoded)
@@ -573,22 +593,62 @@ object DG13Parser {
         return best
     }
 
+    /**
+     * Check if text contains mojibake patterns (UTF-8 decoded as ISO-8859-1).
+     * e.g., "Ã´" (Ã followed by ´/² etc.) is a strong indicator of mojibake.
+     */
+    private fun hasMojibakePattern(text: String): Boolean {
+        if (text.isBlank()) return false
+        // Common mojibake patterns: Ã followed by another non-ASCII char
+        // UTF-8 multi-byte sequences decoded as ISO-8859-1 produce:
+        // Ã + [€-¿] for 2-byte sequences (U+00C0..U+00FF)
+        // Ã¡=á, Ã =à, Ã¢=â, Ã£=ã, Ã´=ô, Ã³=ó, etc.
+        val mojibakeRegex = Regex("[ÃÂÄ][\\u0080-\\u00BF\\u00B4\\u00A0-\\u00BF²³´µ]")
+        if (mojibakeRegex.containsMatchIn(text)) return true
+
+        // Check ratio of Latin Extended chars (likely mojibake) vs Vietnamese chars
+        val latinExtended = text.count { it.code in 0x00C0..0x00FF }
+        val trueVietnamese = text.count { it.code in 0x0100..0xFFFF && it.isLetter() && it.code !in 0x00C0..0x00FF }
+        // If we have Latin Extended chars but no true Vietnamese chars, likely mojibake
+        if (latinExtended > 0 && trueVietnamese == 0 && text.length <= 20) {
+            // Short text with Latin Extended but no proper Vietnamese = suspicious
+            val asciiLetters = text.count { it.code in 0x0041..0x007A && it.isLetter() }
+            if (asciiLetters > 0 && latinExtended.toFloat() / text.length > 0.15f) return true
+        }
+
+        return false
+    }
+
+    /**
+     * Clean text without mojibake repair (used for initial UTF-8 validation).
+     */
+    private fun cleanupTextWithoutRepair(value: String?): String {
+        if (value == null) return ""
+        return value
+            .replace('\u0000', ' ')
+            .replace(Regex("[\\p{Cntrl}&&[^\\n\\r\\t]]"), " ")
+            .replace(Regex("\\s+"), " ")
+            .trim()
+    }
+
     private fun repairVietnameseMojibake(text: String): String {
         if (text.isBlank()) return text
+        // Only attempt repair if mojibake pattern is detected
+        if (!hasMojibakePattern(text)) return text
 
         val candidates = listOf(
-            text,
             convertCharset(text, "ISO-8859-1", "UTF-8"),
             convertCharset(text, "windows-1252", "UTF-8"),
             convertCharset(text, "ISO-8859-1", "windows-1258"),
             convertCharset(text, "windows-1252", "windows-1258")
         )
 
-        return candidates
+        val repaired = candidates
             .map { it.trim() }
-            .filter { it.isNotBlank() }
+            .filter { it.isNotBlank() && !hasMojibakePattern(it) }
             .maxByOrNull { textScore(it) }
-            ?: text
+
+        return repaired ?: text
     }
 
     private fun convertCharset(text: String, from: String, to: String): String {
@@ -600,9 +660,18 @@ object DG13Parser {
     private fun textScore(text: String): Int {
         if (text.isBlank()) return Int.MIN_VALUE / 4
         val base = text.count { it.isLetterOrDigit() || it in " /.-|:;,\n\r" }
-        val viBonus = text.count { it in "ăâđêôơưĂÂĐÊÔƠƯáàảãạắằẳẵặấầẩẫậéèẻẽẹếềểễệóòỏõọốồổỗộớờởỡợúùủũụứừửữựíìỉĩịýỳỷỹỵÁÀẢÃẠẮẰẲẴẶẤẦẨẪẬÉÈẺẼẸẾỀỂỄỆÓÒỎÕỌỐỒỔỖỘỚỜỞỠỢÚÙỦŨỤỨỪỬỮỰÍÌỈĨỊÝỲỶỸỴ" }
-        val mojibakePenalty = text.count { it in "ÃÂÄÅÆÇÐÑØÞßáðñóôõö÷øùúûüýþÿ�" } * 2
-        return base + viBonus * 3 - mojibakePenalty
+        // True Vietnamese diacritical chars (Unicode combining marks applied to Vietnamese letters)
+        val trueVietnamese = text.count {
+            it in "ăâđêôơưĂÂĐÊÔƠƯ" ||
+            it.code in 0x1EA0..0x1EF9 || // Vietnamese precomposed: Ạ-ỹ
+            it in "áàảãạéèẻẽẹóòỏõọúùủũụíìỉĩịýỳỷỹỵ" ||
+            it in "ÁÀẢÃẠÉÈẺẼẸÓÒỎÕỌÚÙỦŨỤÍÌỈĨỊÝỲỶỸỴ"
+        }
+        // Chars that appear in mojibake (Latin Extended: Ã, Â, etc. in ISO-8859-1 range)
+        val mojibakePenalty = text.count {
+            it.code in 0x00C0..0x00FF && it !in "áàảãạéèẻẽẹóòỏõọúùủũụíìỉĩịýỳỷỹỵÁÀẢÃẠÉÈẺẼẸÓÒỎÕỌÚÙỦŨỤÍÌỈĨỊÝỲỶỸỴ"
+        } * 3
+        return base + trueVietnamese * 5 - mojibakePenalty
     }
 
     private fun isLikelyText(value: String): Boolean {
